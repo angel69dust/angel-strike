@@ -2,66 +2,32 @@
 <html lang="fa">
 <head>
 <meta charset="UTF-8">
-
-<!-- ==================== SEO اصلی ==================== -->
-<title>آنجل استرایک | بازی تیراندازی محله رضا گلزار - ساخته سهیل ایمانی</title>
-<meta name="description" content="آنجل استرایک (Angel Strike) بازی سه‌بعدی تیراندازی مرورگری در محله رضا گلزار. شامل مدرسه درخشنده صراف، مسجد، دریاچه، فروشگاه اسلحه، چاقوهای کمیاب، باس سوزنی و شکم قرومساق. ساخته سهیل ایمانی.">
-<meta name="keywords" content="آنجل استرایک, Angel Strike, بازی آنجل استرایک, محله رضا گلزار, سهیل ایمانی, مدرسه درخشنده صراف, بازی تیراندازی, بازی مرورگری, باس سوزنی, سوزنی, شکم قرومساق, بازی ایرانی, بازی سه بعدی">
-<meta name="author" content="سهیل ایمانی">
-<meta name="robots" content="index, follow">
-<meta name="language" content="Persian">
-<meta name="revisit-after" content="3 days">
-
-<!-- ==================== Open Graph ==================== -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="آنجل استرایک - بازی تیراندازی محله رضا گلزار">
-<meta property="og:description" content="بازی سه‌بعدی تیراندازی مرورگری با فروشگاه اسلحه، چاقوهای کمیاب، باس سوزنی و شکم قرومساق. ساخته سهیل ایمانی.">
-<meta property="og:site_name" content="آنجل استرایک">
-<meta property="og:locale" content="fa_IR">
-
-<!-- ==================== Twitter ==================== -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="آنجل استرایک - بازی تیراندازی">
-<meta name="twitter:description" content="بازی سه‌بعدی تیراندازی مرورگری در محله رضا گلزار. ساخته سهیل ایمانی.">
-
+<title>آنجل استرایک - محله رضا گلزار</title>
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<meta name="theme-color" content="#ff5a9a">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="آنجل استرایک">
-
-<!-- ==================== Structured Data ==================== -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "VideoGame",
-  "name": "آنجل استرایک",
-  "alternateName": "Angel Strike",
-  "description": "بازی سه‌بعدی تیراندازی مرورگری در محله رضا گلزار با فروشگاه اسلحه، چاقوهای کمیاب، باس سوزنی و شکم قرومساق.",
-  "genre": ["Shooter", "Action", "First-Person"],
-  "gamePlatform": ["Web Browser", "Mobile", "PC"],
-  "applicationCategory": "Game",
-  "inLanguage": "fa",
-  "author": { "@type": "Person", "name": "سهیل ایمانی" },
-  "creator": { "@type": "Person", "name": "سهیل ایمانی" },
-  "publisher": { "@type": "Organization", "name": "مدرسه درخشنده صراف" },
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "IRR" }
-}
-</script>
 
 <!--
     =====================================================
-    سلام. این بازیه که خودم ساختم. سهیل ایمانی ام.
-    ورژن 75 - با کلی تغییر جدید:
-    - سوزنی حالا شبیه آدم واقعیه! 👃
-    - دماغ مستطیلی بزرگ
-    - گردن، صورت، گوش، کفش
-    - SEO برای پیدا شدن تو گوگل
+    سلام. سهیل ایمانی ام. این بازی رو خودم ساختم.
+    ورژن 75 - آپدیت جدید:
+    - منوی شیک با افکت بلور
+    - سیستم زبان (فارسی/انگلیسی)
+    - باس جدید: عمو سهند و عمه هاش 👻👻👻
+    - چرخش دوربین با لمس تو موبایل
+    - یه سری کصشر دیگه که یادم نمیاد
     =====================================================
 -->
 
 <style>
-html,body{margin:0;padding:0;overflow:hidden;width:100%;height:100%;background:#b8ccd8;font-family:Tahoma,sans-serif;-webkit-tap-highlight-color:transparent;touch-action:none;user-select:none;transition:background .4s}
+/* ============================================= */
+/* اول CSS. یعنی چیزی که بازی رو خوشگل میکنه   */
+/* مثل آرایش قبل از مهمونی. ولی اینجا خودمون    */
+/* مهمونیم پس راحت باش                          */
+/* ============================================= */
+
+html,body{margin:0;padding:0;overflow:hidden;width:100%;height:100%;background:#1a1428;font-family:Tahoma,sans-serif;-webkit-tap-highlight-color:transparent;touch-action:none;user-select:none;transition:background .4s}
 canvas{display:block}
+
+/* ========== نشانه گیری ========== */
 #crosshair{position:fixed;top:50%;left:50%;width:26px;height:26px;transform:translate(-50%,-50%);pointer-events:none;z-index:10}
 #crosshair .ch-line{position:absolute;background:#fff;box-shadow:0 0 3px #000}
 #crosshair .ch-t{left:50%;top:0;width:2px;height:8px;transform:translateX(-50%)}
@@ -73,112 +39,207 @@ canvas{display:block}
 #crosshair.sniper .ch-ring{display:block;inset:-8px;border-color:rgba(255,60,80,.9)}
 #crosshair.knife .ch-ring{display:block;border-color:rgba(255,150,210,.9)}
 #crosshair.phone .ch-ring{display:block;border-color:rgba(100,200,255,.95);inset:-4px}
+
+/* ========== چرخ ها ========== */
 #danceWheel,#weaponWheel{position:fixed;inset:0;z-index:41;pointer-events:none;opacity:0;transition:opacity .15s}
 #danceWheel{background:radial-gradient(circle at center,rgba(60,20,90,.45) 0%,rgba(40,10,70,.8) 45%,rgba(30,8,60,.9) 100%);z-index:42}
 #weaponWheel{background:radial-gradient(circle at center,rgba(30,40,80,.4) 0%,rgba(20,26,60,.8) 45%,rgba(15,20,50,.9) 100%)}
 #danceWheel.show,#weaponWheel.show{opacity:1}
 .wheel-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:220px;height:220px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff}
-#danceWheel .wheel-center{border:2px solid rgba(255,180,230,.5);background:rgba(70,30,110,.9)}
-#weaponWheel .wheel-center{border:2px solid rgba(160,200,255,.35);background:rgba(30,40,80,.9)}
+#danceWheel .wheel-center{border:2px solid rgba(255,180,230,.5);background:rgba(70,30,110,.9);backdrop-filter:blur(20px)}
+#weaponWheel .wheel-center{border:2px solid rgba(160,200,255,.35);background:rgba(30,40,80,.9);backdrop-filter:blur(20px)}
 .wheel-center .cname{font-size:16px;font-weight:bold;color:#ffe888;margin-bottom:6px;text-align:center;padding:0 8px}
 #danceWheel .slot,#weaponWheel .slot{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;transition:transform .15s,border-color .15s;pointer-events:none}
-#danceWheel .slot{width:110px;height:110px;border:2px solid rgba(255,180,230,.3);background:linear-gradient(160deg,rgba(110,50,160,.85),rgba(60,20,110,.85))}
-#weaponWheel .slot{width:130px;height:130px;border:2px solid rgba(160,200,255,.22);background:linear-gradient(160deg,rgba(60,80,140,.85),rgba(30,40,80,.85))}
+#danceWheel .slot{width:110px;height:110px;border:2px solid rgba(255,180,230,.3);background:linear-gradient(160deg,rgba(110,50,160,.85),rgba(60,20,110,.85));backdrop-filter:blur(10px)}
+#weaponWheel .slot{width:130px;height:130px;border:2px solid rgba(160,200,255,.22);background:linear-gradient(160deg,rgba(60,80,140,.85),rgba(30,40,80,.85));backdrop-filter:blur(10px)}
 #danceWheel .slot.active{border-color:#ff8ac8;transform:translate(-50%,-50%) scale(1.15)}
 #weaponWheel .slot.active{border-color:#7ab8ff;transform:translate(-50%,-50%) scale(1.12)}
 #danceWheel .slot .e,#weaponWheel .slot .e{font-size:38px;line-height:1}
 #danceWheel .slot .n,#weaponWheel .slot .n{font-size:10px;margin-top:3px;text-align:center;padding:0 4px;font-weight:bold;max-width:120px;overflow:hidden;white-space:nowrap}
 #weaponWheel .slot .num{position:absolute;top:8px;right:10px;font-size:11px;color:#ffe888;font-weight:bold}
+
+/* ========== متن رویداد ========== */
 #eventText{position:fixed;top:35%;left:50%;transform:translate(-50%,-50%) scale(.7);font-size:64px;font-weight:900;letter-spacing:14px;z-index:200;pointer-events:none;opacity:0;transition:opacity .3s,transform .35s;color:#ff5a9a;white-space:nowrap;text-align:center;text-shadow:4px 4px 0 #fff}
 #eventText.show{opacity:1;transform:translate(-50%,-50%) scale(1.1)}
 #eventText.gold{color:#ffaa22}
 #eventText.red{color:#cc1144}
+
+/* ========== HUD ========== */
 #healthWrap{position:fixed;bottom:18px;left:18px;width:200px;z-index:10;pointer-events:none}
 #healthBar{width:100%;height:12px;border-radius:6px;background:rgba(0,0,0,.55);overflow:hidden;border:1px solid rgba(255,255,255,.3)}
 #healthFill{height:100%;width:100%;background:linear-gradient(90deg,#ff6688,#ffaacc);transition:width .2s}
 #healthNum{position:absolute;bottom:16px;right:4px;font-size:12px;color:#fff;font-weight:bold;text-shadow:1px 1px 3px #000}
-#ammoHud{position:fixed;bottom:14px;right:14px;color:#fff;font-size:26px;font-weight:bold;z-index:10;pointer-events:none;text-align:right;line-height:1;padding:10px 16px;background:rgba(30,26,60,.45);border:1px solid rgba(200,180,255,.25);border-radius:12px}
+#ammoHud{position:fixed;bottom:14px;right:14px;color:#fff;font-size:26px;font-weight:bold;z-index:10;pointer-events:none;text-align:right;line-height:1;padding:10px 16px;background:rgba(30,26,60,.45);border:1px solid rgba(200,180,255,.25);border-radius:12px;backdrop-filter:blur(10px)}
 #ammoHud .ammoBig{font-size:34px}
 #ammoHud.low .ammoBig{color:#ff5588}
 #wpnName{font-size:12px;opacity:.95;margin-top:6px;font-weight:bold}
-#kills{position:fixed;top:14px;left:50%;transform:translateX(-50%);color:#ffdd88;font-size:13px;font-weight:bold;background:rgba(40,30,70,.55);padding:7px 18px;border-radius:14px;z-index:10;pointer-events:none;border:1px solid rgba(255,220,140,.35)}
-#scoreHud{position:fixed;top:14px;right:60px;font-size:15px;font-weight:900;padding:9px 22px;border-radius:16px;z-index:10;pointer-events:none;background:rgba(255,225,150,.55);border:1.5px solid rgba(255,225,140,.6)}
+#kills{position:fixed;top:14px;left:50%;transform:translateX(-50%);color:#ffdd88;font-size:13px;font-weight:bold;background:rgba(40,30,70,.55);padding:7px 18px;border-radius:14px;z-index:10;pointer-events:none;border:1px solid rgba(255,220,140,.35);backdrop-filter:blur(10px)}
+#scoreHud{position:fixed;top:14px;right:60px;font-size:15px;font-weight:900;padding:9px 22px;border-radius:16px;z-index:10;pointer-events:none;background:rgba(255,225,150,.55);border:1.5px solid rgba(255,225,140,.6);backdrop-filter:blur(10px)}
 #scoreHud .num{display:inline-block;margin-left:4px;color:#d48a10;font-size:18px;font-weight:900}
-#levelHud{position:fixed;top:52px;right:60px;color:#fff;font-size:11px;font-weight:bold;background:rgba(40,30,70,.55);padding:5px 12px;border-radius:10px;z-index:10;pointer-events:none;border:1px solid rgba(255,190,120,.4)}
+#levelHud{position:fixed;top:52px;right:60px;color:#fff;font-size:11px;font-weight:bold;background:rgba(40,30,70,.55);padding:5px 12px;border-radius:10px;z-index:10;pointer-events:none;border:1px solid rgba(255,190,120,.4);backdrop-filter:blur(10px)}
 #levelHud .lv{color:#ffbb55}
-#bossBar{position:fixed;top:60px;left:50%;transform:translateX(-50%);width:78%;max-width:620px;height:22px;background:rgba(0,0,0,.72);border:2px solid rgba(255,255,255,.35);border-radius:12px;z-index:15;display:none;overflow:hidden}
+#bossBar{position:fixed;top:60px;left:50%;transform:translateX(-50%);width:78%;max-width:620px;height:22px;background:rgba(0,0,0,.72);border:2px solid rgba(255,255,255,.35);border-radius:12px;z-index:15;display:none;overflow:hidden;backdrop-filter:blur(10px)}
 #bossBar.show{display:block}
 #bossBarFill{height:100%;width:100%;background:linear-gradient(90deg,#ff2277,#ff66aa);transition:width .25s}
 #bossBarLabel{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;font-weight:bold;font-size:12px}
-.overlayScreen{position:fixed;top:0;left:0;width:100%;height:100%;color:#3a2a5a;z-index:1000;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px;box-sizing:border-box;overflow-y:auto}
-#startScreen{background:linear-gradient(135deg,#ffd9ec 0%,#e8d9ff 28%,#d6ecff 55%,#ffe6d6 82%,#ffd9ec 100%)}
-#startScreen h1{color:#ff5a9a}
-#startScreen .subtitle{color:#7a5aa8;font-weight:bold}
-#pauseScreen{background:rgba(240,225,255,.75);z-index:900;display:none}
-#mapSelectScreen{background:linear-gradient(160deg,#ffe4f0 0%,#e8d9ff 30%,#d6ecff 60%,#ffd9ec 100%);z-index:1250;display:none;color:#3a2a5a}
-#tutorialScreen{background:linear-gradient(160deg,#e6f0ff 0%,#f5e0ff 35%,#e0f0ff 65%,#ffe8f0 100%);z-index:1250;display:none;color:#3a2a5a}
-#loadoutScreen{background:linear-gradient(160deg,#ffe4f0 0%,#e8d9ff 30%,#d6ecff 60%,#ffd9ec 100%);z-index:1250;display:none;color:#3a2a5a}
-#shopScreen{background:linear-gradient(160deg,#fff0f6 0%,#ead9ff 50%,#dceeff 100%);z-index:1100;display:none;justify-content:flex-start;padding-top:20px;color:#3a2a5a}
-#settingsScreen{background:#f5ebff;z-index:1300;display:none;color:#3a2a5a}
+
+/* ============================================= */
+/* منوها - اینجا شیکش کردم با بلور              */
+/* مثل شیشه ماشین بابام. یا مثل شیشه پنجره     */
+/* همسایه که توپ خورده بود.                    */
+/* ============================================= */
+.overlayScreen{
+  position:fixed;top:0;left:0;width:100%;height:100%;color:#fff;z-index:1000;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:20px;box-sizing:border-box;overflow-y:auto;
+  background:rgba(20,10,40,.35);
+  backdrop-filter:blur(24px) saturate(1.6);
+  -webkit-backdrop-filter:blur(24px) saturate(1.6);
+}
+#startScreen{background:radial-gradient(ellipse at 30% 20%,rgba(255,120,200,.35),transparent 55%),radial-gradient(ellipse at 70% 80%,rgba(120,180,255,.35),transparent 55%),radial-gradient(ellipse at 50% 50%,rgba(180,100,255,.25),transparent 70%),rgba(15,10,35,.55)}
+#startScreen h1{color:#fff;text-shadow:0 0 30px rgba(255,120,200,.8),0 4px 12px rgba(0,0,0,.5)}
+#startScreen .subtitle{color:rgba(255,255,255,.75);font-weight:bold;text-shadow:0 2px 8px rgba(0,0,0,.5)}
+#pauseScreen{background:rgba(20,10,40,.5);z-index:900;display:none;backdrop-filter:blur(28px) saturate(1.6)}
+#mapSelectScreen{background:radial-gradient(ellipse at 30% 20%,rgba(255,120,200,.3),transparent 55%),radial-gradient(ellipse at 70% 80%,rgba(120,180,255,.3),transparent 55%),rgba(15,10,35,.6);z-index:1250;display:none;color:#fff}
+#tutorialScreen{background:radial-gradient(ellipse at 30% 20%,rgba(150,200,255,.3),transparent 55%),radial-gradient(ellipse at 70% 80%,rgba(200,150,255,.3),transparent 55%),rgba(15,10,35,.6);z-index:1250;display:none;color:#fff}
+#loadoutScreen{background:radial-gradient(ellipse at 30% 20%,rgba(255,120,200,.3),transparent 55%),radial-gradient(ellipse at 70% 80%,rgba(120,180,255,.3),transparent 55%),rgba(15,10,35,.6);z-index:1250;display:none;color:#fff}
+#shopScreen{background:radial-gradient(ellipse at 30% 20%,rgba(255,180,220,.3),transparent 55%),radial-gradient(ellipse at 70% 80%,rgba(180,150,255,.3),transparent 55%),rgba(15,10,35,.6);z-index:1100;display:none;justify-content:flex-start;padding-top:20px;color:#fff}
+#settingsScreen{background:rgba(20,10,40,.55);z-index:1300;display:none;color:#fff;backdrop-filter:blur(28px) saturate(1.6)}
 #startScreen.hidden{display:none}
 #shopScreen.show,#pauseScreen.show,#settingsScreen.show{display:flex}
 #tutorialScreen.show,#mapSelectScreen.show,#loadoutScreen.show{display:flex}
 h1{font-size:52px;margin:0 0 8px 0;font-weight:900;letter-spacing:2px}
 .subtitle{font-size:14px;letter-spacing:4px;margin-bottom:32px;text-transform:uppercase}
-p{font-size:15px;margin:4px 0}
-.btn,.menuBtn,.tutorialBtn{position:relative;margin-top:14px;padding:16px 48px;font-size:18px;font-weight:800;color:#5a2a8a;border:2px solid #fff;border-radius:18px;cursor:pointer;min-width:300px;background:#fff;transition:all .25s}
-.btn:hover,.menuBtn:hover,.tutorialBtn:hover{background:#ffeaf5;color:#ff4a8a}
-.btn.secondary{font-size:18px;padding:14px 40px;margin-top:10px;background:#f0e8ff;color:#6a3aa8}
-.musicBtn{background:#fff5d0;color:#7a5a20}
-.mapCard{background:#fff;border:2px solid #ffb8d8;border-radius:22px;padding:26px;cursor:pointer;color:#3a2a5a}
+
+/* دکمه ها - شیک و بلوری */
+.btn,.menuBtn,.tutorialBtn{
+  position:relative;margin-top:14px;padding:16px 48px;font-size:18px;font-weight:800;
+  color:#fff;border:1.5px solid rgba(255,255,255,.55);border-radius:18px;cursor:pointer;
+  min-width:300px;
+  background:linear-gradient(135deg,rgba(255,255,255,.22),rgba(255,255,255,.08));
+  backdrop-filter:blur(14px) saturate(1.4);
+  -webkit-backdrop-filter:blur(14px) saturate(1.4);
+  box-shadow:0 8px 32px rgba(0,0,0,.25),inset 0 1px 0 rgba(255,255,255,.35);
+  transition:all .25s;
+  text-shadow:0 1px 4px rgba(0,0,0,.4);
+  overflow:hidden;
+}
+.btn:hover,.menuBtn:hover,.tutorialBtn:hover{
+  background:linear-gradient(135deg,rgba(255,180,230,.35),rgba(200,150,255,.25));
+  transform:translateY(-2px);
+  box-shadow:0 12px 40px rgba(255,120,200,.4),inset 0 1px 0 rgba(255,255,255,.5);
+  border-color:rgba(255,255,255,.85);
+}
+.btn.secondary{background:linear-gradient(135deg,rgba(150,200,255,.25),rgba(120,180,255,.1));}
+.musicBtn{background:linear-gradient(135deg,rgba(255,225,140,.3),rgba(255,200,100,.15));}
+
+.mapCard{
+  background:linear-gradient(135deg,rgba(255,255,255,.22),rgba(255,255,255,.06));
+  border:1.5px solid rgba(255,255,255,.4);
+  border-radius:22px;padding:26px;cursor:pointer;color:#fff;
+  backdrop-filter:blur(16px);
+  box-shadow:0 12px 40px rgba(0,0,0,.25),inset 0 1px 0 rgba(255,255,255,.3);
+  transition:all .3s;
+}
+.mapCard:hover{transform:translateY(-4px) scale(1.02);background:linear-gradient(135deg,rgba(255,180,220,.35),rgba(255,120,200,.2));}
 .mapCard .emoji{font-size:56px}
-.mapCard .name{font-size:19px;font-weight:bold;margin:10px 0;color:#5a2a8a}
-.mapCard .desc{font-size:13px;color:#6a5a8a;line-height:1.6}
-.backBtn{width:60px;height:60px;padding:0;font-size:26px;border-radius:50%;background:#fff;color:#5a2a8a;border:2px solid #fff;cursor:pointer;margin-top:22px;font-weight:900}
-.backBtn:hover{color:#ff4a8a}
-.shopBtn2{width:100%;padding:10px;border-radius:10px;border:2px solid #fff;background:#fff;font-weight:800;font-size:12.5px;cursor:pointer;color:#5a2a8a}
-.shopBtn2.buy{background:#ffd0e6;color:#7a1a4a}
-.shopBtn2.buy.disabled{background:#ddd;color:#888;cursor:not-allowed}
-.shopBtn2.equipped{background:#ffb8d8;color:#fff}
-.shopBtn2.owned{background:#c8f5d8;color:#0a4a30}
-.shopBtn2.bigBuy{padding:22px 20px !important;font-size:20px !important;font-weight:900 !important;letter-spacing:2px !important;background:linear-gradient(135deg,#ff2a7a,#ff77aa,#ff2a7a) !important;background-size:200% 100% !important;animation:bigBuyPulse 1.8s ease-in-out infinite !important;color:#fff !important;text-shadow:0 2px 6px rgba(0,0,0,.5) !important;border:3px solid #ffd166 !important;box-shadow:0 8px 24px rgba(255,42,122,.6),inset 0 2px 0 rgba(255,255,255,.4) !important;border-radius:16px !important}
+.mapCard .name{font-size:19px;font-weight:bold;margin:10px 0;color:#fff}
+.mapCard .desc{font-size:13px;color:rgba(255,255,255,.85);line-height:1.6}
+.backBtn{width:60px;height:60px;padding:0;font-size:26px;border-radius:50%;
+  background:linear-gradient(135deg,rgba(255,255,255,.25),rgba(255,255,255,.08));
+  color:#fff;border:1.5px solid rgba(255,255,255,.5);cursor:pointer;margin-top:22px;font-weight:900;
+  backdrop-filter:blur(12px);box-shadow:0 8px 24px rgba(0,0,0,.3);transition:all .25s;
+}
+.backBtn:hover{background:linear-gradient(135deg,rgba(255,120,200,.5),rgba(200,100,255,.3));transform:scale(1.05);}
+
+.shopBtn2{width:100%;padding:10px;border-radius:10px;border:1.5px solid rgba(255,255,255,.4);background:rgba(255,255,255,.15);font-weight:800;font-size:12.5px;cursor:pointer;color:#fff;backdrop-filter:blur(8px);transition:all .2s}
+.shopBtn2.buy{background:linear-gradient(135deg,rgba(255,150,220,.45),rgba(255,120,200,.25));border-color:rgba(255,180,230,.6)}
+.shopBtn2.buy.disabled{background:rgba(80,80,80,.4);color:#aaa;cursor:not-allowed}
+.shopBtn2.equipped{background:linear-gradient(135deg,rgba(255,120,200,.6),rgba(200,80,180,.4));color:#fff;border-color:#fff}
+.shopBtn2.owned{background:linear-gradient(135deg,rgba(140,240,180,.35),rgba(100,200,150,.2));color:#eaffea;border-color:rgba(180,255,200,.5)}
+.shopBtn2.bigBuy{padding:22px 20px !important;font-size:20px !important;font-weight:900 !important;letter-spacing:2px !important;background:linear-gradient(135deg,#ff2a7a,#ff77aa,#ff2a7a) !important;background-size:200% 100% !important;animation:bigBuyPulse 1.8s ease-in-out infinite !important;color:#fff !important;text-shadow:0 2px 6px rgba(0,0,0,.5) !important;border:2px solid #ffd166 !important;box-shadow:0 8px 24px rgba(255,42,122,.6),inset 0 2px 0 rgba(255,255,255,.4) !important;border-radius:16px !important}
 .shopBtn2.bigBuy:hover{transform:translateY(-3px) scale(1.03) !important}
-.shopBtn2.bigBuy.disabled{background:linear-gradient(135deg,#999,#666) !important;animation:none !important;color:#ddd !important;border-color:#777 !important}
+.shopBtn2.bigBuy.disabled{background:linear-gradient(135deg,#555,#333) !important;animation:none !important;color:#999 !important;border-color:#555 !important}
 @keyframes bigBuyPulse{0%,100%{background-position:0% 50%;box-shadow:0 8px 24px rgba(255,42,122,.6)}50%{background-position:100% 50%;box-shadow:0 8px 32px rgba(255,42,122,.9)}}
-#loadoutConfirm{padding:16px 44px;font-size:19px;font-weight:800;background:#b8f0d0;color:#0a4a30;border:2px solid #7fe0a8;border-radius:14px;cursor:pointer;margin-top:14px}
-.filterBtn{padding:7px 15px;border-radius:20px;border:2px solid #fff;background:#f5ecff;color:#5a2a8a;font-size:12px;cursor:pointer;font-weight:700;margin:2px}
-.filterBtn.active{background:#ffb8d8;color:#7a1a4a}
-.closeX{position:absolute;top:16px;right:16px;width:44px;height:44px;border-radius:50%;background:#fff;color:#5a2a8a;border:2px solid #ddd;font-size:20px;font-weight:800;cursor:pointer;z-index:5}
-.loChip{padding:10px;border-radius:14px;background:#fff;border:2px solid #ddd;cursor:pointer;text-align:center;color:#3a2a5a}
-.loChip.used{background:#b8f0d0;color:#0a4a30;border-color:#7fe0a8}
+
+#loadoutConfirm{padding:16px 44px;font-size:19px;font-weight:800;
+  background:linear-gradient(135deg,rgba(140,240,180,.45),rgba(100,200,150,.25));
+  color:#fff;border:1.5px solid rgba(180,255,200,.6);border-radius:14px;cursor:pointer;margin-top:14px;
+  backdrop-filter:blur(12px);box-shadow:0 8px 24px rgba(0,0,0,.25),inset 0 1px 0 rgba(255,255,255,.4);transition:all .25s;
+}
+#loadoutConfirm:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(100,220,150,.4)}
+
+.filterBtn{padding:7px 15px;border-radius:20px;border:1.5px solid rgba(255,255,255,.35);
+  background:rgba(255,255,255,.1);color:#fff;font-size:12px;cursor:pointer;font-weight:700;margin:2px;
+  backdrop-filter:blur(8px);transition:all .2s}
+.filterBtn.active{background:linear-gradient(135deg,rgba(255,150,220,.55),rgba(200,120,255,.35));border-color:#fff;box-shadow:0 4px 16px rgba(255,120,200,.4)}
+.closeX{position:absolute;top:16px;right:16px;width:44px;height:44px;border-radius:50%;
+  background:linear-gradient(135deg,rgba(255,255,255,.25),rgba(255,255,255,.08));
+  color:#fff;border:1.5px solid rgba(255,255,255,.5);font-size:20px;font-weight:800;cursor:pointer;z-index:5;
+  backdrop-filter:blur(12px);transition:all .2s}
+.closeX:hover{background:linear-gradient(135deg,rgba(255,80,120,.6),rgba(200,40,80,.4));transform:scale(1.08)}
+
+.loChip{padding:10px;border-radius:14px;background:rgba(255,255,255,.12);border:1.5px solid rgba(255,255,255,.25);cursor:pointer;text-align:center;color:#fff;backdrop-filter:blur(8px);transition:all .2s}
+.loChip:hover{background:rgba(255,255,255,.2)}
+.loChip.used{background:linear-gradient(135deg,rgba(140,240,180,.35),rgba(100,200,150,.2));color:#fff;border-color:rgba(180,255,200,.55)}
 .loChip .ic{font-size:28px}
 .loChip .nm{font-size:11px;margin-top:4px;font-weight:700}
-.shopCard2{background:#fff;border:2px solid #ffd0e6;border-radius:18px;padding:14px;display:flex;flex-direction:column;gap:8px;position:relative;color:#3a2a5a}
-.shopCard2.specialCard{border:3px solid #ffd166;box-shadow:0 0 30px rgba(255,209,102,.5)}
-.shopCat{font-size:10px;color:#c852a0;letter-spacing:2.5px;font-weight:bold}
-.shopName{font-size:13px;font-weight:bold;color:#4a2a6a;line-height:1.3}
-.shopSkin{height:66px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:34px;border:1px solid #eee}
-.shopStats{font-size:10.5px;color:#5a4a7a;display:grid;grid-template-columns:1fr 1fr;gap:3px}
-.shopPrice{font-size:17px;color:#d48a10;font-weight:bold;text-align:center}
+
+.shopCard2{
+  background:linear-gradient(135deg,rgba(255,255,255,.18),rgba(255,255,255,.05));
+  border:1.5px solid rgba(255,255,255,.28);border-radius:18px;padding:14px;display:flex;flex-direction:column;gap:8px;position:relative;color:#fff;
+  backdrop-filter:blur(14px) saturate(1.4);
+  box-shadow:0 8px 24px rgba(0,0,0,.2),inset 0 1px 0 rgba(255,255,255,.25);
+  transition:all .3s;
+}
+.shopCard2:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(255,120,200,.25),inset 0 1px 0 rgba(255,255,255,.4);border-color:rgba(255,180,230,.5)}
+.shopCard2.specialCard{border:2px solid #ffd166;box-shadow:0 0 40px rgba(255,209,102,.5),inset 0 1px 0 rgba(255,255,255,.4);background:linear-gradient(135deg,rgba(255,225,140,.2),rgba(255,150,200,.1))}
+.shopCat{font-size:10px;color:#ffb8e0;letter-spacing:2.5px;font-weight:bold;text-shadow:0 1px 4px rgba(0,0,0,.5)}
+.shopName{font-size:13px;font-weight:bold;color:#fff;line-height:1.3;text-shadow:0 1px 3px rgba(0,0,0,.4)}
+.shopSkin{height:66px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:34px;border:1px solid rgba(255,255,255,.15)}
+.shopStats{font-size:10.5px;color:rgba(255,255,255,.85);display:grid;grid-template-columns:1fr 1fr;gap:3px}
+.shopPrice{font-size:17px;color:#ffd166;font-weight:bold;text-align:center;text-shadow:0 1px 4px rgba(0,0,0,.5)}
 .shopTag{position:absolute;top:10px;right:10px;background:#ffd166;color:#4a2a00;font-size:10px;font-weight:bold;padding:3px 9px;border-radius:10px}
 .shopTag.legend{background:#ff5fa8;color:#fff}
 .shopTag.special{background:linear-gradient(135deg,#ff2a7a,#ff77aa);color:#fff;animation:bigBuyPulse 2s infinite}
+
 .shopHeader{display:flex;flex-direction:column;align-items:center;gap:6px;width:100%;max-width:1200px;margin-bottom:16px}
-.shopHeader h1{font-size:34px;color:#ff5a9a}
-.shopScore{padding:11px 28px;border-radius:22px;font-size:16px;font-weight:900;color:#4a2a00;background:#ffe6a8;border:2px solid #ffd166}
+.shopHeader h1{font-size:34px;color:#fff;text-shadow:0 0 20px rgba(255,120,200,.8),0 2px 8px rgba(0,0,0,.5)}
+.shopScore{padding:11px 28px;border-radius:22px;font-size:16px;font-weight:900;color:#4a2a00;background:linear-gradient(135deg,#ffe6a8,#ffd166);border:1.5px solid rgba(255,255,255,.5);box-shadow:0 8px 24px rgba(255,180,80,.4)}
 .shopFilters{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin-bottom:10px;padding:0 12px}
-.tutBox{background:#fff;border:2px solid #dbb8ff;border-radius:20px;padding:22px 28px;max-width:680px;text-align:right;line-height:2;font-size:14px;color:#4a3866}
-.tutBox h3{color:#8a3ac8;margin:14px 0 6px 0;font-size:16px}
-.tutBox .key{display:inline-block;background:#f5ecff;color:#4a3866;border-radius:6px;padding:1px 8px;font-weight:bold;font-size:13px;margin:0 2px}
-.tutFooter{margin-top:18px;padding-top:14px;border-top:2px dashed #dbb8ff;font-size:12px;color:#8a3ac8;text-align:center;font-weight:bold;line-height:1.8}
+
+/* کادر آموزش */
+.tutBox{
+  background:linear-gradient(135deg,rgba(255,255,255,.18),rgba(255,255,255,.05));
+  border:1.5px solid rgba(255,255,255,.3);border-radius:20px;padding:22px 28px;max-width:680px;
+  text-align:right;line-height:2;font-size:14px;color:#fff;backdrop-filter:blur(16px) saturate(1.4);
+  box-shadow:0 12px 40px rgba(0,0,0,.25),inset 0 1px 0 rgba(255,255,255,.3);
+}
+.tutBox h3{color:#ffb8e0;margin:14px 0 6px 0;font-size:16px;text-shadow:0 1px 4px rgba(0,0,0,.5)}
+.tutBox .key{display:inline-block;background:rgba(255,255,255,.2);color:#fff;border-radius:6px;padding:1px 8px;font-weight:bold;font-size:13px;margin:0 2px;border:1px solid rgba(255,255,255,.3)}
+.tutFooter{margin-top:18px;padding-top:14px;border-top:1.5px dashed rgba(255,255,255,.3);font-size:12px;color:rgba(255,255,255,.85);text-align:center;font-weight:bold;line-height:1.8}
+
 .mapGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;width:100%;max-width:800px;margin:20px 0;padding:0 20px}
-.totalScore{margin-top:22px;font-size:15px;padding:14px 34px;border-radius:22px;background:#ffe6a8;color:#4a2a00;font-weight:800;border:2px solid #ffd166}
-.totalScore .num{display:inline-block;margin-left:8px;color:#d48a10;font-size:24px;font-weight:900}
+.totalScore{
+  margin-top:22px;font-size:15px;padding:14px 34px;border-radius:22px;
+  background:linear-gradient(135deg,rgba(255,225,150,.5),rgba(255,190,100,.3));
+  color:#fff;font-weight:800;border:1.5px solid rgba(255,220,150,.6);
+  backdrop-filter:blur(12px);box-shadow:0 8px 24px rgba(255,180,80,.3),inset 0 1px 0 rgba(255,255,255,.4);
+  text-shadow:0 1px 4px rgba(0,0,0,.4);
+}
+.totalScore .num{display:inline-block;margin-left:8px;color:#fff;font-size:24px;font-weight:900;text-shadow:0 0 12px rgba(255,200,80,.8)}
+
 #loadoutSlots{display:flex;gap:16px;margin:14px 0;flex-wrap:wrap;justify-content:center}
-.loadSlot{width:170px;height:90px;border:2.5px dashed #b896e0;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:13px;color:#6a5a8a;background:#fff;padding:6px;flex-direction:column;gap:4px}
-.loadSlot.filled{border-style:solid;border-color:#7cdc9c;background:#dff5e8;color:#0a4a30;font-weight:bold}
-.loadSlot.knife{border-style:solid;border-color:#ff96d2;background:#ffe0f0;color:#7a1a4a;font-weight:bold}
+.loadSlot{
+  width:170px;height:90px;border:2px dashed rgba(255,255,255,.4);border-radius:16px;
+  display:flex;align-items:center;justify-content:center;font-size:13px;color:#fff;
+  background:rgba(255,255,255,.1);padding:6px;flex-direction:column;gap:4px;backdrop-filter:blur(10px);
+}
+.loadSlot.filled{border-style:solid;border-color:rgba(180,255,200,.7);background:linear-gradient(135deg,rgba(140,240,180,.3),rgba(100,200,150,.15));font-weight:bold}
+.loadSlot.knife{border-style:solid;border-color:rgba(255,180,230,.7);background:linear-gradient(135deg,rgba(255,150,220,.3),rgba(200,120,255,.15));font-weight:bold}
 #loadoutGrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;width:100%;max-width:1000px;margin-bottom:16px;max-height:40vh;overflow-y:auto;padding:0 20px}
+
+/* ========== موبایل ========== */
 #mobileControls{display:none}
 @media (pointer:coarse),(max-width:900px){#mobileControls{display:block}}
 #mobileControls{position:fixed;inset:0;pointer-events:none;z-index:20}
@@ -199,37 +260,62 @@ p{font-size:15px;margin:4px 0}
 .wpnBtn.active{background:rgba(255,150,210,.75);border-color:#fff}
 .wpnBtn.knifeBtn{background:rgba(255,150,210,.35);border-color:rgba(255,180,230,.9)}
 .wpnBtn.knifeBtn.active{background:rgba(255,120,200,.85)}
+
+/* ========== تنظیمات ========== */
 #settingsScroll{max-height:78vh;overflow-y:auto;width:100%;max-width:520px;padding:0 20px;box-sizing:border-box}
-.setRow{display:flex;align-items:center;justify-content:space-between;padding:12px 18px;background:#fff;border:2px solid #eee;border-radius:10px;margin-bottom:8px;color:#333;gap:10px;flex-wrap:wrap}
-.setRow label{font-size:13px;font-weight:bold;min-width:150px;text-align:right}
-.setRow .val{color:#d48a10;font-weight:bold;font-size:13px;min-width:50px;text-align:left}
-.setCat{font-size:13px;color:#8a3ac8;font-weight:bold;margin:18px 0 6px;text-align:right;border-bottom:2px solid #ddd;padding-bottom:6px}
-input[type=range]{-webkit-appearance:none;width:180px;height:6px;background:#ddd;border-radius:3px;outline:none;flex:1;min-width:120px}
-input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;background:#ff5a9a;border-radius:50%;cursor:pointer}
-.toggleBtn{width:50px;height:26px;background:#ddd;border-radius:13px;position:relative;cursor:pointer;border:2px solid #fff;flex-shrink:0}
-.toggleBtn .knob{position:absolute;top:2px;left:2px;width:20px;height:20px;background:#fff;border-radius:50%;transition:left .25s}
-.toggleBtn.on{background:#8cf0b4}
+.setRow{
+  display:flex;align-items:center;justify-content:space-between;padding:12px 18px;
+  background:linear-gradient(135deg,rgba(255,255,255,.18),rgba(255,255,255,.05));
+  border:1.5px solid rgba(255,255,255,.22);border-radius:12px;margin-bottom:8px;color:#fff;gap:10px;flex-wrap:wrap;
+  backdrop-filter:blur(10px);
+}
+.setRow label{font-size:13px;font-weight:bold;min-width:150px;text-align:right;text-shadow:0 1px 3px rgba(0,0,0,.4)}
+.setRow .val{color:#ffd166;font-weight:bold;font-size:13px;min-width:50px;text-align:left;text-shadow:0 1px 3px rgba(0,0,0,.5)}
+.setCat{font-size:14px;color:#ffb8e0;font-weight:bold;margin:18px 0 6px;text-align:right;border-bottom:1.5px solid rgba(255,255,255,.2);padding-bottom:6px;text-shadow:0 0 10px rgba(255,150,220,.5)}
+input[type=range]{-webkit-appearance:none;width:180px;height:6px;background:rgba(255,255,255,.2);border-radius:3px;outline:none;flex:1;min-width:120px}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;background:linear-gradient(135deg,#ff5a9a,#ff8ac8);border-radius:50%;cursor:pointer;box-shadow:0 2px 8px rgba(255,90,150,.6)}
+.toggleBtn{width:50px;height:26px;background:rgba(255,255,255,.2);border-radius:13px;position:relative;cursor:pointer;border:1.5px solid rgba(255,255,255,.4);flex-shrink:0;transition:background .25s}
+.toggleBtn .knob{position:absolute;top:2px;left:2px;width:20px;height:20px;background:#fff;border-radius:50%;transition:left .25s;box-shadow:0 2px 6px rgba(0,0,0,.3)}
+.toggleBtn.on{background:linear-gradient(135deg,#8cf0b4,#5ad890)}
 .toggleBtn.on .knob{left:26px}
-#aimZoomHud{position:fixed;top:50%;right:20px;transform:translateY(-50%);background:rgba(40,30,70,.6);border:1.5px solid rgba(200,180,255,.35);border-radius:12px;padding:8px 14px;color:#fff;font-size:12px;font-weight:bold;z-index:10;display:none}
+
+/* انتخاب زبان */
+.langRow{display:flex;gap:8px;justify-content:flex-end;flex:1}
+.langBtn{
+  padding:8px 18px;border-radius:10px;border:1.5px solid rgba(255,255,255,.35);
+  background:rgba(255,255,255,.1);color:#fff;font-size:13px;font-weight:bold;cursor:pointer;
+  backdrop-filter:blur(8px);transition:all .2s;min-width:80px;
+}
+.langBtn:hover{background:rgba(255,255,255,.2)}
+.langBtn.active{background:linear-gradient(135deg,rgba(255,150,220,.6),rgba(200,120,255,.4));border-color:#fff;box-shadow:0 4px 16px rgba(255,120,200,.5)}
+
+/* HUD های متفرقه */
+#aimZoomHud{position:fixed;top:50%;right:20px;transform:translateY(-50%);background:rgba(40,30,70,.6);border:1.5px solid rgba(200,180,255,.35);border-radius:12px;padding:8px 14px;color:#fff;font-size:12px;font-weight:bold;z-index:10;display:none;backdrop-filter:blur(10px)}
 #aimZoomHud.show{display:block}
 #aimZoomHud .zv{color:#8ec8ff;font-size:16px}
-#stanceHud{position:fixed;bottom:70px;left:50%;transform:translateX(-50%);color:#8ec8ff;font-size:13px;font-weight:bold;z-index:10;pointer-events:none;opacity:0;transition:opacity .25s;background:rgba(40,30,70,.6);padding:6px 16px;border-radius:12px;border:1.5px solid rgba(140,200,255,.5)}
+#stanceHud{position:fixed;bottom:70px;left:50%;transform:translateX(-50%);color:#8ec8ff;font-size:13px;font-weight:bold;z-index:10;pointer-events:none;opacity:0;transition:opacity .25s;background:rgba(40,30,70,.6);padding:6px 16px;border-radius:12px;border:1.5px solid rgba(140,200,255,.5);backdrop-filter:blur(10px)}
 #stanceHud.show{opacity:1}
-#danceHud{position:fixed;bottom:130px;left:50%;transform:translateX(-50%);color:#ffb8e0;font-size:14px;font-weight:bold;z-index:10;pointer-events:none;opacity:0;transition:opacity .3s;background:rgba(60,20,80,.65);padding:8px 20px;border-radius:14px;border:1.5px solid rgba(255,180,230,.55)}
+#danceHud{position:fixed;bottom:130px;left:50%;transform:translateX(-50%);color:#ffb8e0;font-size:14px;font-weight:bold;z-index:10;pointer-events:none;opacity:0;transition:opacity .3s;background:rgba(60,20,80,.65);padding:8px 20px;border-radius:14px;border:1.5px solid rgba(255,180,230,.55);backdrop-filter:blur(10px)}
 #danceHud.show{opacity:1}
 #errBox{position:fixed;top:0;left:0;right:0;background:#c00;color:#fff;padding:12px;font-size:13px;z-index:9999;display:none;white-space:pre-wrap;max-height:40vh;overflow:auto}
-#toast{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:#fff;color:#5a2a8a;padding:16px 30px;border-radius:18px;font-size:16px;font-weight:bold;z-index:2000;pointer-events:none;opacity:0;transition:opacity .3s;text-align:center;max-width:80%;border:2px solid #ffb8d8}
+#toast{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);
+  background:linear-gradient(135deg,rgba(255,255,255,.9),rgba(255,240,250,.9));
+  color:#5a2a8a;padding:16px 30px;border-radius:18px;font-size:16px;font-weight:bold;z-index:2000;
+  pointer-events:none;opacity:0;transition:opacity .3s;text-align:center;max-width:80%;
+  border:1.5px solid #fff;box-shadow:0 12px 40px rgba(0,0,0,.4);
+  backdrop-filter:blur(20px);
+}
 #toast.show{opacity:1}
-#bossSubtitle{position:fixed;bottom:110px;left:50%;transform:translateX(-50%);color:#fff;font-size:19px;font-weight:bold;background:rgba(50,30,80,.75);padding:14px 26px;border-radius:16px;z-index:50;pointer-events:none;opacity:0;transition:opacity .4s;max-width:85%;text-align:center;border:1.5px solid rgba(255,200,240,.5)}
+#bossSubtitle{position:fixed;bottom:110px;left:50%;transform:translateX(-50%);color:#fff;font-size:19px;font-weight:bold;background:rgba(50,30,80,.75);padding:14px 26px;border-radius:16px;z-index:50;pointer-events:none;opacity:0;transition:opacity .4s;max-width:85%;text-align:center;border:1.5px solid rgba(255,200,240,.5);backdrop-filter:blur(12px)}
 #bossSubtitle.show{opacity:1}
 #hitmark{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);color:#ff5588;font-size:42px;font-weight:bold;opacity:0;pointer-events:none;z-index:11;transition:opacity .15s}
 #damage{position:fixed;inset:0;background:radial-gradient(ellipse at center,transparent 45%,rgba(255,60,120,.5) 100%);pointer-events:none;opacity:0;z-index:9;transition:opacity .2s}
-#gearBtn{position:fixed;top:12px;left:12px;width:44px;height:44px;border-radius:50%;background:#fff;color:#5a2a8a;border:2px solid #fff;font-size:20px;cursor:pointer;z-index:30;display:flex;align-items:center;justify-content:center}
-#fsBtn{position:fixed;top:12px;left:64px;width:44px;height:44px;border-radius:50%;background:#fff;color:#5a2a8a;border:2px solid #fff;font-size:22px;cursor:pointer;z-index:30;display:none;align-items:center;justify-content:center}
+#gearBtn{position:fixed;top:12px;left:12px;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.25);color:#fff;border:1.5px solid rgba(255,255,255,.5);font-size:20px;cursor:pointer;z-index:30;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(10px);box-shadow:0 4px 16px rgba(0,0,0,.25)}
+#fsBtn{position:fixed;top:12px;left:64px;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.25);color:#fff;border:1.5px solid rgba(255,255,255,.5);font-size:22px;cursor:pointer;z-index:30;display:none;align-items:center;justify-content:center;backdrop-filter:blur(10px)}
 @media (pointer:coarse){#fsBtn{display:flex}}
-#editCtrlBtn{position:fixed;top:12px;left:116px;width:44px;height:44px;border-radius:50%;background:#fff;color:#5a2a8a;border:2px solid #fff;font-size:20px;cursor:pointer;z-index:30;display:none;align-items:center;justify-content:center}
+#editCtrlBtn{position:fixed;top:12px;left:116px;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.25);color:#fff;border:1.5px solid rgba(255,255,255,.5);font-size:20px;cursor:pointer;z-index:30;display:none;align-items:center;justify-content:center;backdrop-filter:blur(10px)}
 @media (pointer:coarse){#editCtrlBtn{display:flex}}
-#editCtrlBtn.active{background:#ffb8d8;color:#fff}
+#editCtrlBtn.active{background:rgba(255,150,210,.7);color:#fff}
 .actionBtn.draggable,.wpnBtn.draggable,#joystick.draggable{cursor:move;border-color:#ff8ac8 !important}
 #shopGrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;width:100%;max-width:1200px;padding:0 20px 30px 20px;box-sizing:border-box}
 #fpsHud{position:fixed;top:90px;left:14px;color:#88ff88;font-size:11px;font-weight:bold;background:rgba(20,30,40,.55);padding:5px 10px;border-radius:8px;z-index:10;pointer-events:none;display:none;font-family:monospace}
@@ -237,13 +323,6 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;heigh
 </style>
 </head>
 <body>
-
-<!-- ==================== SEO مخفی ==================== -->
-<div style="position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;overflow:hidden" aria-hidden="true">
-  <h1>آنجل استرایک - بازی تیراندازی سه‌بعدی محله رضا گلزار</h1>
-  <h2>ساخته سهیل ایمانی از مدرسه درخشنده صراف</h2>
-  <p>آنجل استرایک یک بازی تیراندازی مرورگری است که در محله رضا گلزار اتفاق می‌افتد. بازیکن می‌تواند در فروشگاه اسلحه، سلاح‌های مختلف مثل AK-47، AWP، چاقوهای کمیاب و تلفن آقای دهقان بخرد. باس‌های بازی شامل سوزنی با دماغ بزرگ و شکم قرومساق هستند. این بازی برای موبایل و کامپیوتر بهینه شده است.</p>
-</div>
 
 <div id="errBox"></div>
 <div id="toast"></div>
@@ -261,16 +340,16 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;heigh
 <div id="healthWrap"><div id="healthBar"><div id="healthFill"></div></div><div id="healthNum">150</div></div>
 <div id="ammoHud"><span class="ammoBig" id="ammoCount">17</span>/<span id="ammoMax">90</span><div id="wpnName">🔫 Glock-18</div></div>
 <div id="kills">🎯 0 / 12</div>
-<div id="scoreHud">💰 امتیاز: <span class="num" id="scoreVal">0</span></div>
-<div id="levelHud">🏆 مرحله: <span class="lv" id="levelVal">1</span></div>
+<div id="scoreHud">💰 <span id="scoreLabel">امتیاز</span>: <span class="num" id="scoreVal">0</span></div>
+<div id="levelHud">🏆 <span id="levelLabel">مرحله</span>: <span class="lv" id="levelVal">1</span></div>
 <div id="fpsHud">FPS: <span id="fpsVal">60</span></div>
 
-<div id="bossBar"><div id="bossBarFill"></div><div id="bossBarLabel">🕴️ باس</div></div>
+<div id="bossBar"><div id="bossBarFill"></div><div id="bossBarLabel">🕴️ Boss</div></div>
 
 <div id="hitmark">✕</div>
 <div id="damage"></div>
 <div id="bossSubtitle"></div>
-<div id="aimZoomHud">🔭 زوم: <span class="zv" id="zoomVal">1.0×</span></div>
+<div id="aimZoomHud">🔭 <span id="zoomLabel">زوم</span>: <span class="zv" id="zoomVal">1.0×</span></div>
 <div id="stanceHud"></div>
 <div id="danceHud"></div>
 
@@ -282,7 +361,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;heigh
   <div id="joystick"><div id="joyKnob"></div></div>
   <div id="weaponBtns"></div>
   <div class="actionBtn" id="reloadBtn">🔄</div>
-  <div class="actionBtn" id="jumpBtn">پرش</div>
+  <div class="actionBtn" id="jumpBtn">Jump</div>
   <div class="actionBtn" id="adsBtn">🎯</div>
   <div class="actionBtn" id="slideBtn">💨</div>
   <div class="actionBtn" id="proneBtn">🛌</div>
@@ -292,9 +371,9 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;heigh
 </div>
 
 <div id="startScreen" class="overlayScreen">
-  <h1>آنجل استرایک</h1>
+  <h1 id="titleMain">آنجل استرایک</h1>
   <div class="subtitle">ANGEL STRIKE — ARSENAL</div>
-  <div class="totalScore">💰 امتیاز کل: <span class="num" id="startScoreVal">0</span></div>
+  <div class="totalScore">💰 <span id="startScoreLabel">امتیاز کل</span>: <span class="num" id="startScoreVal">0</span></div>
   <button class="btn" id="startBtn">▶ شروع بازی</button>
   <button class="btn secondary" id="openShopBtn">🛒 فروشگاه اسلحه</button>
   <button class="tutorialBtn" id="tutorialBtn">📚 آموزش</button>
@@ -302,8 +381,8 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;heigh
 </div>
 
 <div id="tutorialScreen" class="overlayScreen">
-  <h1 style="font-size:36px;color:#8a3ac8">📚 آموزش</h1>
-  <div class="tutBox">
+  <h1 style="font-size:36px;color:#ffb8e0;text-shadow:0 0 20px rgba(255,150,220,.7)" id="tutorialTitle">📚 آموزش</h1>
+  <div class="tutBox" id="tutorialBody">
     <h3>🎮 حرکت</h3>
     <span class="key">WASD</span> حرکت | <span class="key">Space</span> پرش
     <h3>💨 اسلاید</h3>
@@ -320,7 +399,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;heigh
     کلیک وسط موس یا <span class="key">G</span>
     <h3>🔫 اسلحه</h3>
     <span class="key">1</span><span class="key">2</span><span class="key">3</span> | <span class="key">R</span> خشاب | <span class="key">Esc</span> توقف
-    <div class="tutFooter">
+    <div class="tutFooter" id="tutorialFooter">
       ⚠️ کپی کردن ممنوع، من اینو ساختم ⚠️<br>
       ساخته شده توسط سهیل ایمانی از مدرسه درخشنده صراف<br>
       ممنون از آقای دهقان که تلفنش رو قرض داد
@@ -330,18 +409,18 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;heigh
 </div>
 
 <div id="mapSelectScreen" class="overlayScreen">
-  <h1 style="color:#ff5a9a">🗺️ انتخاب نقشه</h1>
+  <h1 style="color:#fff;text-shadow:0 0 20px rgba(255,120,200,.7)" id="mapTitle">🗺️ انتخاب نقشه</h1>
   <div class="mapGrid" id="mapGrid"></div>
   <button class="backBtn" id="mapBackBtn">←</button>
 </div>
 
 <div id="loadoutScreen" class="overlayScreen">
-  <h1 style="color:#ff5a9a">🎒 انتخاب تجهیزات</h1>
-  <p style="color:#6a5a8a;font-weight:600">۲ اسلحه + ۱ چاقو</p>
+  <h1 style="color:#fff;text-shadow:0 0 20px rgba(255,120,200,.7)" id="loadoutTitle">🎒 انتخاب تجهیزات</h1>
+  <p style="color:rgba(255,255,255,.85);font-weight:600" id="loadoutSub">۲ اسلحه + ۱ چاقو</p>
   <div id="loadoutSlots">
-    <div class="loadSlot" data-slot="0">🎯 اسلات ۱<br><span style="font-size:11px;opacity:.7">خالی</span></div>
-    <div class="loadSlot" data-slot="1">🎯 اسلات ۲<br><span style="font-size:11px;opacity:.7">خالی</span></div>
-    <div class="loadSlot knife" data-slot="2">🗡️ چاقو<br><span style="font-size:11px;opacity:.85">پیش‌فرض</span></div>
+    <div class="loadSlot" data-slot="0">🎯 <span id="slot1Label">اسلات ۱</span><br><span style="font-size:11px;opacity:.7" id="slot1Empty">خالی</span></div>
+    <div class="loadSlot" data-slot="1">🎯 <span id="slot2Label">اسلات ۲</span><br><span style="font-size:11px;opacity:.7" id="slot2Empty">خالی</span></div>
+    <div class="loadSlot knife" data-slot="2">🗡️ <span id="slotKnifeLabel">چاقو</span><br><span style="font-size:11px;opacity:.85" id="slotKnifeDefault">پیش‌فرض</span></div>
   </div>
   <div id="loadoutGrid"></div>
   <button id="loadoutConfirm">✅ شروع بازی</button>
@@ -349,8 +428,8 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;heigh
 </div>
 
 <div id="pauseScreen" class="overlayScreen">
-  <h1>آنجل استرایک</h1>
-  <p style="opacity:.75;letter-spacing:3px;color:#6a5a8a;font-weight:700">— ⏸️ متوقف شد —</p>
+  <h1 id="pauseTitle">آنجل استرایک</h1>
+  <p style="opacity:.85;letter-spacing:3px;color:rgba(255,255,255,.85);font-weight:700" id="pauseSub">— ⏸️ متوقف شد —</p>
   <button class="menuBtn" id="resumeBtn">▶️ ادامه</button>
   <button class="menuBtn musicBtn" id="musicBtn">🔊 موسیقی: روشن</button>
   <button class="menuBtn" id="settingsFromPauseBtn">⚙️ تنظیمات</button>
@@ -361,8 +440,8 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;heigh
 <div id="shopScreen" class="overlayScreen">
   <button class="closeX" id="shopCloseBtn">✕</button>
   <div class="shopHeader">
-    <h1>🛒 فروشگاه اسلحه</h1>
-    <div class="shopScore">💰 امتیاز: <span id="shopScoreVal">0</span></div>
+    <h1 id="shopTitle">🛒 فروشگاه اسلحه</h1>
+    <div class="shopScore">💰 <span id="shopScoreLabel">امتیاز</span>: <span id="shopScoreVal">0</span></div>
     <div class="shopFilters" id="shopFilters"></div>
   </div>
   <div id="shopGrid"></div>
@@ -370,12 +449,16 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;heigh
 
 <div id="settingsScreen" class="overlayScreen">
   <button class="closeX" id="settingsCloseBtn">✕</button>
-  <h1 style="font-size:32px;color:#ff5a9a">⚙️ تنظیمات</h1>
+  <h1 style="font-size:32px;color:#fff;text-shadow:0 0 20px rgba(255,120,200,.7)" id="settingsTitle">⚙️ تنظیمات</h1>
   <div id="settingsScroll"></div>
   <button class="backBtn" id="settingsBackBtn">←</button>
 </div>
 
 <script>
+// ============================================================
+// اول موتور بازی رو لود میکنیم. سه تا CDN گذاشتم چون
+// اینترنت ما معلوم نیست کدوم رو بلاک کرده. شانس بیاریم :)
+// ============================================================
 (function() {
   var cdns = [
     'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js',
@@ -386,7 +469,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;heigh
   function tryLoad() {
     if (idx >= cdns.length) {
       var e = document.getElementById('errBox');
-      if (e) { e.style.display='block'; e.textContent='⚠️ three.js لود نشد! اینترنتت رو چک کن عزیزم'; }
+      if (e) { e.style.display='block'; e.textContent='⚠️ three.js لود نشد! اینترنتت رو چک کن'; }
       return;
     }
     var s = document.createElement('script');
@@ -403,12 +486,112 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;heigh
 window.__START__ = function() {
 if (typeof THREE === 'undefined') return;
 
-var K_SCORE='angel_score_v74';
-var K_OWNED='angel_owned_v74';
-var K_LOADOUT='angel_loadout_v74';
-var K_SETTINGS='angel_settings_v74';
-var K_PROGRESS='angel_progress_v74';
-var K_CTRL='angel_ctrl_pos_v74';
+// ============================================================
+// سیستم زبان. وقتی زبان عوض میشه همه چی عوض میشه.
+// مثل مغازه آقای دهقان که تابلو فارسی داره انگلیسی هم میزنه
+// ============================================================
+var LANG = 'fa';
+
+var I18N = {
+  fa: {
+    title: 'آنجل استرایک',
+    score: 'امتیاز',
+    totalScore: 'امتیاز کل',
+    level: 'مرحله',
+    startGame: '▶ شروع بازی',
+    shop: '🛒 فروشگاه اسلحه',
+    tutorial: '📚 آموزش',
+    settings: '⚙️ تنظیمات',
+    selectMap: '🗺️ انتخاب نقشه',
+    loadout: '🎒 انتخاب تجهیزات',
+    loadoutSub: '۲ اسلحه + ۱ چاقو',
+    slot1: 'اسلات ۱',
+    slot2: 'اسلات ۲',
+    knife: 'چاقو',
+    default: 'پیش‌فرض',
+    empty: 'خالی',
+    startBtn2: '✅ شروع بازی',
+    paused: '— ⏸️ متوقف شد —',
+    resume: '▶️ ادامه',
+    musicOn: '🔊 موسیقی: روشن',
+    musicOff: '🔇 موسیقی: خاموش',
+    restart: '🔄 شروع مجدد',
+    mainMenu: '🏠 منوی اصلی',
+    shopTitle: '🛒 فروشگاه اسلحه',
+    zoom: 'زوم',
+    boss: '🕴️ باس',
+    lockedWeapon: '🔒 این اسلحه رو نداری!',
+    bought: 'خریداری شد!',
+    equipped: '✓ در چرخ',
+    add: '🎒 افزودن',
+    free: '🎁 رایگان',
+    buy: '🛒 خرید',
+    notEnough: '🔒 کمبود',
+    ready: '🗡️ آماده!',
+    killed: '🏆 پیروزی!',
+    killedKnife: '🗡️ باس با چاقو!',
+    youDied: '☠️ مُردی!',
+    backToMenu: '🏠 برگشت به منو...',
+    notEnoughScore: '❌ کمبود امتیاز',
+    langLabel: '🌐 زبان',
+    persian: 'فارسی',
+    english: 'English'
+  },
+  en: {
+    title: 'Angel Strike',
+    score: 'Score',
+    totalScore: 'Total Score',
+    level: 'Level',
+    startGame: '▶ Start Game',
+    shop: '🛒 Weapon Shop',
+    tutorial: '📚 Tutorial',
+    settings: '⚙️ Settings',
+    selectMap: '🗺️ Select Map',
+    loadout: '🎒 Loadout',
+    loadoutSub: '2 Weapons + 1 Knife',
+    slot1: 'Slot 1',
+    slot2: 'Slot 2',
+    knife: 'Knife',
+    default: 'Default',
+    empty: 'Empty',
+    startBtn2: '✅ Start Game',
+    paused: '— ⏸️ Paused —',
+    resume: '▶️ Resume',
+    musicOn: '🔊 Music: On',
+    musicOff: '🔇 Music: Off',
+    restart: '🔄 Restart',
+    mainMenu: '🏠 Main Menu',
+    shopTitle: '🛒 Weapon Shop',
+    zoom: 'Zoom',
+    boss: '🕴️ Boss',
+    lockedWeapon: '🔒 You don\'t own this weapon!',
+    bought: 'Purchased!',
+    equipped: '✓ Equipped',
+    add: '🎒 Add',
+    free: '🎁 Free',
+    buy: '🛒 Buy',
+    notEnough: '🔒 Not enough',
+    ready: '🗡️ Ready!',
+    killed: '🏆 Victory!',
+    killedKnife: '🗡️ Boss killed with knife!',
+    youDied: '☠️ You died!',
+    backToMenu: '🏠 Back to menu...',
+    notEnoughScore: '❌ Not enough score',
+    langLabel: '🌐 Language',
+    persian: 'فارسی',
+    english: 'English'
+  }
+};
+function t(k){ return (I18N[LANG] && I18N[LANG][k]) || k; }
+
+// کلیدهای ذخیره
+var K_SCORE='angel_score_v75';
+var K_OWNED='angel_owned_v75';
+var K_LOADOUT='angel_loadout_v75';
+var K_SETTINGS='angel_settings_v75';
+var K_PROGRESS='angel_progress_v75';
+var K_CTRL='angel_ctrl_pos_v75';
+var K_LANG='angel_lang_v75';
 
 var totalScore=0;
 var ownedWeapons=['glock','ak','butterfly'];
@@ -420,7 +603,8 @@ var settings={
   screenShake:1, crosshairSize:26, crosshairThickness:2, crosshairColor:'#ffffff',
   hitmarker:true, hitmarkerSound:true, autoReload:false, toggleAds:false,
   invertY:false, sprintToggle:false, shadows:'high', aa:true, showFps:false,
-  camShake:1, walkBob:1, gunSway:1, ambientVolume:0.5, footsteps:true
+  camShake:1, walkBob:1, gunSway:1, ambientVolume:0.5, footsteps:true,
+  touchSensitivity:1.5
 };
 
 var progress={level:1,totalPlays:0,bestStage:1};
@@ -431,11 +615,12 @@ try{
   var lo=localStorage.getItem(K_LOADOUT); if(lo){var lp=JSON.parse(lo); if(Array.isArray(lp)&&lp.length)savedLoadout=lp;}
   var se=localStorage.getItem(K_SETTINGS); if(se){var sp=JSON.parse(se); if(sp){for(var k in sp)settings[k]=sp[k];}}
   var pr=localStorage.getItem(K_PROGRESS); if(pr){var prp=JSON.parse(pr); if(prp){progress.level=prp.level||1;progress.totalPlays=prp.totalPlays||0;progress.bestStage=prp.bestStage||1;}}
+  var lg=localStorage.getItem(K_LANG); if(lg && (lg==='fa'||lg==='en')) LANG=lg;
 }catch(e){}
 
 ['glock','ak','butterfly'].forEach(function(id){if(ownedWeapons.indexOf(id)<0)ownedWeapons.push(id);});
 
-function saveGame(){try{localStorage.setItem(K_SCORE,String(totalScore));localStorage.setItem(K_OWNED,JSON.stringify(ownedWeapons));localStorage.setItem(K_LOADOUT,JSON.stringify(savedLoadout));localStorage.setItem(K_SETTINGS,JSON.stringify(settings));localStorage.setItem(K_PROGRESS,JSON.stringify(progress));}catch(e){}}
+function saveGame(){try{localStorage.setItem(K_SCORE,String(totalScore));localStorage.setItem(K_OWNED,JSON.stringify(ownedWeapons));localStorage.setItem(K_LOADOUT,JSON.stringify(savedLoadout));localStorage.setItem(K_SETTINGS,JSON.stringify(settings));localStorage.setItem(K_PROGRESS,JSON.stringify(progress));localStorage.setItem(K_LANG,LANG);}catch(e){}}
 function addScore(n){totalScore+=n;saveGame();updateStartScore();updateShopScore();}
 function getEnemyHpMult(){return 1+(progress.level-1)*0.30;}
 function getEnemySpeedMult(){return 1+(progress.level-1)*0.07;}
@@ -464,17 +649,32 @@ var wheelOpen=false,wheelHover=0,wheelPointerX=0,wheelPointerY=0,wheelType='weap
 var fpsFrames=0,fpsLastTime=performance.now();
 var danceAnim={gunSpin:0,gunTossY:0,gunTossVel:0,gunWave:0,gunFlip:0,armRaise:0};
 var lastFootstep=0, ambientBirdTimer=3+Math.random()*4;
+
+// برای چرخش دوربین با لمس
+var cameraTouchId = null;
+var cameraTouchLastX = 0, cameraTouchLastY = 0;
+var cameraTouchStartTime = 0;
+var cameraTouchStartX = 0, cameraTouchStartY = 0;
+
+// برای باس سهند و ارواح
+var sahandGhosts = [];   // سه تا روح
+var sahandGhostState = 'idle';  // idle, attacking, returning
+var sahandGhostAttackCooldown = 0;
+var sahandGhostActiveIdx = -1;
+var sahandGhostTimer = 0;
+var SAHAND_GHOST_HOME_POS = null;
+
 function resetDanceAnim(){danceAnim.gunSpin=0;danceAnim.gunTossY=0;danceAnim.gunTossVel=0;danceAnim.gunWave=0;danceAnim.gunFlip=0;danceAnim.armRaise=0;}
 
 var DANCES=[
-  {id:'floss',name:'فلوس',emoji:'🕺',desc:'رقص فلوس'},
-  {id:'dab',name:'دَب',emoji:'💪',desc:'حرکت دَب'},
-  {id:'renegade',name:'رنه‌گید',emoji:'👯',desc:'رقص تیک‌تاکی'},
-  {id:'orange',name:'اورنج',emoji:'🍊',desc:'رقص انیمه'},
-  {id:'savage',name:'سیواج',emoji:'🔥',desc:'رقص خیابانی'},
-  {id:'moonwalk',name:'مون‌واک',emoji:'🌙',desc:'راه ماه'},
-  {id:'robot',name:'ربات',emoji:'🤖',desc:'رقص رباتی'},
-  {id:'floss2',name:'فلوس سریع',emoji:'⚡',desc:'فلوس سریع'}
+  {id:'floss',name:'فلوس',emoji:'🕺'},
+  {id:'dab',name:'دَب',emoji:'💪'},
+  {id:'renegade',name:'رنه‌گید',emoji:'👯'},
+  {id:'orange',name:'اورنج',emoji:'🍊'},
+  {id:'savage',name:'سیواج',emoji:'🔥'},
+  {id:'moonwalk',name:'مون‌واک',emoji:'🌙'},
+  {id:'robot',name:'ربات',emoji:'🤖'},
+  {id:'floss2',name:'فلوس سریع',emoji:'⚡'}
 ];
 
 function refreshCurrentWeapon(){currentWeapon=carriedWeapons[activeSlot]>=0?carriedWeapons[activeSlot]:0;}
@@ -484,6 +684,7 @@ var meleeCooldown=0,meleeAnimT=0;
 var PASTEL=['#FFD1DC','#FFE5B4','#FFFACD','#D4F1D4','#D4E6F1','#E0D4F1','#F1D4E6'];
 var pastelIdx=0;
 
+// اسلحه ها
 var weapons=[
   {id:'glock',cat:'pistol',name:'Glock-18',price:0,damage:1.5,fireRate:70,magSize:17,ammo:17,reserve:102,maxReserve:102,reloadTime:1300,auto:true,spread:0.014,sound:'glock',skinEmoji:'🔫',skinGrad:'linear-gradient(135deg,#2a2a2a,#0a0a0a)',desc:'پیستول اتریشی'},
   {id:'ak',cat:'rifle',name:'AK-47',price:0,damage:3,fireRate:130,magSize:30,ammo:30,reserve:90,maxReserve:90,reloadTime:1900,auto:true,spread:0.022,sound:'ak',skinEmoji:'🪖',skinGrad:'linear-gradient(135deg,#1a0d05,#5a2a10)',desc:'رایفل شوروی'},
@@ -527,39 +728,28 @@ for(var ki=0;ki<weapons.length;ki++){if(weapons[ki].id==='butterfly'){KNIFE_INDE
 var isReloading=false,weaponModels=[];
 function isOwned(id){return ownedWeapons.indexOf(id)>=0;}
 
-function playPhoneBeep(){
-  if(!audioCtx) return;
-  if(audioCtx.state==='suspended') audioCtx.resume();
-  var t=audioCtx.currentTime;
-  var v=settings.sfxVolume;
-  playTone(t,1200,1100,0.06,0.28*v,'sine');
-  playTone(t+0.06,1400,1300,0.05,0.22*v,'sine');
-  playNoise(t,0.02,8000,0.15*v,'highpass');
-}
-function playPhoneReload(){
-  if(!audioCtx) return;
-  var t=audioCtx.currentTime;
-  var v=settings.sfxVolume;
-  playNoise(t,0.15,2000,0.3*v,'bandpass');
-  playTone(t+0.2,800,600,0.05,0.2*v,'square');
-  playNoise(t+0.3,0.1,3000,0.25*v,'highpass');
-  playTone(t+0.5,900,700,0.05,0.2*v,'square');
-  playNoise(t+0.7,0.12,1500,0.3*v,'bandpass');
-}
+// ============================================================
+// صداها. همه ساختگی. آقای دهقان گفت با دهنم بسازم
+// گفتم نه با کد میسازم. گفت اوکی. مرد خوبیه
+// ============================================================
+function playPhoneBeep(){if(!audioCtx)return;if(audioCtx.state==='suspended')audioCtx.resume();var t=audioCtx.currentTime;var v=settings.sfxVolume;playTone(t,1200,1100,0.06,0.28*v,'sine');playTone(t+0.06,1400,1300,0.05,0.22*v,'sine');playNoise(t,0.02,8000,0.15*v,'highpass');}
+function playPhoneReload(){if(!audioCtx)return;var t=audioCtx.currentTime;var v=settings.sfxVolume;playNoise(t,0.15,2000,0.3*v,'bandpass');playTone(t+0.2,800,600,0.05,0.2*v,'square');playNoise(t+0.3,0.1,3000,0.25*v,'highpass');playTone(t+0.5,900,700,0.05,0.2*v,'square');playNoise(t+0.7,0.12,1500,0.3*v,'bandpass');}
 
 var audioCtx=null,musicPlaying=true,musicScheduler=null,musicStep=0,nextNoteTime=0;
 function initAudio(){try{audioCtx=new(window.AudioContext||window.webkitAudioContext)();}catch(e){}}
 function playNoise(t0,dur,ff,gv,type){if(!audioCtx)return;type=type||'lowpass';var sz=Math.max(1,Math.floor(audioCtx.sampleRate*dur));var buf=audioCtx.createBuffer(1,sz,audioCtx.sampleRate);var d=buf.getChannelData(0);for(var i=0;i<sz;i++)d[i]=Math.random()*2-1;var n=audioCtx.createBufferSource();n.buffer=buf;var f=audioCtx.createBiquadFilter();f.type=type;f.frequency.value=ff;var g=audioCtx.createGain();g.gain.setValueAtTime(gv,t0);g.gain.exponentialRampToValueAtTime(0.001,t0+dur);n.connect(f);f.connect(g);g.connect(audioCtx.destination);n.start(t0);n.stop(t0+dur);}
 function playTone(t0,f0,f1,dur,gv,type){if(!audioCtx)return;type=type||'sine';var o=audioCtx.createOscillator();o.type=type;o.frequency.setValueAtTime(f0,t0);o.frequency.exponentialRampToValueAtTime(Math.max(10,f1),t0+dur);var g=audioCtx.createGain();g.gain.setValueAtTime(gv,t0);g.gain.exponentialRampToValueAtTime(0.001,t0+dur);o.connect(g);g.connect(audioCtx.destination);o.start(t0);o.stop(t0+dur);}
-function speakText(text,opts){opts=opts||{};if(!('speechSynthesis' in window))return false;try{if(!opts.queue)window.speechSynthesis.cancel();var u=new SpeechSynthesisUtterance(text);u.lang='fa-IR';u.rate=opts.rate||1;u.pitch=opts.pitch||1;u.volume=(opts.volume||1)*settings.voiceVolume;var vs=window.speechSynthesis.getVoices();for(var i=0;i<vs.length;i++)if(vs[i].lang&&vs[i].lang.toLowerCase().indexOf('fa')===0){u.voice=vs[i];break;}window.speechSynthesis.speak(u);return true;}catch(e){return false;}}
+function speakText(text,opts){opts=opts||{};if(!('speechSynthesis' in window))return false;try{if(!opts.queue)window.speechSynthesis.cancel();var u=new SpeechSynthesisUtterance(text);u.lang=LANG==='en'?'en-US':'fa-IR';u.rate=opts.rate||1;u.pitch=opts.pitch||1;u.volume=(opts.volume||1)*settings.voiceVolume;var vs=window.speechSynthesis.getVoices();for(var i=0;i<vs.length;i++){var l=vs[i].lang&&vs[i].lang.toLowerCase();if(LANG==='en'&&l.indexOf('en')===0){u.voice=vs[i];break;}if(LANG==='fa'&&l.indexOf('fa')===0){u.voice=vs[i];break;}}window.speechSynthesis.speak(u);return true;}catch(e){return false;}}
 if('speechSynthesis' in window){window.speechSynthesis.getVoices();window.speechSynthesis.onvoiceschanged=function(){window.speechSynthesis.getVoices();};}
 var lastSiktir=0;
-function speakSiktir(){var n=performance.now();if(n-lastSiktir<900)return;lastSiktir=n;if(!speakText('سیکتیر',{rate:1.3,pitch:0.5,queue:true}))playSiktirSound();}
-function speakBossIntro(){speakText('سیکتیر کن داداش اینجا محله ماست',{rate:0.85,pitch:0.35});}
-function speakShikamIntro(){speakText('سیکتیر کن دایی تا با شکمم پرس نکردمت',{rate:0.7,pitch:0.25});}
+function speakSiktir(){var n=performance.now();if(n-lastSiktir<900)return;lastSiktir=n;var word=LANG==='en'?'Siktir!':'سیکتیر';if(!speakText(word,{rate:1.3,pitch:0.5,queue:true}))playSiktirSound();}
+function speakBossIntro(){var msg=LANG==='en'?'Get lost man, this is our neighborhood':'سیکتیر کن داداش اینجا محله ماست';speakText(msg,{rate:0.85,pitch:0.35});}
+function speakShikamIntro(){var msg=LANG==='en'?'Get lost until I belly-slam you!':'سیکتیر کن دایی تا با شکمم پرس نکردمت';speakText(msg,{rate:0.7,pitch:0.25});}
+function speakSahandIntro(){var msg=LANG==='en'?'Uncle Sahand is here with the aunts!':'عمو سهند با عمه هاش اومده!';speakText(msg,{rate:0.85,pitch:0.4});}
 function playSiktirSound(){if(!audioCtx)return;var t=audioCtx.currentTime;playTone(t,220,110,0.7,0.45*settings.sfxVolume,'sawtooth');playNoise(t,0.4,1200,0.25*settings.sfxVolume,'bandpass');}
 function playBossRoar(){if(!audioCtx)return;var t=audioCtx.currentTime;playNoise(t,1.6,800,0.6*settings.sfxVolume);playTone(t,90,25,1.4,0.7*settings.sfxVolume,'sawtooth');}
 function playBossLand(){if(!audioCtx)return;var t=audioCtx.currentTime;playNoise(t,0.7,400,0.9*settings.sfxVolume);playTone(t,120,30,0.7,0.7*settings.sfxVolume,'sine');}
+function playGhostWail(){if(!audioCtx)return;var t=audioCtx.currentTime,v=settings.sfxVolume;playTone(t,900,300,0.6,0.25*v,'sine');playTone(t+0.15,700,250,0.5,0.2*v,'sine');playNoise(t,0.5,2500,0.15*v,'bandpass');}
 function playGunshot(type){
   if(!audioCtx)return;
   if(audioCtx.state==='suspended')audioCtx.resume();
@@ -584,7 +774,6 @@ function playCarHorn(){if(!audioCtx)return;var t=audioCtx.currentTime,v=settings
 function playDanceMusic(){if(!audioCtx)return;var t=audioCtx.currentTime,v=settings.musicVolume;var notes=[262,294,330,349,392,440,494,523];for(var i=0;i<8;i++)playTone(t+i*0.15,notes[i],200,0.15,0.15*v,'triangle');}
 function playKnifeSwing(){if(!audioCtx)return;if(audioCtx.state==='suspended')audioCtx.resume();var t=audioCtx.currentTime,v=settings.sfxVolume;playNoise(t,0.14,4200,0.35*v,'highpass');playTone(t,1400,400,0.1,0.22*v,'sawtooth');}
 function playKnifeHit(){if(!audioCtx)return;var t=audioCtx.currentTime,v=settings.sfxVolume;playNoise(t,0.08,3000,0.4*v,'bandpass');playTone(t,500,120,0.12,0.3*v,'sawtooth');}
-
 function playFootstep(isRunning){
   if(!audioCtx||!settings.footsteps)return;
   var now=performance.now();
@@ -597,18 +786,12 @@ function playFootstep(isRunning){
   playNoise(t,0.03,2200,v*0.5,'bandpass');
 }
 function playAmbientBird(){
-  if(!audioCtx)return;
-  if(audioCtx.state==='suspended')return;
+  if(!audioCtx)return;if(audioCtx.state==='suspended')return;
   var t=audioCtx.currentTime,v=settings.sfxVolume*settings.ambientVolume*0.18;
   var base=1400+Math.random()*900;
   playTone(t,base,base*1.15,0.09,v,'sine');
   playTone(t+0.11,base*1.15,base*1.35,0.07,v,'sine');
   playTone(t+0.24,base*0.92,base*1.05,0.09,v,'sine');
-}
-function playWindSound(){
-  if(!audioCtx||audioCtx.state==='suspended')return;
-  var t=audioCtx.currentTime,v=settings.sfxVolume*settings.ambientVolume*0.05;
-  playNoise(t,2.5,600,v,'lowpass');
 }
 
 var bassNotes=[130.81,110.00,87.31,98.00];
@@ -644,8 +827,9 @@ function scheduleMusicStep(){
 function startMusic(){if(!audioCtx||musicScheduler||!settings.music)return;musicPlaying=true;musicStep=0;nextNoteTime=audioCtx.currentTime+0.1;scheduleMusicStep();updateMusicButton();}
 function stopMusic(){musicPlaying=false;if(musicScheduler)clearTimeout(musicScheduler);musicScheduler=null;updateMusicButton();}
 function toggleMusic(){if(musicPlaying)stopMusic();else{if(!settings.music)settings.music=true;startMusic();}saveGame();}
-function updateMusicButton(){var b=document.getElementById('musicBtn');if(b)b.textContent=musicPlaying?'🔊 موسیقی: روشن':'🔇 موسیقی: خاموش';}
+function updateMusicButton(){var b=document.getElementById('musicBtn');if(b)b.textContent=musicPlaying?t('musicOn'):t('musicOff');}
 
+// بافت ها
 function newCtx(s){var c=document.createElement('canvas');c.width=c.height=s;return c;}
 function addGrain(x,s,i){var id=x.getImageData(0,0,s,s),d=id.data;for(var k=0;k<d.length;k+=4){var n=(Math.random()-0.5)*i;d[k]+=n;d[k+1]+=n;d[k+2]+=n;}x.putImageData(id,0,0);}
 function makeGrassTex(){var c=newCtx(1024),x=c.getContext('2d');var g=x.createLinearGradient(0,0,1024,1024);g.addColorStop(0,'#7fd070');g.addColorStop(0.5,'#8ee080');g.addColorStop(1,'#6fc060');x.fillStyle=g;x.fillRect(0,0,1024,1024);for(var i=0;i<4000;i++){var greens=['#5aa84a','#7ac060','#4a9040','#9ad090'];x.fillStyle=greens[i%4];x.fillRect(Math.random()*1024,Math.random()*1024,Math.random()*4+1,Math.random()*8+2);}return c;}
@@ -657,7 +841,6 @@ function makeSnackTex(txt,bg1,bg2,fg){var c=newCtx(256),x=c.getContext('2d');var
 function makeOutfitTex(kind){var c=newCtx(512),x=c.getContext('2d');if(kind==='stripe'){x.fillStyle='#18283d';x.fillRect(0,0,512,512);x.save();x.rotate(-0.18);for(var i=-600;i<1000;i+=82){x.fillStyle=(i/82)%2?'#27c5ff':'#ff4f8b';x.fillRect(i,-100,34,800);}x.restore();}else if(kind==='camo'){x.fillStyle='#23452d';x.fillRect(0,0,512,512);var cc=['#385f36','#172d24','#7b6f39','#49663a'];for(var j=0;j<100;j++){x.fillStyle=cc[j%4];x.beginPath();x.ellipse(Math.random()*512,Math.random()*512,20+Math.random()*55,10+Math.random()*35,Math.random()*Math.PI,0,Math.PI*2);x.fill();}}else{x.fillStyle='#5b102d';x.fillRect(0,0,512,512);x.strokeStyle='#ffd33d';x.lineWidth=18;for(var k=-512;k<1024;k+=64){x.beginPath();x.moveTo(k,0);x.lineTo(k+512,512);x.stroke();}}var t=new THREE.CanvasTexture(c);t.wrapS=t.wrapT=THREE.RepeatWrapping;t.repeat.set(2,2);return t;}
 function makeRGBSparkleTex(){var c=newCtx(256),x=c.getContext('2d');x.fillStyle='#f0f4ff';x.fillRect(0,0,256,256);for(var i=0;i<180;i++){var hue=Math.floor(Math.random()*360);x.fillStyle='hsla('+hue+',100%,60%,'+(0.4+Math.random()*0.5)+')';x.beginPath();x.arc(Math.random()*256,Math.random()*256,1.5+Math.random()*4,0,Math.PI*2);x.fill();}var t=new THREE.CanvasTexture(c);t.wrapS=t.wrapT=THREE.RepeatWrapping;return t;}
 function makeTornPantsTex(){var c=newCtx(512),x=c.getContext('2d');x.fillStyle='#3a4a5a';x.fillRect(0,0,512,512);for(var i=0;i<60;i++){x.fillStyle='rgba(20,25,35,'+(0.4+Math.random()*0.5)+')';x.beginPath();var px=Math.random()*512,py=Math.random()*512;x.moveTo(px,py);x.lineTo(px+30+Math.random()*50,py+10+Math.random()*40);x.lineTo(px+Math.random()*60,py+60+Math.random()*60);x.closePath();x.fill();}return new THREE.CanvasTexture(c);}
-function makeMarbleTex(){var c=newCtx(512),x=c.getContext('2d');x.fillStyle='#f0ece0';x.fillRect(0,0,512,512);for(var i=0;i<40;i++){x.strokeStyle='rgba(140,130,110,'+(0.2+Math.random()*0.4)+')';x.lineWidth=1+Math.random()*3;x.beginPath();var sx=Math.random()*512,sy=Math.random()*512;x.moveTo(sx,sy);for(var j=0;j<5;j++){sx+=(Math.random()-0.5)*100;sy+=(Math.random()-0.5)*100;x.lineTo(sx,sy);}x.stroke();}return c;}
 
 function makeSignboard(text,color,bg,w,h){
   var c=document.createElement('canvas');
@@ -675,7 +858,6 @@ function makeSignboard(text,color,bg,w,h){
   var mat=new THREE.MeshBasicMaterial({map:tex,transparent:true,side:THREE.FrontSide,depthTest:true});
   return new THREE.Mesh(new THREE.PlaneGeometry(w||8,h||2),mat);
 }
-
 function makeTexLocal(canvas,rx,ry){var t=new THREE.CanvasTexture(canvas);t.wrapS=t.wrapT=THREE.RepeatWrapping;t.repeat.set(rx,ry);return t;}
 
 var TEX={},OUTFIT_TEX={};
@@ -700,6 +882,9 @@ var MATS={
   phoneAntenna:new THREE.MeshStandardMaterial({color:0x222222,metalness:0.5,roughness:0.5})
 };
 
+// ============================================================
+// مدل اسلحه ها. همه با دست ساخته شدن
+// ============================================================
 function createGlockViewmodel(){
   var g=new THREE.Group();
   var slide=new THREE.Mesh(new THREE.BoxGeometry(0.036,0.034,0.21),MATS.darkSteel);slide.position.set(0,0.020,-0.05);g.add(slide);
@@ -737,17 +922,12 @@ function createLegendaryViewmodel(){var g=createAKViewmodel();g.traverse(functio
 
 function createDehghanPhoneViewmodel(){
   var g=new THREE.Group();
-  var body=new THREE.Mesh(new THREE.BoxGeometry(0.06,0.20,0.025),MATS.phoneBody);
-  body.position.set(0,0,0);g.add(body);
-  var screen=new THREE.Mesh(new THREE.BoxGeometry(0.045,0.035,0.002),MATS.phoneScreen);
-  screen.position.set(0,0.065,0.014);g.add(screen);
+  var body=new THREE.Mesh(new THREE.BoxGeometry(0.06,0.20,0.025),MATS.phoneBody);body.position.set(0,0,0);g.add(body);
+  var screen=new THREE.Mesh(new THREE.BoxGeometry(0.045,0.035,0.002),MATS.phoneScreen);screen.position.set(0,0.065,0.014);g.add(screen);
   for(var px=0;px<5;px++){for(var py=0;py<3;py++){var pixel=new THREE.Mesh(new THREE.BoxGeometry(0.006,0.006,0.001),new THREE.MeshBasicMaterial({color:0x224422}));pixel.position.set(-0.015+px*0.008, 0.055+py*0.008, 0.0155);if(Math.random()>0.4) g.add(pixel);}}
-  var antenna=new THREE.Mesh(new THREE.CylinderGeometry(0.003,0.003,0.035,6),MATS.phoneAntenna);
-  antenna.position.set(0.022,0.115,0);g.add(antenna);
-  var antTip=new THREE.Mesh(new THREE.SphereGeometry(0.005,6,5),MATS.phoneAntenna);
-  antTip.position.set(0.022,0.133,0);g.add(antTip);
-  var speaker=new THREE.Mesh(new THREE.BoxGeometry(0.03,0.005,0.003),MATS.matteBlack);
-  speaker.position.set(0,0.09,0.013);g.add(speaker);
+  var antenna=new THREE.Mesh(new THREE.CylinderGeometry(0.003,0.003,0.035,6),MATS.phoneAntenna);antenna.position.set(0.022,0.115,0);g.add(antenna);
+  var antTip=new THREE.Mesh(new THREE.SphereGeometry(0.005,6,5),MATS.phoneAntenna);antTip.position.set(0.022,0.133,0);g.add(antTip);
+  var speaker=new THREE.Mesh(new THREE.BoxGeometry(0.03,0.005,0.003),MATS.matteBlack);speaker.position.set(0,0.09,0.013);g.add(speaker);
   var buttonRows=4,buttonCols=3,startY=0.005,startX=-0.015,spacingX=0.015,spacingY=0.014;
   for(var r=0;r<buttonRows;r++){for(var c=0;c<buttonCols;c++){var btn=new THREE.Mesh(new THREE.BoxGeometry(0.011,0.010,0.003),MATS.phoneButton);btn.position.set(startX+c*spacingX, startY-r*spacingY, 0.013);g.add(btn);var label=new THREE.Mesh(new THREE.BoxGeometry(0.008,0.007,0.001),new THREE.MeshBasicMaterial({color:0xdddddd}));label.position.set(startX+c*spacingX, startY-r*spacingY, 0.0145);g.add(label);}}
   var topBtn1=new THREE.Mesh(new THREE.BoxGeometry(0.014,0.008,0.003),MATS.phoneButton);topBtn1.position.set(-0.012,0.04,0.013);g.add(topBtn1);
@@ -759,7 +939,7 @@ function createDehghanPhoneViewmodel(){
   return g;
 }
 
-var knifeBladeGroup=null,knifeHandle2Group=null;
+var knifeBladeGroup=null;
 function makeKnifeBase(bladeColor,bladeEmissive,accentColor,accentEmissive,handleColor){
   var bladeMat=new THREE.MeshStandardMaterial({color:bladeColor,metalness:0.98,roughness:0.05,emissive:bladeEmissive,emissiveIntensity:0.15});
   var edgeMat=new THREE.MeshStandardMaterial({color:0xffffff,metalness:1.0,roughness:0.02,emissive:0xaaddff,emissiveIntensity:0.25});
@@ -844,6 +1024,9 @@ function buildCar(opts){
   return g;
 }
 
+// ============================================================
+// ساخت نقشه. محله رضا گلزار. همه چی توش داره
+// ============================================================
 var MAP_SIZE=250;
 function buildMap(){
   var ground=new THREE.Mesh(new THREE.PlaneGeometry(600,600),new THREE.MeshStandardMaterial({map:makeTexLocal(TEX.grass,60,60),color:0xc8e8a8,roughness:0.9}));
@@ -870,6 +1053,7 @@ function buildMap(){
     for(var i=0;i<8;i++){var ang=(i/8)*Math.PI*2;var tx=-80+Math.cos(ang)*30,tz=-80+Math.sin(ang)*30;var tree=new THREE.Group();var trunk=new THREE.Mesh(new THREE.CylinderGeometry(0.4,0.5,3,8),new THREE.MeshStandardMaterial({color:0x8a5530}));trunk.position.y=1.5;tree.add(trunk);var leaves=new THREE.Mesh(new THREE.SphereGeometry(1.8,8,6),new THREE.MeshStandardMaterial({color:0x4ad04a,emissive:0x2a802a,emissiveIntensity:0.1}));leaves.position.y=3.6;tree.add(leaves);tree.position.set(tx,0,tz);scene.add(tree);obstacles.push({geometry:{type:'CylinderGeometry',parameters:{radiusTop:0.9,height:4}},position:new THREE.Vector3(tx,2,tz)});}
   })();
 
+  // مدرسه
   (function(){
     var school=new THREE.Group();
     var wallMat=new THREE.MeshStandardMaterial({color:0xf0e0b0,roughness:0.85});
@@ -910,6 +1094,7 @@ function buildMap(){
     sign.position.set(signWorldX,signLocalY,signWorldZ);sign.rotation.y=-3*Math.PI/4;scene.add(sign);
   })();
 
+  // مسجد
   (function(){
     var mosque=new THREE.Group();
     var wallMat=new THREE.MeshStandardMaterial({color:0xf5e8d0,roughness:0.85});
@@ -927,76 +1112,14 @@ function buildMap(){
     var sign=makeSignboard('مسجد رضا گلزار','#FFF','#0a6a60',10,2.2);sign.position.set(-60+W/2+2,8,60);sign.rotation.y=-Math.PI/2;scene.add(sign);
   })();
 
-  (function(){
-    var t=new THREE.Group();
-    var wallMat=new THREE.MeshStandardMaterial({color:0x3399dd,roughness:0.75});
-    var body=new THREE.Mesh(new THREE.BoxGeometry(1.6,2.6,1.6),wallMat);body.position.y=1.3;t.add(body);
-    var roof=new THREE.Mesh(new THREE.BoxGeometry(1.8,0.2,1.8),new THREE.MeshStandardMaterial({color:0x1a5588,roughness:0.8}));roof.position.y=2.7;t.add(roof);
-    t.position.set(-30,0,60);t.rotation.y=0.6;scene.add(t);
-    obstacles.push({geometry:{type:'BoxGeometry',parameters:{width:1.6,height:2.6,depth:1.6}},position:new THREE.Vector3(-30,1.3,60)});
-    var sign=makeSignboard('دستشویی','#FFF','#1e5aa0',3,0.9);sign.position.set(-30,3.5,60);scene.add(sign);
-  })();
-  (function(){
-    var s=new THREE.Group();
-    var wallMat=new THREE.MeshStandardMaterial({color:0xffcc88,roughness:0.85});
-    var W=12,H=5,D=10;
-    var body=new THREE.Mesh(new THREE.BoxGeometry(W,H,D),wallMat);body.position.y=H/2;s.add(body);
-    var roof=new THREE.Mesh(new THREE.BoxGeometry(W+1,0.4,D+1),new THREE.MeshStandardMaterial({color:0xcc4444,roughness:0.8}));roof.position.y=H+0.2;s.add(roof);
-    s.position.set(-60,0,-30);s.rotation.y=-0.3;scene.add(s);
-    obstacles.push({geometry:{type:'BoxGeometry',parameters:{width:W,height:H,depth:D}},position:new THREE.Vector3(-60,H/2,-30)});
-    var sign=makeSignboard('سوپرمارکت رضا گلزار','#FFF','#c83250',8,1.8);sign.position.set(-60,7,-30+D/2);scene.add(sign);
-  })();
-  (function(){
-    var g=new THREE.Group();
-    var roof=new THREE.Mesh(new THREE.BoxGeometry(10,0.5,6),new THREE.MeshStandardMaterial({color:0xffffff,roughness:0.6}));roof.position.y=5;g.add(roof);
-    for(var c=0;c<4;c++){var px=(c%2?3:-3),pz=(c<2?1.5:-1.5);var pole=new THREE.Mesh(new THREE.CylinderGeometry(0.2,0.2,5,8),MATS.chrome);pole.position.set(px,2.5,pz);g.add(pole);}
-    for(var p=0;p<2;p++){var pump=new THREE.Mesh(new THREE.BoxGeometry(1,2,0.7),new THREE.MeshStandardMaterial({color:0xdd2222,roughness:0.7}));pump.position.set(-2+p*4,1,0);g.add(pump);}
-    g.position.set(30,0,-60);scene.add(g);
-    var sign=makeSignboard('پمپ بنزین','#FFF','#c85a1e',6,1.5);sign.position.set(30,7,-60);scene.add(sign);
-  })();
-  (function(){
-    var g=new THREE.Group();
-    for(var b=0;b<4;b++){var bg=new THREE.Group();var seat=new THREE.Mesh(new THREE.BoxGeometry(2,0.15,0.5),MATS.wood2);seat.position.y=0.6;bg.add(seat);var back=new THREE.Mesh(new THREE.BoxGeometry(2,0.6,0.15),MATS.wood2);back.position.set(0,1,0.2);bg.add(back);for(var l=0;l<2;l++){var leg=new THREE.Mesh(new THREE.BoxGeometry(0.1,0.6,0.1),MATS.chrome);leg.position.set((l?0.8:-0.8),0.3,0);bg.add(leg);}bg.position.set(Math.cos(b*Math.PI/2)*4,0,Math.sin(b*Math.PI/2)*4);bg.rotation.y=-b*Math.PI/2;g.add(bg);}
-    var fountain=new THREE.Mesh(new THREE.CylinderGeometry(1.5,1.5,0.6,16),new THREE.MeshStandardMaterial({color:0x999999}));fountain.position.y=0.3;g.add(fountain);
-    var water=new THREE.Mesh(new THREE.CylinderGeometry(1.3,1.3,0.4,16),new THREE.MeshStandardMaterial({color:0x44aaff,transparent:true,opacity:0.7}));water.position.y=0.5;g.add(water);
-    g.position.set(30,0,60);scene.add(g);
-    var sign=makeSignboard('پارک رضا گلزار','#FFF','#329650',6,1.5);sign.position.set(30,5,60);scene.add(sign);
-  })();
-  (function(){
-    var n=new THREE.Group();
-    var wallMat=new THREE.MeshStandardMaterial({color:0xffe8b0,roughness:0.85});
-    var W=8,H=4,D=6;
-    var body=new THREE.Mesh(new THREE.BoxGeometry(W,H,D),wallMat);body.position.y=H/2;n.add(body);
-    var roof=new THREE.Mesh(new THREE.BoxGeometry(W+1,0.4,D+1),new THREE.MeshStandardMaterial({color:0x8b4513,roughness:0.8}));roof.position.y=H+0.2;n.add(roof);
-    n.position.set(60,0,-30);n.rotation.y=0.2;scene.add(n);
-    obstacles.push({geometry:{type:'BoxGeometry',parameters:{width:W,height:H,depth:D}},position:new THREE.Vector3(60,H/2,-30)});
-    var sign=makeSignboard('نانوایی سنگکی','#FFF','#a86820',6,1.5);sign.position.set(60,6,-30);scene.add(sign);
-  })();
-  (function(){
-    var c=new THREE.Group();
-    var wallMat=new THREE.MeshStandardMaterial({color:0xffffff,roughness:0.85});
-    var W=12,H=5,D=10;
-    var body=new THREE.Mesh(new THREE.BoxGeometry(W,H,D),wallMat);body.position.y=H/2;c.add(body);
-    var cross=new THREE.Mesh(new THREE.BoxGeometry(2,2,0.1),new THREE.MeshStandardMaterial({color:0xff2222}));cross.position.set(0,H+0.5,D/2+0.1);c.add(cross);
-    var crossV=new THREE.Mesh(new THREE.BoxGeometry(0.6,2,0.1),new THREE.MeshStandardMaterial({color:0xffffff}));crossV.position.set(0,H+0.5,D/2+0.15);c.add(crossV);
-    var crossH=new THREE.Mesh(new THREE.BoxGeometry(2,0.6,0.1),new THREE.MeshStandardMaterial({color:0xffffff}));crossH.position.set(0,H+0.5,D/2+0.15);c.add(crossH);
-    c.position.set(60,0,30);c.rotation.y=-0.4;scene.add(c);
-    obstacles.push({geometry:{type:'BoxGeometry',parameters:{width:W,height:H,depth:D}},position:new THREE.Vector3(60,H/2,30)});
-    var sign=makeSignboard('درمانگاه رضا','#FFF','#c02828',6,1.5);sign.position.set(60,7,30);scene.add(sign);
-  })();
-  (function(){
-    var house=new THREE.Group();
-    var wallMat=new THREE.MeshStandardMaterial({color:0xf0d8a8,roughness:0.85});
-    var W=10,H=5,D=8;
-    var body=new THREE.Mesh(new THREE.BoxGeometry(W,H,D),wallMat);body.position.y=H/2;house.add(body);
-    var roofMat=new THREE.MeshStandardMaterial({color:0x8a3a1a,roughness:0.8});
-    var roofL=new THREE.Mesh(new THREE.BoxGeometry(W+1,0.4,D/2+0.5),roofMat);roofL.position.set(0,H+0.7,-D/4);roofL.rotation.x=0.4;house.add(roofL);
-    var roofR=new THREE.Mesh(new THREE.BoxGeometry(W+1,0.4,D/2+0.5),roofMat);roofR.position.set(0,H+0.7,D/4);roofR.rotation.x=-0.4;house.add(roofR);
-    var door=new THREE.Mesh(new THREE.BoxGeometry(1.8,3,0.1),MATS.wood2);door.position.set(0,1.5,D/2+0.06);house.add(door);
-    house.position.set(-90,0,-70);house.rotation.y=0.3;scene.add(house);
-    obstacles.push({geometry:{type:'BoxGeometry',parameters:{width:W,height:H,depth:D}},position:new THREE.Vector3(-90,H/2,-70)});
-    var sign=makeSignboard('خانه اقای دهقان','#FFF','#5a3a1a',8,1.8);sign.position.set(-90,7.5,-70);scene.add(sign);
-  })();
+  // بقیه ساختمون ها - کپی پیست شد دیگه
+  (function(){var t=new THREE.Group();var wallMat=new THREE.MeshStandardMaterial({color:0x3399dd,roughness:0.75});var body=new THREE.Mesh(new THREE.BoxGeometry(1.6,2.6,1.6),wallMat);body.position.y=1.3;t.add(body);var roof=new THREE.Mesh(new THREE.BoxGeometry(1.8,0.2,1.8),new THREE.MeshStandardMaterial({color:0x1a5588,roughness:0.8}));roof.position.y=2.7;t.add(roof);t.position.set(-30,0,60);t.rotation.y=0.6;scene.add(t);obstacles.push({geometry:{type:'BoxGeometry',parameters:{width:1.6,height:2.6,depth:1.6}},position:new THREE.Vector3(-30,1.3,60)});var sign=makeSignboard('دستشویی','#FFF','#1e5aa0',3,0.9);sign.position.set(-30,3.5,60);scene.add(sign);})();
+  (function(){var s=new THREE.Group();var wallMat=new THREE.MeshStandardMaterial({color:0xffcc88,roughness:0.85});var W=12,H=5,D=10;var body=new THREE.Mesh(new THREE.BoxGeometry(W,H,D),wallMat);body.position.y=H/2;s.add(body);var roof=new THREE.Mesh(new THREE.BoxGeometry(W+1,0.4,D+1),new THREE.MeshStandardMaterial({color:0xcc4444,roughness:0.8}));roof.position.y=H+0.2;s.add(roof);s.position.set(-60,0,-30);s.rotation.y=-0.3;scene.add(s);obstacles.push({geometry:{type:'BoxGeometry',parameters:{width:W,height:H,depth:D}},position:new THREE.Vector3(-60,H/2,-30)});var sign=makeSignboard('سوپرمارکت رضا گلزار','#FFF','#c83250',8,1.8);sign.position.set(-60,7,-30+D/2);scene.add(sign);})();
+  (function(){var g=new THREE.Group();var roof=new THREE.Mesh(new THREE.BoxGeometry(10,0.5,6),new THREE.MeshStandardMaterial({color:0xffffff,roughness:0.6}));roof.position.y=5;g.add(roof);for(var c=0;c<4;c++){var px=(c%2?3:-3),pz=(c<2?1.5:-1.5);var pole=new THREE.Mesh(new THREE.CylinderGeometry(0.2,0.2,5,8),MATS.chrome);pole.position.set(px,2.5,pz);g.add(pole);}for(var p=0;p<2;p++){var pump=new THREE.Mesh(new THREE.BoxGeometry(1,2,0.7),new THREE.MeshStandardMaterial({color:0xdd2222,roughness:0.7}));pump.position.set(-2+p*4,1,0);g.add(pump);}g.position.set(30,0,-60);scene.add(g);var sign=makeSignboard('پمپ بنزین','#FFF','#c85a1e',6,1.5);sign.position.set(30,7,-60);scene.add(sign);})();
+  (function(){var g=new THREE.Group();for(var b=0;b<4;b++){var bg=new THREE.Group();var seat=new THREE.Mesh(new THREE.BoxGeometry(2,0.15,0.5),MATS.wood2);seat.position.y=0.6;bg.add(seat);var back=new THREE.Mesh(new THREE.BoxGeometry(2,0.6,0.15),MATS.wood2);back.position.set(0,1,0.2);bg.add(back);for(var l=0;l<2;l++){var leg=new THREE.Mesh(new THREE.BoxGeometry(0.1,0.6,0.1),MATS.chrome);leg.position.set((l?0.8:-0.8),0.3,0);bg.add(leg);}bg.position.set(Math.cos(b*Math.PI/2)*4,0,Math.sin(b*Math.PI/2)*4);bg.rotation.y=-b*Math.PI/2;g.add(bg);}var fountain=new THREE.Mesh(new THREE.CylinderGeometry(1.5,1.5,0.6,16),new THREE.MeshStandardMaterial({color:0x999999}));fountain.position.y=0.3;g.add(fountain);var water=new THREE.Mesh(new THREE.CylinderGeometry(1.3,1.3,0.4,16),new THREE.MeshStandardMaterial({color:0x44aaff,transparent:true,opacity:0.7}));water.position.y=0.5;g.add(water);g.position.set(30,0,60);scene.add(g);var sign=makeSignboard('پارک رضا گلزار','#FFF','#329650',6,1.5);sign.position.set(30,5,60);scene.add(sign);})();
+  (function(){var n=new THREE.Group();var wallMat=new THREE.MeshStandardMaterial({color:0xffe8b0,roughness:0.85});var W=8,H=4,D=6;var body=new THREE.Mesh(new THREE.BoxGeometry(W,H,D),wallMat);body.position.y=H/2;n.add(body);var roof=new THREE.Mesh(new THREE.BoxGeometry(W+1,0.4,D+1),new THREE.MeshStandardMaterial({color:0x8b4513,roughness:0.8}));roof.position.y=H+0.2;n.add(roof);n.position.set(60,0,-30);n.rotation.y=0.2;scene.add(n);obstacles.push({geometry:{type:'BoxGeometry',parameters:{width:W,height:H,depth:D}},position:new THREE.Vector3(60,H/2,-30)});var sign=makeSignboard('نانوایی سنگکی','#FFF','#a86820',6,1.5);sign.position.set(60,6,-30);scene.add(sign);})();
+  (function(){var c=new THREE.Group();var wallMat=new THREE.MeshStandardMaterial({color:0xffffff,roughness:0.85});var W=12,H=5,D=10;var body=new THREE.Mesh(new THREE.BoxGeometry(W,H,D),wallMat);body.position.y=H/2;c.add(body);var cross=new THREE.Mesh(new THREE.BoxGeometry(2,2,0.1),new THREE.MeshStandardMaterial({color:0xff2222}));cross.position.set(0,H+0.5,D/2+0.1);c.add(cross);var crossV=new THREE.Mesh(new THREE.BoxGeometry(0.6,2,0.1),new THREE.MeshStandardMaterial({color:0xffffff}));crossV.position.set(0,H+0.5,D/2+0.15);c.add(crossV);var crossH=new THREE.Mesh(new THREE.BoxGeometry(2,0.6,0.1),new THREE.MeshStandardMaterial({color:0xffffff}));crossH.position.set(0,H+0.5,D/2+0.15);c.add(crossH);c.position.set(60,0,30);c.rotation.y=-0.4;scene.add(c);obstacles.push({geometry:{type:'BoxGeometry',parameters:{width:W,height:H,depth:D}},position:new THREE.Vector3(60,H/2,30)});var sign=makeSignboard('درمانگاه رضا','#FFF','#c02828',6,1.5);sign.position.set(60,7,30);scene.add(sign);})();
+  (function(){var house=new THREE.Group();var wallMat=new THREE.MeshStandardMaterial({color:0xf0d8a8,roughness:0.85});var W=10,H=5,D=8;var body=new THREE.Mesh(new THREE.BoxGeometry(W,H,D),wallMat);body.position.y=H/2;house.add(body);var roofMat=new THREE.MeshStandardMaterial({color:0x8a3a1a,roughness:0.8});var roofL=new THREE.Mesh(new THREE.BoxGeometry(W+1,0.4,D/2+0.5),roofMat);roofL.position.set(0,H+0.7,-D/4);roofL.rotation.x=0.4;house.add(roofL);var roofR=new THREE.Mesh(new THREE.BoxGeometry(W+1,0.4,D/2+0.5),roofMat);roofR.position.set(0,H+0.7,D/4);roofR.rotation.x=-0.4;house.add(roofR);var door=new THREE.Mesh(new THREE.BoxGeometry(1.8,3,0.1),MATS.wood2);door.position.set(0,1.5,D/2+0.06);house.add(door);house.position.set(-90,0,-70);house.rotation.y=0.3;scene.add(house);obstacles.push({geometry:{type:'BoxGeometry',parameters:{width:W,height:H,depth:D}},position:new THREE.Vector3(-90,H/2,-70)});var sign=makeSignboard('خانه اقای دهقان','#FFF','#5a3a1a',8,1.8);sign.position.set(-90,7.5,-70);scene.add(sign);})();
 
   var treeCount = isMobile ? 15 : 25;
   for(var t=0;t<treeCount;t++){
@@ -1057,11 +1180,7 @@ function buildMap(){
     fg.position.set(fx,0,fz);scene.add(fg);
   }
 
-  var parkCars=[
-    {x:-20,z:15,rot:0.3,color:0x44aaff},{x:20,z:-15,rot:-1.2,color:0x333333},
-    {x:-15,z:-15,rot:2.0,color:0xffffff},{x:15,z:15,rot:Math.PI/2,color:0x44dd66},
-    {x:-80,z:30,rot:1.5,color:0xffaa33},{x:80,z:-50,rot:-0.6,color:0xdd44aa}
-  ];
+  var parkCars=[{x:-20,z:15,rot:0.3,color:0x44aaff},{x:20,z:-15,rot:-1.2,color:0x333333},{x:-15,z:-15,rot:2.0,color:0xffffff},{x:15,z:15,rot:Math.PI/2,color:0x44dd66},{x:-80,z:30,rot:1.5,color:0xffaa33},{x:80,z:-50,rot:-0.6,color:0xdd44aa}];
   parkCars.forEach(function(p){var car=buildCar({color:p.color});car.position.set(p.x,0,p.z);car.rotation.y=p.rot;scene.add(car);obstacles.push({geometry:{type:'BoxGeometry',parameters:{width:4.4,height:1.6,depth:2.0}},position:new THREE.Vector3(p.x,0.8,p.z)});});
 
   var mc=buildCar({color:0xff5533,length:4.5,width:1.85,height:1.5});
@@ -1072,6 +1191,9 @@ function buildMap(){
   vehicles.push({mesh:mc2,dir:-1,speed:10,startX:-110,endX:110,wheelSpin:0,honkTimer:5});
 }
 
+// ============================================================
+// دشمن ها. شخصیتشونو خودم طراحی کردم. اگه بدرد بخورن بهم زنگ بزن
+// ============================================================
 var ENEMY_TYPES=[
   {type:'hoodie',jacket:0x14192e,shirt:0x222222,pants:0x9aa0a8,hair:0x0d0d0d,skin:0xd4a574,speedMin:1.6,speedMax:2.2,hp:5,damage:7,reach:1.7,meleeCd:1200},
   {type:'green',jacket:0x2a5a2a,shirt:0xdddddd,pants:0x3a3a4a,hair:0x4a2a1a,skin:0xe0b890,speedMin:2.0,speedMax:2.6,hp:6,damage:9,reach:1.8,meleeCd:1100},
@@ -1151,110 +1273,42 @@ function spawnEnemy(){
 }
 
 // ============================================================
-// سوزنی جدید - حالا شبیه آدم واقعیه! 👃
-// با گردن، صورت کامل، و دماغ مستطیلی بزرگ
+// باس ها
 // ============================================================
+
+// سوزنی با دماغ بزرگ
 function createSouzaniModel(){
   var g=new THREE.Group();
   var suitMat=new THREE.MeshStandardMaterial({color:0x0a0a0a,roughness:0.55,metalness:0.15});
-  var shirtMat=new THREE.MeshStandardMaterial({color:0xf5f5f5,roughness:0.7});
   var skinMat=new THREE.MeshStandardMaterial({color:0xd0a080,roughness:0.72});
   var goldMat=new THREE.MeshStandardMaterial({color:0xffc82a,metalness:0.98,roughness:0.08});
-  var hairMat=new THREE.MeshStandardMaterial({color:0x0a0a0a,roughness:0.9});
-  var darkMat=new THREE.MeshStandardMaterial({color:0x050505,roughness:0.9});
-
-  // پاها
-  var legLPivot=new THREE.Group();legLPivot.position.set(-0.20,0.88,0);g.add(legLPivot);
-  var legL=new THREE.Mesh(new THREE.BoxGeometry(0.24,0.90,0.24),suitMat);legL.position.y=-0.45;legLPivot.add(legL);
-  var shoeL=new THREE.Mesh(new THREE.BoxGeometry(0.26,0.12,0.36),darkMat);shoeL.position.set(0,-0.90,0.06);legLPivot.add(shoeL);
-
-  var legRPivot=new THREE.Group();legRPivot.position.set(0.20,0.88,0);g.add(legRPivot);
-  var legR=new THREE.Mesh(new THREE.BoxGeometry(0.24,0.90,0.24),suitMat);legR.position.y=-0.45;legRPivot.add(legR);
-  var shoeR=new THREE.Mesh(new THREE.BoxGeometry(0.26,0.12,0.36),darkMat);shoeR.position.set(0,-0.90,0.06);legRPivot.add(shoeR);
-
-  // تنه
-  var torso=new THREE.Mesh(new THREE.BoxGeometry(0.68,0.92,0.38),suitMat);torso.position.y=1.42;g.add(torso);
-
-  // پیراهن سفید
-  var shirt=new THREE.Mesh(new THREE.BoxGeometry(0.28,0.88,0.04),shirtMat);shirt.position.set(0,1.42,0.20);g.add(shirt);
-
-  // کروات
-  var tie=new THREE.Mesh(new THREE.BoxGeometry(0.08,0.55,0.03),darkMat);tie.position.set(0,1.38,0.22);g.add(tie);
-
-  // یقه
-  var collar=new THREE.Mesh(new THREE.BoxGeometry(0.34,0.08,0.30),suitMat);collar.position.y=1.92;g.add(collar);
-
-  // گردن
-  var neck=new THREE.Mesh(new THREE.CylinderGeometry(0.11,0.12,0.22,12),skinMat);
-  neck.position.y=2.02;g.add(neck);
-
-  // سر
-  var head=new THREE.Mesh(new THREE.BoxGeometry(0.42,0.46,0.40),skinMat);
-  head.position.y=2.36;g.add(head);
-
-  // گوش‌ها
-  var earL=new THREE.Mesh(new THREE.BoxGeometry(0.04,0.12,0.09),skinMat);earL.position.set(-0.23,2.36,0);g.add(earL);
-  var earR=new THREE.Mesh(new THREE.BoxGeometry(0.04,0.12,0.09),skinMat);earR.position.set(0.23,2.36,0);g.add(earR);
-
-  // مو
-  var hair=new THREE.Mesh(new THREE.BoxGeometry(0.44,0.12,0.42),hairMat);hair.position.y=2.62;g.add(hair);
-  var hairBack=new THREE.Mesh(new THREE.BoxGeometry(0.42,0.20,0.06),hairMat);hairBack.position.set(0,2.50,-0.18);g.add(hairBack);
-
-  // چشم‌ها
-  var eyeWhiteMat=new THREE.MeshBasicMaterial({color:0xffffff});
-  var pupilMat=new THREE.MeshBasicMaterial({color:0x1a0a05});
-  var eyeL=new THREE.Mesh(new THREE.BoxGeometry(0.09,0.06,0.02),eyeWhiteMat);eyeL.position.set(-0.10,2.42,0.20);g.add(eyeL);
-  var eyeR=new THREE.Mesh(new THREE.BoxGeometry(0.09,0.06,0.02),eyeWhiteMat);eyeR.position.set(0.10,2.42,0.20);g.add(eyeR);
-  var pupL=new THREE.Mesh(new THREE.BoxGeometry(0.04,0.05,0.02),pupilMat);pupL.position.set(-0.10,2.41,0.211);g.add(pupL);
-  var pupR=new THREE.Mesh(new THREE.BoxGeometry(0.04,0.05,0.02),pupilMat);pupR.position.set(0.10,2.41,0.211);g.add(pupR);
-
-  // ابروها
-  var browL=new THREE.Mesh(new THREE.BoxGeometry(0.12,0.03,0.02),hairMat);browL.position.set(-0.10,2.49,0.20);g.add(browL);
-  var browR=new THREE.Mesh(new THREE.BoxGeometry(0.12,0.03,0.02),hairMat);browR.position.set(0.10,2.49,0.20);g.add(browR);
-
-  // دهان
-  var mouth=new THREE.Mesh(new THREE.BoxGeometry(0.15,0.025,0.02),darkMat);mouth.position.set(0,2.22,0.20);g.add(mouth);
-
-  // ============ دماغ مستطیلی بزرگ ============
-  var noseMat=new THREE.MeshStandardMaterial({color:0xd49a70,roughness:0.55});
-  var noseMain=new THREE.Mesh(new THREE.BoxGeometry(0.20,0.18,0.44),noseMat);
-  noseMain.position.set(0,2.34,0.42);
-  g.add(noseMain);
-  var nostrilL=new THREE.Mesh(new THREE.BoxGeometry(0.11,0.11,0.14),noseMat);
-  nostrilL.position.set(-0.075,2.28,0.58);
-  g.add(nostrilL);
-  var nostrilR=new THREE.Mesh(new THREE.BoxGeometry(0.11,0.11,0.14),noseMat);
-  nostrilR.position.set(0.075,2.28,0.58);
-  g.add(nostrilR);
-  var noseTipMat=new THREE.MeshStandardMaterial({color:0xff6655,roughness:0.4,emissive:0x441100,emissiveIntensity:0.2});
-  var noseTip=new THREE.Mesh(new THREE.BoxGeometry(0.24,0.14,0.08),noseTipMat);
-  noseTip.position.set(0,2.32,0.66);
-  g.add(noseTip);
-  var holeMat=new THREE.MeshBasicMaterial({color:0x1a0505});
-  var holeL=new THREE.Mesh(new THREE.BoxGeometry(0.045,0.035,0.02),holeMat);
-  holeL.position.set(-0.06,2.25,0.705);g.add(holeL);
-  var holeR=new THREE.Mesh(new THREE.BoxGeometry(0.045,0.035,0.02),holeMat);
-  holeR.position.set(0.06,2.25,0.705);g.add(holeR);
-
-  // بازوها
-  var armLPivot=new THREE.Group();armLPivot.position.set(-0.45,1.78,0);g.add(armLPivot);
-  var shoulderL=new THREE.Mesh(new THREE.BoxGeometry(0.22,0.18,0.36),suitMat);shoulderL.position.y=-0.05;armLPivot.add(shoulderL);
-  var armL=new THREE.Mesh(new THREE.BoxGeometry(0.18,0.68,0.20),suitMat);armL.position.y=-0.48;armLPivot.add(armL);
-  var handL=new THREE.Mesh(new THREE.BoxGeometry(0.16,0.16,0.18),skinMat);handL.position.y=-0.88;armLPivot.add(handL);
-
-  var armRPivot=new THREE.Group();armRPivot.position.set(0.45,1.78,0);g.add(armRPivot);
-  var shoulderR=new THREE.Mesh(new THREE.BoxGeometry(0.22,0.18,0.36),suitMat);shoulderR.position.y=-0.05;armRPivot.add(shoulderR);
-  var armR=new THREE.Mesh(new THREE.BoxGeometry(0.18,0.68,0.20),suitMat);armR.position.y=-0.48;armRPivot.add(armR);
-  var handR=new THREE.Mesh(new THREE.BoxGeometry(0.16,0.16,0.18),skinMat);handR.position.y=-0.88;armRPivot.add(handR);
-
-  // زنجیر طلا
-  var chain=new THREE.Mesh(new THREE.TorusGeometry(0.16,0.028,8,20),goldMat);
-  chain.position.set(0,1.72,0.19);chain.rotation.x=0.35;g.add(chain);
-
-  g.userData.armLPivot=armLPivot;g.userData.armRPivot=armRPivot;
-  g.userData.legLPivot=legLPivot;g.userData.legRPivot=legRPivot;
+  var head=new THREE.Mesh(new THREE.BoxGeometry(0.42,0.48,0.40),skinMat);head.position.y=2.24;g.add(head);
+  var noseMat=new THREE.MeshStandardMaterial({color:0xd49a70,roughness:0.55,emissive:0x331100,emissiveIntensity:0.15});
+  var noseMain=new THREE.Mesh(new THREE.SphereGeometry(0.20,12,10),noseMat);
+  noseMain.scale.set(1.0,1.4,2.0);noseMain.position.set(0,2.16,0.42);g.add(noseMain);
+  var tipMat=new THREE.MeshStandardMaterial({color:0xff5544,roughness:0.35,emissive:0x551100,emissiveIntensity:0.3});
+  var tip1=new THREE.Mesh(new THREE.SphereGeometry(0.10,10,8),tipMat);tip1.position.set(0.08,2.14,0.66);g.add(tip1);
+  var tip2=tip1.clone();tip2.position.x=-0.08;g.add(tip2);
+  var nostrilMat=new THREE.MeshStandardMaterial({color:0x1a0505,roughness:0.9});
+  var nostril1=new THREE.Mesh(new THREE.SphereGeometry(0.04,6,5),nostrilMat);nostril1.position.set(0.08,2.10,0.70);g.add(nostril1);
+  var nostril2=nostril1.clone();nostril2.position.x=-0.08;g.add(nostril2);
+  var bridge=new THREE.Mesh(new THREE.BoxGeometry(0.14,0.16,0.25),noseMat);bridge.position.set(0,2.32,0.28);g.add(bridge);
+  var hairNoseMat=new THREE.MeshBasicMaterial({color:0x2a1010});
+  for(var hn=0;hn<4;hn++){var nh=new THREE.Mesh(new THREE.BoxGeometry(0.005,0.04,0.005),hairNoseMat);nh.position.set(-0.03+hn*0.02, 2.12, 0.68);g.add(nh);}
+  var torso=new THREE.Mesh(new THREE.BoxGeometry(0.78,0.90,0.40),suitMat);torso.position.y=1.35;g.add(torso);
+  var chain=new THREE.Mesh(new THREE.TorusGeometry(0.22,0.038,8,24),goldMat);chain.position.set(0,1.58,0.21);chain.rotation.x=0.32;g.add(chain);
+  var armLPivot=new THREE.Group();armLPivot.position.set(-0.48,1.68,0);g.add(armLPivot);
+  var armL=new THREE.Mesh(new THREE.BoxGeometry(0.20,0.78,0.22),suitMat);armL.position.y=-0.36;armLPivot.add(armL);
+  var armRPivot=new THREE.Group();armRPivot.position.set(0.48,1.68,0);g.add(armRPivot);
+  var armR=new THREE.Mesh(new THREE.BoxGeometry(0.20,0.78,0.22),suitMat);armR.position.y=-0.36;armRPivot.add(armR);
+  var legLPivot=new THREE.Group();legLPivot.position.set(-0.22,0.88,0);g.add(legLPivot);
+  var legL=new THREE.Mesh(new THREE.BoxGeometry(0.26,0.92,0.26),suitMat);legL.position.y=-0.46;legLPivot.add(legL);
+  var legRPivot=new THREE.Group();legRPivot.position.set(0.22,0.88,0);g.add(legRPivot);
+  var legR=new THREE.Mesh(new THREE.BoxGeometry(0.26,0.92,0.26),suitMat);legR.position.y=-0.46;legRPivot.add(legR);
+  g.userData.armLPivot=armLPivot;g.userData.armRPivot=armRPivot;g.userData.legLPivot=legLPivot;g.userData.legRPivot=legRPivot;
   return g;
 }
+
 function createShikamModel(){
   var g=new THREE.Group();
   var skinMat=new THREE.MeshStandardMaterial({color:0xc89878,roughness:0.85});
@@ -1273,11 +1327,185 @@ function createShikamModel(){
   g.userData.armLPivot=armLPivot;g.userData.armRPivot=armRPivot;g.userData.legLPivot=legLPivot;g.userData.legRPivot=legRPivot;
   return g;
 }
+
+// ============================================================
+// باس جدید: عمو سهند و عمه هاش
+// عمو سهند یه مرده با کاپشن آبی و شلوار سورمه ای
+// سه تا روح خانم پشتش که وقتی نزدیک میشه میان جلو میزنن
+// ============================================================
+function createSahandModel(){
+  var g=new THREE.Group();
+
+  // ==== عمو سهند ====
+  // کاپشن آبی، شلوار سورمه ای
+  var jacketMat=new THREE.MeshStandardMaterial({color:0x1e5eb8,roughness:0.7,metalness:0.05});
+  var pantsMat=new THREE.MeshStandardMaterial({color:0x0e1a3a,roughness:0.85});
+  var skinMat=new THREE.MeshStandardMaterial({color:0xe0b890,roughness:0.75});
+  var hairMat=new THREE.MeshStandardMaterial({color:0x2a1a0a,roughness:0.9});
+  var shirtMat=new THREE.MeshStandardMaterial({color:0xf0f0f0,roughness:0.8});
+
+  // بدن
+  var torso=new THREE.Mesh(new THREE.BoxGeometry(0.72,0.92,0.40),jacketMat);torso.position.y=1.38;g.add(torso);
+  var shirt=new THREE.Mesh(new THREE.BoxGeometry(0.40,0.85,0.30),shirtMat);shirt.position.set(0,1.38,0.22);g.add(shirt);
+  // دکمه های کاپشن
+  var btnMat=new THREE.MeshStandardMaterial({color:0xffd166,metalness:0.9,roughness:0.15});
+  for(var b=0;b<3;b++){var btn=new THREE.Mesh(new THREE.SphereGeometry(0.04,8,6),btnMat);btn.position.set(0.15,1.6-b*0.2,0.22);g.add(btn);}
+
+  // سر
+  var neckY=1.38+0.92/2+0.08;
+  var neck=new THREE.Mesh(new THREE.CylinderGeometry(0.12,0.13,0.18,10),skinMat);neck.position.set(0,neckY,0);g.add(neck);
+  var headY=neckY+0.10+0.27;
+  var head=new THREE.Mesh(new THREE.BoxGeometry(0.50,0.52,0.46),skinMat);head.position.set(0,headY,0);g.add(head);
+  var faceZ=0.23+0.011;
+  // چشم ها
+  [-0.13,0.13].forEach(function(dx){
+    var eW=new THREE.Mesh(new THREE.BoxGeometry(0.09,0.08,0.02),new THREE.MeshBasicMaterial({color:0xffffff}));
+    eW.position.set(dx,headY+0.04,faceZ);g.add(eW);
+    var pupil=new THREE.Mesh(new THREE.BoxGeometry(0.045,0.055,0.02),new THREE.MeshBasicMaterial({color:0x1a0a05}));
+    pupil.position.set(dx,headY+0.03,faceZ+0.011);g.add(pupil);
+  });
+  // ابرو
+  [-0.13,0.13].forEach(function(dx){
+    var br=new THREE.Mesh(new THREE.BoxGeometry(0.12,0.03,0.02),hairMat);
+    br.position.set(dx,headY+0.13,faceZ);g.add(br);
+  });
+  var nose=new THREE.Mesh(new THREE.BoxGeometry(0.07,0.09,0.08),new THREE.MeshStandardMaterial({color:0xd0a080,roughness:0.8}));
+  nose.position.set(0,headY-0.02,faceZ+0.03);g.add(nose);
+  var mouth=new THREE.Mesh(new THREE.BoxGeometry(0.14,0.03,0.02),new THREE.MeshBasicMaterial({color:0x6a2a20}));
+  mouth.position.set(0,headY-0.14,faceZ);g.add(mouth);
+  // مو
+  var hair=new THREE.Mesh(new THREE.BoxGeometry(0.52,0.16,0.50),hairMat);
+  hair.position.set(0,headY+0.20,0);g.add(hair);
+  // سبیل (چون عمو سهنده)
+  var mustache=new THREE.Mesh(new THREE.BoxGeometry(0.22,0.035,0.03),hairMat);
+  mustache.position.set(0,headY-0.09,faceZ+0.005);g.add(mustache);
+
+  // دست ها
+  var armY=1.38+0.92*0.35;
+  var armLPivot=new THREE.Group();armLPivot.position.set(-(0.72/2+0.10),armY,0);g.add(armLPivot);
+  var armL=new THREE.Mesh(new THREE.BoxGeometry(0.20,0.78,0.22),jacketMat);armL.position.y=-0.36;armLPivot.add(armL);
+  var handL=new THREE.Mesh(new THREE.BoxGeometry(0.19,0.14,0.19),skinMat);handL.position.y=-0.78;armLPivot.add(handL);
+  var armRPivot=new THREE.Group();armRPivot.position.set((0.72/2+0.10),armY,0);g.add(armRPivot);
+  var armR=new THREE.Mesh(new THREE.BoxGeometry(0.20,0.78,0.22),jacketMat);armR.position.y=-0.36;armRPivot.add(armR);
+  var handR=new THREE.Mesh(new THREE.BoxGeometry(0.19,0.14,0.19),skinMat);handR.position.y=-0.78;armRPivot.add(handR);
+
+  // پاها
+  var legLPivot=new THREE.Group();legLPivot.position.set(-0.20,0.88,0);g.add(legLPivot);
+  var legL=new THREE.Mesh(new THREE.BoxGeometry(0.26,0.92,0.26),pantsMat);legL.position.y=-0.46;legLPivot.add(legL);
+  var shoeL=new THREE.Mesh(new THREE.BoxGeometry(0.28,0.14,0.34),new THREE.MeshStandardMaterial({color:0x0a0a0a,roughness:0.7}));
+  shoeL.position.set(0,-0.85,0.05);legLPivot.add(shoeL);
+  var legRPivot=new THREE.Group();legRPivot.position.set(0.20,0.88,0);g.add(legRPivot);
+  var legR=new THREE.Mesh(new THREE.BoxGeometry(0.26,0.92,0.26),pantsMat);legR.position.y=-0.46;legRPivot.add(legR);
+  var shoeR=new THREE.Mesh(new THREE.BoxGeometry(0.28,0.14,0.34),new THREE.MeshStandardMaterial({color:0x0a0a0a,roughness:0.7}));
+  shoeR.position.set(0,-0.85,0.05);legRPivot.add(shoeR);
+
+  g.userData.armLPivot=armLPivot;g.userData.armRPivot=armRPivot;g.userData.legLPivot=legLPivot;g.userData.legRPivot=legRPivot;
+  return g;
+}
+
+// ساخت روح عمه - یه روح زن شبیه خانم با لباس سفید شبح وار
+function createGhostAunt(color,index){
+  var g=new THREE.Group();
+  var ghostColor = color || 0xddeeff;
+  var ghostMat=new THREE.MeshStandardMaterial({
+    color:ghostColor,
+    emissive:0x88bbff,
+    emissiveIntensity:0.5,
+    transparent:true,
+    opacity:0.68,
+    roughness:0.2,
+    metalness:0.1
+  });
+  var ghostMat2=new THREE.MeshStandardMaterial({
+    color:ghostColor,
+    emissive:0xaaccff,
+    emissiveIntensity:0.7,
+    transparent:true,
+    opacity:0.55,
+    roughness:0.2,
+    metalness:0.1
+  });
+  var eyeMat=new THREE.MeshBasicMaterial({color:0x001133});
+
+  // ==== بدن روح (لباس بلند) ====
+  // شکل مخروطی که به پایین گشاد میشه مثل روح واقعی
+  var dress=new THREE.Mesh(new THREE.ConeGeometry(0.55,1.6,12),ghostMat);
+  dress.position.y=0.80;g.add(dress);
+
+  // ==== سر ====
+  var head=new THREE.Mesh(new THREE.SphereGeometry(0.28,14,12),ghostMat2);
+  head.position.y=1.85;g.add(head);
+
+  // موی بلند روح
+  var hairMat=new THREE.MeshStandardMaterial({
+    color:0x223344,
+    emissive:0x445566,
+    emissiveIntensity:0.3,
+    transparent:true,
+    opacity:0.6,
+    roughness:0.4
+  });
+  var hairTop=new THREE.Mesh(new THREE.SphereGeometry(0.30,12,10,0,Math.PI*2,0,Math.PI*0.65),hairMat);
+  hairTop.position.y=1.88;g.add(hairTop);
+  var hairBack=new THREE.Mesh(new THREE.BoxGeometry(0.5,0.9,0.15),hairMat);
+  hairBack.position.set(0,1.4,-0.25);g.add(hairBack);
+
+  // چشم ها (خالی و ترسناک)
+  [-0.09,0.09].forEach(function(dx){
+    var eye=new THREE.Mesh(new THREE.SphereGeometry(0.045,8,6),eyeMat);
+    eye.position.set(dx,1.9,0.25);g.add(eye);
+  });
+  // دهن
+  var mouth=new THREE.Mesh(new THREE.BoxGeometry(0.10,0.025,0.02),eyeMat);
+  mouth.position.set(0,1.78,0.27);g.add(mouth);
+
+  // ==== دست های روح (کشیده و شبح وار) ====
+  var armL=new THREE.Mesh(new THREE.CylinderGeometry(0.075,0.10,0.75,8),ghostMat);
+  armL.position.set(-0.38,1.35,0);armL.rotation.z=0.35;g.add(armL);
+  var handL=new THREE.Mesh(new THREE.SphereGeometry(0.11,8,6),ghostMat2);
+  handL.position.set(-0.55,1.0,0);g.add(handL);
+
+  var armR=new THREE.Mesh(new THREE.CylinderGeometry(0.075,0.10,0.75,8),ghostMat);
+  armR.position.set(0.38,1.35,0);armR.rotation.z=-0.35;g.add(armR);
+  var handR=new THREE.Mesh(new THREE.SphereGeometry(0.11,8,6),ghostMat2);
+  handR.position.set(0.55,1.0,0);g.add(handR);
+
+  // هاله نورانی دور روح
+  var auraMat=new THREE.MeshBasicMaterial({
+    color:0x88bbff,
+    transparent:true,
+    opacity:0.12,
+    side:THREE.BackSide,
+    depthWrite:false
+  });
+  var aura=new THREE.Mesh(new THREE.SphereGeometry(0.9,16,12),auraMat);
+  aura.position.y=1.2;g.add(aura);
+
+  g.userData.handL=handL;
+  g.userData.handR=handR;
+  g.userData.armL=armL;
+  g.userData.armR=armR;
+  g.userData.aura=aura;
+  g.userData.ghostIndex=index||0;
+
+  return g;
+}
+
+// ============================================================
+// تابع ساخت باس. سهند = عمو سهند و عمه هاش
+// ============================================================
 function spawnBoss(bossType){
   bossActive=true;currentBossType=bossType||'souzani';
   enemies.forEach(function(e){if(e.alive)scene.remove(e.mesh);});
   enemies=[];
-  var g=currentBossType==='shikam'?createShikamModel():createSouzaniModel();
+  sahandGhosts=[];
+  sahandGhostState='idle';
+
+  var g;
+  if(currentBossType==='shikam') g=createShikamModel();
+  else if(currentBossType==='sahand') g=createSahandModel();
+  else g=createSouzaniModel();
+
   var pp=camera.position;
   var d=new THREE.Vector3();camera.getWorldDirection(d);d.y=0;
   if(d.lengthSq()<0.001)d.set(0,0,-1);
@@ -1285,24 +1513,71 @@ function spawnBoss(bossType){
   g.position.set(pp.x+d.x*6,40,pp.z+d.z*6);
   var ld=new THREE.Vector3().subVectors(pp,g.position);ld.y=0;
   g.rotation.y=Math.atan2(ld.x,ld.z);scene.add(g);
+
+  // اگه سهند بود، سه تا روح عمه اضافه کن
+  if(currentBossType==='sahand'){
+    // رنگای مختلف برای هر عمه
+    var ghostColors=[0xffddee, 0xddeeff, 0xeeffdd];
+    for(var i=0;i<3;i++){
+      var ghost=createGhostAunt(ghostColors[i],i);
+      // موقعیت اولیه پشت باس
+      // زاویه 120 درجه بین هر عمه
+      var angle = (i / 3) * Math.PI * 2;
+      var radius = 1.8;
+      var gx = g.position.x + Math.cos(angle) * radius;
+      var gz = g.position.z + Math.sin(angle) * radius;
+      ghost.position.set(gx, 40, gz);
+      // چرخش به سمت بازیکن
+      ghost.rotation.y = Math.atan2(pp.x - gx, pp.z - gz);
+      scene.add(ghost);
+      sahandGhosts.push({
+        mesh: ghost,
+        homeAngle: angle,
+        homeRadius: radius,
+        state: 'idle',   // idle, attacking, returning
+        attackTimer: 0,
+        bobPhase: Math.random() * Math.PI * 2,
+        lastHit: 0
+      });
+    }
+  }
+
   var baseHp=280*Math.pow(3,stageNumber-1)*getEnemyHpMult();
-  boss={mesh:g,hp:baseHp,maxHp:baseHp,lastAttack:0,attackCooldown:2200,state:'sky',stateTime:0,walkPhase:0,landTarget:null,baseSpeed:currentBossType==='shikam'?3.2:4.2,type:currentBossType,slowWalkTime:0,charging:false,chargeT:0,slamCooldown:0,slamming:false,slamT:0};
+  var bossSpeed = currentBossType==='shikam'?3.2:(currentBossType==='sahand'?3.8:4.2);
+  boss={mesh:g,hp:baseHp,maxHp:baseHp,lastAttack:0,attackCooldown:currentBossType==='sahand'?1800:2200,state:'sky',stateTime:0,walkPhase:0,landTarget:null,baseSpeed:bossSpeed,type:currentBossType,slowWalkTime:0,charging:false,chargeT:0,slamCooldown:0,slamming:false,slamT:0};
+
   var bb=document.getElementById('bossBar');if(bb)bb.classList.add('show');
   var bf=document.getElementById('bossBarFill');if(bf)bf.style.width='100%';
-  var bl=document.getElementById('bossBarLabel');if(bl)bl.textContent=currentBossType==='shikam'?'🐻 شکم قرومساق':'🕴️ سوزنی (با دماغ!)';
+  var bl=document.getElementById('bossBarLabel');
+  var bossNames={shikam:'🐻 شکم قرومساق',souzani:'🕴️ سوزنی (با دماغ!)',sahand:'👨 عمو سهند و عمه هاش'};
+  if(bl)bl.textContent=bossNames[currentBossType]||'🕴️ باس';
+
   playBossRoar();
   var sub=document.getElementById('bossSubtitle');
-  if(sub){sub.textContent=currentBossType==='shikam'?'🐻 شکم قرومساق':'🕴️ سوزنی';sub.classList.add('show');}
-  if(currentBossType==='shikam')speakShikamIntro();else speakBossIntro();
-  showEventText('⚔️ باس فایت!','gold');
+  if(sub){
+    sub.textContent=bossNames[currentBossType]||'Boss';
+    sub.classList.add('show');
+  }
+  if(currentBossType==='shikam')speakShikamIntro();
+  else if(currentBossType==='sahand'){speakSahandIntro();playGhostWail();}
+  else speakBossIntro();
+  showEventText('⚔️ Boss Fight!','gold');
 }
+
+// ============================================================
+// به روزرسانی باس هر فریم. اینجا گندش در میاد
+// ============================================================
 function updateBoss(dt,time){
   if(!boss||!bossActive)return;
   var pp=camera.position;boss.stateTime+=dt;
+
+  // حالت آسمون - از بالا میاد
   if(boss.state==='sky'){
     boss.mesh.position.y=40+Math.sin(time*0.003)*1.5;
     var lk=new THREE.Vector3().subVectors(pp,boss.mesh.position);lk.y=0;
     boss.mesh.rotation.y=Math.atan2(lk.x,lk.z);
+    // ارواح هم تو آسمون پشتشن
+    updateGhostsHome(dt,time);
     if(boss.stateTime>4){
       boss.state='landing';boss.stateTime=0;
       var d=new THREE.Vector3();camera.getWorldDirection(d);d.y=0;
@@ -1312,16 +1587,30 @@ function updateBoss(dt,time){
     }
     return;
   }
+
+  // حالت فرود
   if(boss.state==='landing'){
     var t=Math.min(1,boss.stateTime/0.9),e=1-(1-t)*(1-t);
     boss.mesh.position.y=40*(1-e);
-    if(boss.landTarget){boss.mesh.position.x+=(boss.landTarget.x-boss.mesh.position.x)*dt*4;boss.mesh.position.z+=(boss.landTarget.z-boss.mesh.position.z)*dt*4;}
-    if(t>=1){boss.mesh.position.y=0;boss.state='fighting';boss.stateTime=0;playBossLand();screenShake=0.7;createExplosion(new THREE.Vector3(boss.mesh.position.x,0.5,boss.mesh.position.z),6,0);}
+    if(boss.landTarget){
+      boss.mesh.position.x+=(boss.landTarget.x-boss.mesh.position.x)*dt*4;
+      boss.mesh.position.z+=(boss.landTarget.z-boss.mesh.position.z)*dt*4;
+    }
+    // ارواح هم با باس میان پایین
+    updateGhostsHome(dt,time);
+    if(t>=1){
+      boss.mesh.position.y=0;boss.state='fighting';boss.stateTime=0;
+      playBossLand();screenShake=0.7;
+      createExplosion(new THREE.Vector3(boss.mesh.position.x,0.5,boss.mesh.position.z),6,0);
+    }
     return;
   }
+
+  // حالت مبارزه
   var u=boss.mesh.userData;
   var dir=new THREE.Vector3().subVectors(pp,boss.mesh.position);dir.y=0;
   var dist=dir.length();
+
   if(dist>0.1){
     dir.normalize();
     var sp=boss.baseSpeed*dt;
@@ -1335,13 +1624,175 @@ function updateBoss(dt,time){
   var sw=Math.sin(boss.walkPhase)*0.5;
   if(u.legLPivot){u.legLPivot.rotation.x=sw;u.legRPivot.rotation.x=-sw;u.armLPivot.rotation.x=-sw*0.7;u.armRPivot.rotation.x=sw*0.7;}
   boss.mesh.position.y=Math.abs(Math.sin(boss.walkPhase))*0.15;
-  if(dist<3&&time-boss.lastAttack>boss.attackCooldown){
-    boss.lastAttack=time;
-    if(!isSliding&&performance.now()>=playerInvulnUntil){takeDamage(15*getEnemyDmgMult());playerInvulnUntil=performance.now()+1500;}
+
+  // ضربه نزدیک باس (فقط اگه سهند نباشه)
+  if(currentBossType!=='sahand'){
+    if(dist<3&&time-boss.lastAttack>boss.attackCooldown){
+      boss.lastAttack=time;
+      if(!isSliding&&performance.now()>=playerInvulnUntil){
+        takeDamage(15*getEnemyDmgMult());
+        playerInvulnUntil=performance.now()+1500;
+      }
+    }
+  }
+
+  // ارواح - به روزرسانی
+  if(currentBossType==='sahand'&&sahandGhosts.length){
+    updateSahandGhosts(dt,time);
+  }
+}
+
+// به روزرسانی موقعیت ارواح پشت باس
+function updateGhostsHome(dt,time){
+  if(!boss||!sahandGhosts.length)return;
+  for(var i=0;i<sahandGhosts.length;i++){
+    var g=sahandGhosts[i];
+    if(g.state!=='idle') continue;
+    // موقعیت پشت باس
+    var bx=boss.mesh.position.x, bz=boss.mesh.position.z;
+    var bossRot = boss.mesh.rotation.y;
+    // زاویه پشت باس + افست هر روح
+    var behindAngle = bossRot + Math.PI + g.homeAngle * 0.6;
+    var tx = bx + Math.sin(behindAngle) * g.homeRadius;
+    var tz = bz + Math.cos(behindAngle) * g.homeRadius;
+    var ty = boss.mesh.position.y + 0.2 + Math.sin(time*0.003 + g.bobPhase)*0.15;
+    g.mesh.position.x += (tx - g.mesh.position.x) * Math.min(1,dt*5);
+    g.mesh.position.z += (tz - g.mesh.position.z) * Math.min(1,dt*5);
+    g.mesh.position.y += (ty - g.mesh.position.y) * Math.min(1,dt*5);
+    // نگاه به بازیکن
+    var lookDir = new THREE.Vector3(pp.x - g.mesh.position.x, 0, pp.z - g.mesh.position.z);
+    if(lookDir.lengthSq()>0.01){
+      g.mesh.rotation.y = Math.atan2(lookDir.x, lookDir.z);
+    }
+    // نور هاله
+    if(g.mesh.userData.aura){
+      g.mesh.userData.aura.material.opacity = 0.12 + Math.sin(time*0.005 + g.bobPhase)*0.06;
+    }
+    // دست ها آرام بالا و پایین
+    if(g.mesh.userData.armL){
+      g.mesh.userData.armL.rotation.z = 0.35 + Math.sin(time*0.003 + g.bobPhase)*0.1;
+      g.mesh.userData.armR.rotation.z = -0.35 - Math.sin(time*0.003 + g.bobPhase)*0.1;
+    }
+  }
+}
+
+// وقتی نزدیک میشه، هر روح یکی یکی میاد جلو میزنه
+function updateSahandGhosts(dt,time){
+  if(!boss||!sahandGhosts.length)return;
+  var pp=camera.position;
+  var bossDist = Math.sqrt(
+    (pp.x-boss.mesh.position.x)*(pp.x-boss.mesh.position.x) +
+    (pp.z-boss.mesh.position.z)*(pp.z-boss.mesh.position.z)
+  );
+
+  // اگه نزدیک شدیم (کمتر از 8 متر)، حمله شروع کن
+  if(sahandGhostState==='idle' && bossDist < 8 && time - sahandGhostAttackCooldown > 2500){
+    sahandGhostState='attacking';
+    sahandGhostActiveIdx = Math.floor(Math.random()*sahandGhosts.length);
+    var ag = sahandGhosts[sahandGhostActiveIdx];
+    ag.state='attacking';
+    ag.attackTimer=0;
+    ag.lastHit=0;
+    playGhostWail();
+    sahandGhostAttackCooldown = time;
+  }
+
+  // به روزرسانی هر روح
+  for(var i=0;i<sahandGhosts.length;i++){
+    var g=sahandGhosts[i];
+
+    if(g.state==='idle'){
+      // موقعیت پشت باس
+      var bx=boss.mesh.position.x, bz=boss.mesh.position.z;
+      var bossRot = boss.mesh.rotation.y;
+      var behindAngle = bossRot + Math.PI + g.homeAngle * 0.6;
+      var tx = bx + Math.sin(behindAngle) * g.homeRadius;
+      var tz = bz + Math.cos(behindAngle) * g.homeRadius;
+      var ty = 0.2 + Math.sin(time*0.003 + g.bobPhase)*0.15;
+      g.mesh.position.x += (tx - g.mesh.position.x) * Math.min(1,dt*5);
+      g.mesh.position.z += (tz - g.mesh.position.z) * Math.min(1,dt*5);
+      g.mesh.position.y += (ty - g.mesh.position.y) * Math.min(1,dt*5);
+      var lookDir = new THREE.Vector3(pp.x - g.mesh.position.x, 0, pp.z - g.mesh.position.z);
+      if(lookDir.lengthSq()>0.01){
+        g.mesh.rotation.y = Math.atan2(lookDir.x, lookDir.z);
+      }
+      if(g.mesh.userData.aura){
+        g.mesh.userData.aura.material.opacity = 0.12 + Math.sin(time*0.005 + g.bobPhase)*0.06;
+      }
+    }
+
+    else if(g.state==='attacking'){
+      // روح میاد جلو به سمت بازیکن
+      g.attackTimer += dt;
+      var targetPos = new THREE.Vector3(pp.x, pp.y - 0.3, pp.z);
+      var current = g.mesh.position;
+      var toT = new THREE.Vector3().subVectors(targetPos, current);
+      var dist = toT.length();
+
+      // به روزرسانی چرخش
+      if(dist > 0.01){
+        g.mesh.rotation.y = Math.atan2(toT.x, toT.z);
+      }
+
+      // حرکت به سمت بازیکن
+      var speed = 14 * dt;
+      if(dist > 1.0){
+        var step = Math.min(speed, dist);
+        g.mesh.position.x += toT.x / dist * step;
+        g.mesh.position.y += toT.y / dist * step;
+        g.mesh.position.z += toT.z / dist * step;
+      }
+
+      // وقتی رسید نزدیک، ضربه بزنه
+      if(dist < 1.8 && g.attackTimer - g.lastHit > 0.5){
+        g.lastHit = g.attackTimer;
+        // ضربه به بازیکن
+        if(!isSliding && performance.now() >= playerInvulnUntil){
+          var dmg = (18 + Math.random()*8) * getEnemyDmgMult();
+          takeDamage(dmg);
+          playerInvulnUntil = performance.now() + 800;
+          playHurt();
+          screenShake = 0.5;
+        }
+      }
+
+      // بعد از 2.5 ثانیه برگرد
+      if(g.attackTimer > 2.5){
+        g.state='returning';
+        g.attackTimer=0;
+      }
+    }
+
+    else if(g.state==='returning'){
+      // روح برمیگرده پشت باس
+      g.attackTimer += dt;
+      var bx2=boss.mesh.position.x, bz2=boss.mesh.position.z;
+      var bossRot2 = boss.mesh.rotation.y;
+      var behindAngle2 = bossRot2 + Math.PI + g.homeAngle * 0.6;
+      var tx2 = bx2 + Math.sin(behindAngle2) * g.homeRadius;
+      var tz2 = bz2 + Math.cos(behindAngle2) * g.homeRadius;
+      var ty2 = 0.2 + Math.sin(time*0.003 + g.bobPhase)*0.15;
+
+      var toHome = new THREE.Vector3(tx2 - g.mesh.position.x, ty2 - g.mesh.position.y, tz2 - g.mesh.position.z);
+      var distHome = toHome.length();
+      var speedHome = 10 * dt;
+
+      if(distHome > 0.3){
+        g.mesh.position.x += toHome.x / distHome * Math.min(speedHome, distHome);
+        g.mesh.position.y += toHome.y / distHome * Math.min(speedHome, distHome);
+        g.mesh.position.z += toHome.z / distHome * Math.min(speedHome, distHome);
+      } else {
+        // رسید خونه
+        g.state='idle';
+        sahandGhostState='idle';
+        sahandGhostActiveIdx = -1;
+      }
+    }
   }
 }
 
 var raycaster=new THREE.Raycaster();
+
 function shoot(){
   if(isReloading||isPaused||!gameStarted||dying||isSliding||wheelOpen||currentDance)return;
   var w=weapons[currentWeapon],now=performance.now();
@@ -1375,10 +1826,23 @@ function fireRay(w,isPellet){
   raycaster.set(camera.getWorldPosition(new THREE.Vector3()),d);
   var targets=[];enemies.forEach(function(e){if(e.alive)targets.push(e.mesh);});
   if(boss&&bossActive)targets.push(boss.mesh);
+  // ارواح هم قابل هدف گیری هستن ولی نمیمیرن
+  // چون روحن آخه. چطوری میکشی روح رو؟
+  for(var gi=0;gi<sahandGhosts.length;gi++) targets.push(sahandGhosts[gi].mesh);
   var hits=raycaster.intersectObjects(targets,true);
   if(hits.length>0){
     var hit=hits[0],obj=hit.object;
     while(obj.parent&&targets.indexOf(obj)<0)obj=obj.parent;
+    // چک کن روحه؟
+    var isGhost = false;
+    for(var gi2=0;gi2<sahandGhosts.length;gi2++){
+      if(sahandGhosts[gi2].mesh===obj){isGhost=true;break;}
+    }
+    if(isGhost){
+      // روح رو نمیشه کشت ولی هیت مارک نشون بده که حس خوبی بگیری
+      if(!isPellet){showHitmark();playHit();}
+      return;
+    }
     var enemy=null;
     for(var i=0;i<enemies.length;i++)if(enemies[i].alive&&enemies[i].mesh===obj){enemy=enemies[i];break;}
     if(enemy){enemy.hp-=w.damage;if(!isPellet){showHitmark();playHit();}if(enemy.hp<=0)killEnemy(enemy);}
@@ -1418,7 +1882,15 @@ function killEnemy(enemy,byKnife){
   if(byKnife)showEventText('🗡️ +۳۰۰','gold');
   enemySpeedMultiplier=1+killCount*SPEED_GAIN_PER_KILL;
   KILLS_TO_BOSS=getKillsToBoss();
-  if(killCount>=KILLS_TO_BOSS&&!bossActive){var bt=Math.random()<0.5?'shikam':'souzani';spawnBoss(bt);}
+  if(killCount>=KILLS_TO_BOSS&&!bossActive){
+    // حالا سه گزینه: سوزنی، شکم، سهند
+    var bt;
+    var r=Math.random();
+    if(r<0.33)bt='sahand';
+    else if(r<0.66)bt='shikam';
+    else bt='souzani';
+    spawnBoss(bt);
+  }
   if(!bossActive&&killCount<KILLS_TO_BOSS)setTimeout(function(){if(!dying&&gameStarted&&!isPaused&&!bossActive)spawnEnemy();},400+Math.random()*500);
 }
 function resetGameState(){
@@ -1426,6 +1898,14 @@ function resetGameState(){
   enemies=[];
   if(boss&&boss.mesh&&boss.mesh.parent)boss.mesh.parent.remove(boss.mesh);
   boss=null;bossActive=false;
+  // ارواح رو هم پاک کن
+  for(var gi=0;gi<sahandGhosts.length;gi++){
+    if(sahandGhosts[gi].mesh && sahandGhosts[gi].mesh.parent){
+      sahandGhosts[gi].mesh.parent.remove(sahandGhosts[gi].mesh);
+    }
+  }
+  sahandGhosts=[];
+  sahandGhostState='idle';
   for(var j=0;j<effects.length;j++)if(effects[j].mesh&&effects[j].mesh.parent)effects[j].mesh.parent.remove(effects[j].mesh);
   effects=[];
   score=0;health=150;killCount=0;dying=false;
@@ -1451,6 +1931,22 @@ function returnToMainMenu(){
 function killBoss(byKnife){
   if(!boss)return;
   var mesh=boss.mesh,pos=mesh.position.clone();scene.remove(mesh);
+  // ارواح هم پودر شن
+  for(var gi=0;gi<sahandGhosts.length;gi++){
+    var gm=sahandGhosts[gi].mesh;
+    // یه انفجار آبی خوشگل
+    for(var p=0;p<20;p++){
+      var pd=new THREE.Mesh(new THREE.SphereGeometry(0.1+Math.random()*0.15,6,5),
+        new THREE.MeshStandardMaterial({color:0xddeeff,emissive:0x88bbff,emissiveIntensity:0.6,transparent:true,opacity:0.8}));
+      pd.position.copy(gm.position);
+      scene.add(pd);
+      var ang=Math.random()*Math.PI*2,up=2+Math.random()*4;
+      effects.push({mesh:pd,life:1.5,maxLife:2.5,type:'dust',vel:new THREE.Vector3(Math.cos(ang)*3,up,Math.sin(ang)*3)});
+    }
+    if(gm.parent)gm.parent.remove(gm);
+  }
+  sahandGhosts=[];
+
   var dustCount=isMobile?40:80;
   for(var i=0;i<dustCount;i++){
     var size=0.08+Math.random()*0.22;
@@ -1468,14 +1964,17 @@ function killBoss(byKnife){
   progress.level++;progress.totalPlays++;
   if(progress.level>progress.bestStage)progress.bestStage=progress.level;
   KILLS_TO_BOSS=getKillsToBoss();saveGame();
-  showEventText(byKnife?'🗡️ باس با چاقو!':'🏆 پیروزی!','gold');
-  var msg=(byKnife?'با چاقو! ':'')+(currentBossType==='shikam'?'شکم قرومساق پودر شد!':'سوزنی (و دماغش!) پودر شد!');
-  showToast('🏆 '+msg+' — مرحله '+progress.level,1200);
-  setTimeout(returnToMainMenu,1200);
+  showEventText(byKnife?t('killedKnife'):t('killed'),'gold');
+  var msg;
+  if(currentBossType==='shikam')msg=LANG==='en'?'Belly-Boy destroyed!':'شکم قرومساق پودر شد!';
+  else if(currentBossType==='sahand')msg=LANG==='en'?'Uncle Sahand and aunties destroyed!':'عمو سهند و عمه هاش پودر شدن!';
+  else msg=LANG==='en'?'Souzani (and his nose!) destroyed!':'سوزنی (و دماغش!) پودر شد!';
+  showToast('🏆 '+msg+' — '+t('level')+' '+progress.level,1400);
+  setTimeout(returnToMainMenu,1400);
 }
 function showHitmark(){if(!settings.hitmarker)return;var el=document.getElementById('hitmark');if(!el)return;el.style.opacity=1;setTimeout(function(){el.style.opacity=0;},100);}
 var eventTextTimer=null;
-function showEventText(text,colorClass){var el=document.getElementById('eventText');if(!el)return;el.textContent=text;el.className='';if(colorClass)el.classList.add(colorClass);el.classList.add('show');if(eventTextTimer)clearTimeout(eventTextTimer);eventTextTimer=setTimeout(function(){el.classList.remove('show');},1000);}
+function showEventText(text,colorClass){var el=document.getElementById('eventText');if(!el)return;el.textContent=text;el.className='';if(colorClass)el.classList.add(colorClass);el.classList.add('show');if(eventTextTimer)clearTimeout(eventTextTimer);eventTextTimer=setTimeout(function(){el.classList.remove('show');},1200);}
 function updateHud(){
   var hp=Math.max(0,Math.floor(health));
   var hf=document.getElementById('healthFill');if(hf)hf.style.width=(hp/150*100)+'%';
@@ -1518,7 +2017,7 @@ function switchSlot(slot){
   if(slot<0||slot>=carriedWeapons.length)return;
   var idx=carriedWeapons[slot];
   if(idx==null||idx<0||idx>=weapons.length)return;
-  if(!isOwned(weapons[idx].id)){showToast('🔒 این اسلحه رو نداری!');return;}
+  if(!isOwned(weapons[idx].id)){showToast(t('lockedWeapon'));return;}
   activeSlot=slot;refreshCurrentWeapon();
   isReloading=false;reloadAnim.active=false;
   playWeaponSwitch();updateWeaponVisibility();updateAmmoHud();updateCrosshair();
@@ -1612,7 +2111,7 @@ function takeDamage(dmg){
   if(de){de.style.opacity=0.8;setTimeout(function(){de.style.opacity=0;},200);}
   if(health<=0){health=0;updateHud();gameOver();}
 }
-function gameOver(){dying=true;isPaused=true;if(document.pointerLockElement)document.exitPointerLock();playExplosion();progress.totalPlays++;saveGame();showEventText('☠️ مُردی!','red');showToast('🏠 برگشت به منو...',600);returnToMainMenu();}
+function gameOver(){dying=true;isPaused=true;if(document.pointerLockElement)document.exitPointerLock();playExplosion();progress.totalPlays++;saveGame();showEventText(t('youDied'),'red');showToast(t('backToMenu'),700);returnToMainMenu();}
 function updateEffects(dt){
   for(var i=effects.length-1;i>=0;i--){
     var e=effects[i];e.life-=dt;
@@ -1676,7 +2175,7 @@ function buildWeaponWheel(){
     slot.innerHTML='<div class="num">'+(s+1)+'</div><div class="e">'+w.skinEmoji+'</div><div class="n">'+w.name+'</div>';
     wheel.appendChild(slot);idx++;
   }
-  var c=document.createElement('div');c.className='wheel-center';c.id='wheelCenter';c.innerHTML='<div class="cname">🎯 انتخاب اسلحه</div>';wheel.appendChild(c);
+  var c=document.createElement('div');c.className='wheel-center';c.id='wheelCenter';c.innerHTML='<div class="cname">🎯 '+t('loadout')+'</div>';wheel.appendChild(c);
 }
 function buildDanceWheel(){
   var wheel=document.getElementById('danceWheel');if(!wheel)return;wheel.innerHTML='';
@@ -1686,7 +2185,7 @@ function buildDanceWheel(){
     slot.innerHTML='<div class="e">'+d.emoji+'</div><div class="n">'+d.name+'</div>';
     wheel.appendChild(slot);
   }
-  var c=document.createElement('div');c.className='wheel-center';c.id='danceWheelCenter';c.innerHTML='<div class="cname">🕺 رقص</div>';wheel.appendChild(c);
+  var c=document.createElement('div');c.className='wheel-center';c.id='danceWheelCenter';c.innerHTML='<div class="cname">🕺 '+DANCES[0].name+'</div>';wheel.appendChild(c);
 }
 function updateWheelSelection(){
   var wheel=document.getElementById(wheelType==='dance'?'danceWheel':'weaponWheel');if(!wheel)return;
@@ -1716,13 +2215,16 @@ function closeWheel(select){
   }
   if(!isMobile)setTimeout(function(){if(gameStarted&&!isPaused&&!dying)document.body.requestPointerLock();},50);
 }
-function startDance(danceId){currentDance=danceId;danceTime=0;resetDanceAnim();playDanceMusic();var d=null;for(var i=0;i<DANCES.length;i++)if(DANCES[i].id===danceId){d=DANCES[i];break;}showDanceHud('🕺 در حال رقص: '+(d?d.name:danceId));}
+function startDance(danceId){currentDance=danceId;danceTime=0;resetDanceAnim();playDanceMusic();var d=null;for(var i=0;i<DANCES.length;i++)if(DANCES[i].id===danceId){d=DANCES[i];break;}showDanceHud('🕺 '+(d?d.name:danceId));}
 function showDanceHud(text){var el=document.getElementById('danceHud');if(!el)return;el.textContent=text;el.classList.add('show');setTimeout(function(){el.classList.remove('show');},3000);}
 function stopDance(){if(!currentDance)return;currentDance=null;danceTime=0;resetDanceAnim();}
-function updateDance(dt){if(!currentDance)return;danceTime+=dt;if(Math.hypot(p1.horizVel.x,p1.horizVel.z)>1.5){stopDance();return;}var t=danceTime;if(currentDance==='floss'){bobY=Math.abs(Math.sin(t*8))*0.06;}else if(currentDance==='dab'){bobY=Math.abs(Math.sin(t*3))*0.1;}else{bobY=Math.sin(t*8)*0.05;}if(danceTime>8)stopDance();}
+function updateDance(dt){if(!currentDance)return;danceTime+=dt;if(Math.hypot(p1.horizVel.x,p1.horizVel.z)>1.5){stopDance();return;}var t2=danceTime;if(currentDance==='floss'){bobY=Math.abs(Math.sin(t2*8))*0.06;}else if(currentDance==='dab'){bobY=Math.abs(Math.sin(t2*3))*0.1;}else{bobY=Math.sin(t2*8)*0.05;}if(danceTime>8)stopDance();}
 function trySlide(){if(!gameStarted||isPaused||dying)return;if(isSliding||slideCooldown>0)return;if(!isSprinting)return;var speed=Math.hypot(p1.horizVel.x,p1.horizVel.z);if(speed<3)return;isSliding=true;slideTime=0;slideDir.set(p1.horizVel.x,p1.horizVel.z,0).normalize();p1.horizVel.x=slideDir.x*15;p1.horizVel.z=slideDir.z*15;playerInvulnUntil=performance.now()+slideDuration*1000;}
 function showStanceHud(text){var el=document.getElementById('stanceHud');if(!el)return;el.textContent=text;el.classList.add('show');setTimeout(function(){el.classList.remove('show');},800);}
 
+// ============================================================
+// تنظیمات کنترل. اینجا با کلیک و لمس کار میکنیم
+// ============================================================
 function setupControls(){
   document.addEventListener('keydown',function(e){
     if(!gameStarted||dying)return;
@@ -1781,17 +2283,114 @@ function setupControls(){
   },{passive:false});
   document.addEventListener('click',function(e){
     var el=e.target;
-    var isInteractive=el.closest('button')||el.closest('input')||el.closest('select')||el.closest('.actionBtn')||el.closest('.wpnBtn')||el.closest('#joystick')||el.closest('.mapCard')||el.closest('.loChip')||el.closest('.filterBtn')||el.closest('.shopCard2')||el.closest('.loadSlot')||el.closest('#loadoutConfirm')||el.closest('.backBtn')||el.closest('.closeX')||el.closest('.resBtn')||el.closest('.toggleBtn')||el.closest('.slot')||el.closest('.menuBtn')||el.closest('.tutorialBtn')||el.closest('.btn');
-    if(!isInteractive){pastelIdx=(pastelIdx+1)%PASTEL.length;var c1=PASTEL[pastelIdx];var c2=PASTEL[(pastelIdx+1)%PASTEL.length];var c3=PASTEL[(pastelIdx+2)%PASTEL.length];document.body.style.background=c1;var ss=document.getElementById('startScreen');if(ss&&!ss.classList.contains('hidden'))ss.style.background='linear-gradient(135deg,'+c1+','+c2+','+c3+')';}
+    var isInteractive=el.closest('button')||el.closest('input')||el.closest('select')||el.closest('.actionBtn')||el.closest('.wpnBtn')||el.closest('#joystick')||el.closest('.mapCard')||el.closest('.loChip')||el.closest('.filterBtn')||el.closest('.shopCard2')||el.closest('.loadSlot')||el.closest('#loadoutConfirm')||el.closest('.backBtn')||el.closest('.closeX')||el.closest('.resBtn')||el.closest('.toggleBtn')||el.closest('.slot')||el.closest('.menuBtn')||el.closest('.tutorialBtn')||el.closest('.btn')||el.closest('.langBtn');
     if(gameStarted&&!isPaused&&!dying&&!document.pointerLockElement&&!isMobile&&!wheelOpen){var el2=document.elementFromPoint(e.clientX,e.clientY);if(!el2||(!el2.closest('#mobileControls')&&!el2.closest('#gearBtn')&&!el2.closest('#fsBtn')&&!el2.closest('#editCtrlBtn')))document.body.requestPointerLock();}
   });
+
+  // ====================================================
+  // جوی استیک. آخه موبایل که ماوس نداره
+  // ====================================================
   var joy=document.getElementById('joystick'),knob=document.getElementById('joyKnob');
   if(joy){joy.addEventListener('touchstart',function(e){e.preventDefault();e.stopPropagation();var t=e.changedTouches[0];joystickId=t.identifier;var r=joy.getBoundingClientRect();joystickCenter={x:r.left+r.width/2,y:r.top+r.height/2};},{passive:false});}
   document.addEventListener('touchmove',function(e){
-    for(var i=0;i<e.changedTouches.length;i++){var t=e.changedTouches[i];if(t.identifier===joystickId){e.preventDefault();var dx=t.clientX-joystickCenter.x,dy=t.clientY-joystickCenter.y;var len=Math.hypot(dx,dy);if(len>JOYSTICK_MAX){dx=dx/len*JOYSTICK_MAX;dy=dy/len*JOYSTICK_MAX;}if(knob)knob.style.transform='translate(calc(-50% + '+dx+'px), calc(-50% + '+dy+'px))';var nx=dx/JOYSTICK_MAX,ny=dy/JOYSTICK_MAX,dz=0.25;p1.mFwd=ny<-dz;p1.mBwd=ny>dz;p1.mLeft=nx<-dz;p1.mRight=nx>dz;isSprinting=Math.abs(ny)>0.7;}}
+    for(var i=0;i<e.changedTouches.length;i++){
+      var t=e.changedTouches[i];
+      if(t.identifier===joystickId){
+        e.preventDefault();
+        var dx=t.clientX-joystickCenter.x,dy=t.clientY-joystickCenter.y;
+        var len=Math.hypot(dx,dy);
+        if(len>JOYSTICK_MAX){dx=dx/len*JOYSTICK_MAX;dy=dy/len*JOYSTICK_MAX;}
+        if(knob)knob.style.transform='translate(calc(-50% + '+dx+'px), calc(-50% + '+dy+'px))';
+        var nx=dx/JOYSTICK_MAX,ny=dy/JOYSTICK_MAX,dz=0.25;
+        p1.mFwd=ny<-dz;p1.mBwd=ny>dz;p1.mLeft=nx<-dz;p1.mRight=nx>dz;
+        isSprinting=Math.abs(ny)>0.7;
+      }
+    }
   },{passive:false});
   function joyRelease(e){for(var i=0;i<e.changedTouches.length;i++){var t=e.changedTouches[i];if(t.identifier===joystickId){joystickId=null;if(knob)knob.style.transform='translate(-50%,-50%)';p1.mFwd=p1.mBwd=p1.mLeft=p1.mRight=false;isSprinting=false;}}}
   document.addEventListener('touchend',joyRelease);document.addEventListener('touchcancel',joyRelease);
+
+  // ====================================================
+  // چرخش دوربین با لمس صفحه تو موبایل
+  // وقتی انگشتت رو میبری رو صفحه و میکشی، دوربین میچرخه
+  // مثل پابجی و فری فایر. یادمون نره ما هم آدمیم
+  // ====================================================
+
+  var screenTouchId = null;
+  var screenTouchLastX = 0, screenTouchLastY = 0;
+
+  // شروع لمس روی صفحه بازی
+  document.addEventListener('touchstart',function(e){
+    if(!gameStarted||isPaused||dying||wheelOpen)return;
+    for(var i=0;i<e.changedTouches.length;i++){
+      var t=e.changedTouches[i];
+      // اگه رو یه دکمه یا جوی استیک باشه رد کن
+      var el=document.elementFromPoint(t.clientX, t.clientY);
+      if(el && (
+        el.closest('#joystick') ||
+        el.closest('.actionBtn') ||
+        el.closest('.wpnBtn') ||
+        el.closest('button') ||
+        el.closest('#mobileControls .actionBtn') ||
+        el.closest('#weaponBtns') ||
+        el.closest('#gearBtn') ||
+        el.closest('#fsBtn') ||
+        el.closest('#editCtrlBtn') ||
+        el.closest('.overlayScreen')
+      )) continue;
+
+      // اولین لمس که رو صفحه بازی بود = چرخش دوربین
+      if(screenTouchId===null){
+        screenTouchId = t.identifier;
+        screenTouchLastX = t.clientX;
+        screenTouchLastY = t.clientY;
+        break;
+      }
+    }
+  },{passive:false});
+
+  // حرکت لمس = چرخش دوربین
+  document.addEventListener('touchmove',function(e){
+    if(screenTouchId===null)return;
+    if(!gameStarted||isPaused||dying||wheelOpen)return;
+    for(var i=0;i<e.changedTouches.length;i++){
+      var t=e.changedTouches[i];
+      if(t.identifier===screenTouchId){
+        e.preventDefault();
+        var dx = t.clientX - screenTouchLastX;
+        var dy = t.clientY - screenTouchLastY;
+        screenTouchLastX = t.clientX;
+        screenTouchLastY = t.clientY;
+        // حساسیت لمس
+        var sens = settings.touchSensitivity * 0.0035;
+        if(isAiming) sens *= settings.adsSensitivity;
+        p1.yaw -= dx * sens;
+        p1.pitch -= dy * sens * (settings.invertY ? -1 : 1);
+        p1.pitch = Math.max(-Math.PI/2+0.05, Math.min(Math.PI/2-0.05, p1.pitch));
+      }
+    }
+  },{passive:false});
+
+  // پایان لمس
+  document.addEventListener('touchend',function(e){
+    for(var i=0;i<e.changedTouches.length;i++){
+      var t=e.changedTouches[i];
+      if(t.identifier===screenTouchId){
+        screenTouchId = null;
+        break;
+      }
+    }
+  });
+  document.addEventListener('touchcancel',function(e){
+    for(var i=0;i<e.changedTouches.length;i++){
+      var t=e.changedTouches[i];
+      if(t.identifier===screenTouchId){
+        screenTouchId = null;
+        break;
+      }
+    }
+  });
+
   function setupBtn(id,down,up){var el=document.getElementById(id);if(!el)return;el.addEventListener('touchstart',function(e){e.preventDefault();e.stopPropagation();down();},{passive:false});el.addEventListener('touchend',function(e){e.preventDefault();e.stopPropagation();if(up)up();},{passive:false});el.addEventListener('mousedown',function(e){e.preventDefault();down();});el.addEventListener('mouseup',function(e){e.preventDefault();if(up)up();});}
   setupBtn('shootBtn',function(){mouseDown=true;shoot();},function(){mouseDown=false;});
   setupBtn('jumpBtn',function(){if(!isJumping&&!isSliding&&stance==='stand'){velocityY=6;isJumping=true;stopDance();}});
@@ -1824,7 +2423,7 @@ function toggleEditMode(){
   var ids=['shootBtn','jumpBtn','reloadBtn','adsBtn','slideBtn','proneBtn','wheelBtn','danceBtn'];
   for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el)el.classList.toggle('draggable',editMode);}
   var joy=document.getElementById('joystick');if(joy)joy.classList.toggle('draggable',editMode);
-  showToast(editMode?'🎮 حالت ویرایش':'✅ حالت عادی',1500);
+  showToast(editMode?'🎮 Edit Mode':'✅ Normal Mode',1500);
 }
 function setAim(on){isAiming=on;hasScoped=weapons[currentWeapon]&&(weapons[currentWeapon].cat==='sniper');if(on&&hasScoped)currentZoom=3.5;else currentZoom=1;updateCrosshair();updateAimHud();}
 function updateAimHud(){var hud=document.getElementById('aimZoomHud');if(!hud)return;if(hasScoped&&isAiming){hud.classList.add('show');var zv=document.getElementById('zoomVal');if(zv)zv.textContent=currentZoom.toFixed(1)+'×';targetZoom=currentZoom;}else hud.classList.remove('show');}
@@ -1836,16 +2435,37 @@ function togglePause(){
   else{ps.classList.remove('show');if(audioCtx){try{audioCtx.resume();}catch(e){}}if(!isMobile)document.body.requestPointerLock();}
 }
 var toastTimer=null;
-function showToast(msg,dur){dur=dur||1800;var t=document.getElementById('toast');if(!t)return;t.textContent=msg;t.classList.add('show');if(toastTimer)clearTimeout(toastTimer);toastTimer=setTimeout(function(){t.classList.remove('show');},dur);}
+function showToast(msg,dur){dur=dur||1800;var t2=document.getElementById('toast');if(!t2)return;t2.textContent=msg;t2.classList.add('show');if(toastTimer)clearTimeout(toastTimer);toastTimer=setTimeout(function(){t2.classList.remove('show');},dur);}
 function updateStartScore(){var el=document.getElementById('startScoreVal');if(el)el.textContent=totalScore;}
 function updateShopScore(){var el=document.getElementById('shopScoreVal');if(el)el.textContent=totalScore;}
 
+// ============================================================
+// فروشگاه - آقای دهقان میاد اینجا خرید میکنه
+// ============================================================
 var currentFilter='all';
-var CAT_LABELS={all:'🎒 تمام اصلحه ها',pistol:'🔫 پیستول',smg:'⚡ SMG',shotgun:'💥 شاتگان',rifle:'🪖 رایفل',sniper:'🎯 تک تیر اندازی',lmg:'⚙️ LMG',special:'🚀 ویژه',knife:'🗡️ چاقو',phone:'☎️ تلفن',legendary:'👑 گودرتمند'};
-function buildShopFilters(){var f=document.getElementById('shopFilters');if(!f)return;f.innerHTML='';for(var k in CAT_LABELS){var b=document.createElement('button');b.className='filterBtn'+(currentFilter===k?' active':'');b.textContent=CAT_LABELS[k];(function(key){b.addEventListener('click',function(){currentFilter=key;buildShop();});})(k);f.appendChild(b);}}
+function getCATLabels(){return {
+  all: LANG==='en'?'🎒 All Weapons':'🎒 تمام اصلحه ها',
+  pistol: LANG==='en'?'🔫 Pistols':'🔫 پیستول',
+  smg: '⚡ SMG',
+  shotgun: LANG==='en'?'💥 Shotguns':'💥 شاتگان',
+  rifle: LANG==='en'?'🪖 Rifles':'🪖 رایفل',
+  sniper: LANG==='en'?'🎯 Snipers':'🎯 تک تیر اندازی',
+  lmg: '⚙️ LMG',
+  special: LANG==='en'?'🚀 Special':'🚀 ویژه',
+  knife: LANG==='en'?'🗡️ Knives':'🗡️ چاقو',
+  phone: LANG==='en'?'☎️ Phone':'☎️ تلفن',
+  legendary: LANG==='en'?'👑 Legendary':'👑 گودرتمند'
+};}
+function buildShopFilters(){
+  var f=document.getElementById('shopFilters');if(!f)return;f.innerHTML='';
+  var cats=getCATLabels();
+  for(var k in cats){var b=document.createElement('button');b.className='filterBtn'+(currentFilter===k?' active':'');b.textContent=cats[k];
+    (function(key){b.addEventListener('click',function(){currentFilter=key;buildShop();});})(k);f.appendChild(b);}
+}
 function buildShop(){
   buildShopFilters();
   var grid=document.getElementById('shopGrid');if(!grid)return;grid.innerHTML='';
+  var cats=getCATLabels();
   for(var i=0;i<weapons.length;i++){
     var w=weapons[i];
     if(currentFilter==='legendary'){if(w.tag!=='LEGENDARY')continue;}
@@ -1853,23 +2473,43 @@ function buildShop(){
     var owned=isOwned(w.id);
     var isPhoneCard=(w.id==='dehghan_phone');
     var card=document.createElement('div');card.className='shopCard2'+(isPhoneCard?' specialCard':'');
-    var tagHtml=w.tag==='LEGENDARY'?'<div class="shopTag legend">👑 گودرتمند</div>':(isPhoneCard?'<div class="shopTag special">☎️ ویژه</div>':'');
-    card.innerHTML=tagHtml+'<div class="shopCat">'+(CAT_LABELS[w.cat]||w.cat)+'</div>'+'<div class="shopName">'+w.skinEmoji+' '+w.name+'</div>'+'<div class="shopSkin" style="background:'+w.skinGrad+'">'+w.skinEmoji+'</div>'+'<div class="shopStats"><span>💥 '+w.damage+'</span><span>📦 '+w.magSize+'</span></div>'+'<div style="font-size:10px;color:#6a5a8a;text-align:center">'+w.desc+'</div>'+'<div class="shopPrice">'+(w.price===0?'🎁 رایگان':'💰 '+w.price.toLocaleString('en-US'))+'</div>'+'<button class="shopBtn2"></button>';
+    var tagHtml=w.tag==='LEGENDARY'?'<div class="shopTag legend">👑 '+(LANG==='en'?'Legendary':'گودرتمند')+'</div>':(isPhoneCard?'<div class="shopTag special">☎️ '+(LANG==='en'?'Special':'ویژه')+'</div>':'');
+    card.innerHTML=tagHtml+'<div class="shopCat">'+(cats[w.cat]||w.cat)+'</div>'+'<div class="shopName">'+w.skinEmoji+' '+w.name+'</div>'+'<div class="shopSkin" style="background:'+w.skinGrad+'">'+w.skinEmoji+'</div>'+'<div class="shopStats"><span>💥 '+w.damage+'</span><span>📦 '+w.magSize+'</span></div>'+'<div style="font-size:10px;color:rgba(255,255,255,.75);text-align:center">'+w.desc+'</div>'+'<div class="shopPrice">'+(w.price===0?t('free'):'💰 '+w.price.toLocaleString('en-US'))+'</div>'+'<button class="shopBtn2"></button>';
     var btn=card.querySelector('.shopBtn2');
-    if(isPhoneCard){if(owned){btn.className='shopBtn2 bigBuy';btn.textContent='✓ خریداری شده - استفاده کن!';}else if(totalScore>=w.price){btn.className='shopBtn2 bigBuy';btn.textContent='☎️ خرید تلفن اقای دهقان ☎️';}else{btn.className='shopBtn2 bigBuy disabled';btn.textContent='🔒 '+w.price.toLocaleString('en-US')+' امتیاز لازم داری';btn.disabled=true;}}
-    else{if(owned){if(carriedWeapons.indexOf(i)>=0){btn.className='shopBtn2 equipped';btn.textContent='✓ در چرخ';}else{btn.className='shopBtn2 owned';btn.textContent='🎒 افزودن';}}else if(w.price===0){btn.className='shopBtn2 buy';btn.textContent='🎁 دریافت';}else if(totalScore>=w.price){btn.className='shopBtn2 buy';btn.textContent='🛒 خرید';}else{btn.className='shopBtn2 buy disabled';btn.textContent='🔒 کمبود';btn.disabled=true;}}
+    if(isPhoneCard){
+      if(owned){btn.className='shopBtn2 bigBuy';btn.textContent='✓ '+(LANG==='en'?'Owned - Use it!':'خریداری شده - استفاده کن!');}
+      else if(totalScore>=w.price){btn.className='shopBtn2 bigBuy';btn.textContent='☎️ '+(LANG==='en'?'Buy Dehghan Phone':'خرید تلفن اقای دهقان')+' ☎️';}
+      else{btn.className='shopBtn2 bigBuy disabled';btn.textContent='🔒 '+w.price.toLocaleString('en-US')+' '+(LANG==='en'?'Score needed':'امتیاز لازم داری');btn.disabled=true;}
+    }else{
+      if(owned){if(carriedWeapons.indexOf(i)>=0){btn.className='shopBtn2 equipped';btn.textContent=t('equipped');}else{btn.className='shopBtn2 owned';btn.textContent=t('add');}}
+      else if(w.price===0){btn.className='shopBtn2 buy';btn.textContent=t('free');}
+      else if(totalScore>=w.price){btn.className='shopBtn2 buy';btn.textContent=t('buy');}
+      else{btn.className='shopBtn2 buy disabled';btn.textContent=t('notEnough');btn.disabled=true;}
+    }
     (function(weapon,index){
       btn.addEventListener('click',function(){
         if(isOwned(weapon.id)){
-          if(weapon.cat==='knife'){showToast('🗡️ چاقو همیشه همراهته!');return;}
-          if(weapon.cat==='phone'){carriedWeapons[0]=index;if(carriedWeapons[1]<0) carriedWeapons[1]=1;savedLoadout=[weapons[carriedWeapons[0]].id];for(var s2=1;s2<2;s2++){if(carriedWeapons[s2]>=0)savedLoadout.push(weapons[carriedWeapons[s2]].id);}saveGame();refreshCurrentWeapon();buildShop();buildMobileWeaponButtons();updateWeaponVisibility();updateAmmoHud();showToast('☎️ تلفن آقای دهقان آماده شد! بیپ بیپ');return;}
+          if(weapon.cat==='knife'){showToast('🗡️ '+(LANG==='en'?'Knife is always with you!':'چاقو همیشه همراهته!'));return;}
+          if(weapon.cat==='phone'){
+            carriedWeapons[0]=index;if(carriedWeapons[1]<0) carriedWeapons[1]=1;
+            savedLoadout=[weapons[carriedWeapons[0]].id];
+            for(var s2=1;s2<2;s2++){if(carriedWeapons[s2]>=0)savedLoadout.push(weapons[carriedWeapons[s2]].id);}
+            saveGame();refreshCurrentWeapon();buildShop();buildMobileWeaponButtons();updateWeaponVisibility();updateAmmoHud();
+            showToast('☎️ '+(LANG==='en'?'Dehghan phone ready! Beep beep':'تلفن آقای دهقان آماده شد! بیپ بیپ'));
+            return;
+          }
           var at=carriedWeapons.indexOf(index);
           if(at>=0&&at<2){carriedWeapons[at]=-1;}else{var empty=-1;for(var k=0;k<2;k++)if(carriedWeapons[k]<0){empty=k;break;}if(empty>=0)carriedWeapons[empty]=index;else carriedWeapons[0]=index;}
           savedLoadout=[];for(var s=0;s<2;s++)if(carriedWeapons[s]>=0)savedLoadout.push(weapons[carriedWeapons[s]].id);
-          saveGame();refreshCurrentWeapon();buildShop();buildMobileWeaponButtons();updateWeaponVisibility();updateAmmoHud();showToast('🎒 '+weapon.name);
+          saveGame();refreshCurrentWeapon();buildShop();buildMobileWeaponButtons();updateWeaponVisibility();updateAmmoHud();
+          showToast('🎒 '+weapon.name);
         }else if(weapon.price===0){ownedWeapons.push(weapon.id);saveGame();buildShop();showToast('🎁 '+weapon.name);}
-        else if(totalScore>=weapon.price){totalScore-=weapon.price;ownedWeapons.push(weapon.id);saveGame();updateShopScore();updateStartScore();buildShop();if(weapon.id==='dehghan_phone'){showToast('☎️ تلفن آقای دهقان خریداری شد! بیپ بیپ!',2500);showEventText('☎️ تلفن!','gold');}else{showToast('🎉 '+weapon.name);}}
-        else showToast('❌ کمبود امتیاز');
+        else if(totalScore>=weapon.price){
+          totalScore-=weapon.price;ownedWeapons.push(weapon.id);saveGame();updateShopScore();updateStartScore();buildShop();
+          if(weapon.id==='dehghan_phone'){showToast('☎️ '+(LANG==='en'?'Phone purchased!':'تلفن خریداری شد!')+' ☎️',2500);showEventText('☎️ Phone!','gold');}
+          else{showToast('🎉 '+weapon.name);}
+        }
+        else showToast(t('notEnoughScore'));
       });
     })(w,i);
     grid.appendChild(card);
@@ -1878,10 +2518,27 @@ function buildShop(){
 function openShop(){var ss=document.getElementById('startScreen');if(ss)ss.classList.add('hidden');var sh=document.getElementById('shopScreen');if(sh)sh.classList.add('show');updateShopScore();buildShop();}
 function closeShop(){var sh=document.getElementById('shopScreen');if(sh)sh.classList.remove('show');var ss=document.getElementById('startScreen');if(ss)ss.classList.remove('hidden');updateStartScore();}
 
-var MAPS=[{id:'rezagolzar',name:'🌳 محله رضا گلزار',desc:'🏘️ محله با مدرسه، مسجد، دریاچه و خونه آقای دهقان'}];
-function buildMapGrid(){var g=document.getElementById('mapGrid');if(!g)return;g.innerHTML='';for(var i=0;i<MAPS.length;i++){var m=MAPS[i],c=document.createElement('div');c.className='mapCard';var parts=m.name.split(' ');c.innerHTML='<div class="emoji">'+parts[0]+'</div><div class="name">'+parts.slice(1).join(' ')+'</div><div class="desc">'+m.desc+'</div>';(function(map){c.addEventListener('click',function(){selectedMap=map.id;var ms=document.getElementById('mapSelectScreen');if(ms)ms.classList.remove('show');openLoadoutScreen();});})(m);g.appendChild(c);}}
+var MAPS=[
+  {id:'rezagolzar',
+   nameFa:'🌳 محله رضا گلزار',
+   nameEn:'🌳 Reza Golzar Neighborhood',
+   descFa:'🏘️ محله با مدرسه، مسجد، دریاچه و خونه آقای دهقان',
+   descEn:'🏘️ Neighborhood with school, mosque, lake and Mr. Dehghan house'}
+];
+function buildMapGrid(){
+  var g=document.getElementById('mapGrid');if(!g)return;g.innerHTML='';
+  for(var i=0;i<MAPS.length;i++){
+    var m=MAPS[i],c=document.createElement('div');c.className='mapCard';
+    var nm=m.nameFa,ds=m.descFa;
+    if(LANG==='en'){nm=m.nameEn;ds=m.descEn;}
+    var parts=nm.split(' ');
+    c.innerHTML='<div class="emoji">'+parts[0]+'</div><div class="name">'+parts.slice(1).join(' ')+'</div><div class="desc">'+ds+'</div>';
+    (function(map){c.addEventListener('click',function(){selectedMap=map.id;var ms=document.getElementById('mapSelectScreen');if(ms)ms.classList.remove('show');openLoadoutScreen();});})(m);
+    g.appendChild(c);
+  }
+}
 function openMapSelect(){var ss=document.getElementById('startScreen');if(ss)ss.classList.add('hidden');var ms=document.getElementById('mapSelectScreen');if(ms)ms.classList.add('show');buildMapGrid();}
-function openTutorial(){var ss=document.getElementById('startScreen');if(ss)ss.classList.add('hidden');var ts=document.getElementById('tutorialScreen');if(ts)ts.classList.add('show');}
+function openTutorial(){var ss=document.getElementById('startScreen');if(ss)ss.classList.add('hidden');var ts=document.getElementById('tutorialScreen');if(ts)ts.classList.add('show');applyLanguage();}
 function closeTutorial(){var ts=document.getElementById('tutorialScreen');if(ts)ts.classList.remove('show');var ss=document.getElementById('startScreen');if(ss)ss.classList.remove('hidden');}
 function closeMapSelect(){var ms=document.getElementById('mapSelectScreen');if(ms)ms.classList.remove('show');var ss=document.getElementById('startScreen');if(ss)ss.classList.remove('hidden');}
 function openLoadoutScreen(){
@@ -1893,14 +2550,25 @@ function openLoadoutScreen(){
   if(carriedWeapons[1]<0){for(var b=0;b<weapons.length;b++)if(isOwned(weapons[b].id)&&b!==KNIFE_INDEX&&b!==carriedWeapons[0]){carriedWeapons[1]=b;break;}}
   activeSlot=2;refreshCurrentWeapon();buildLoadoutGrid();updateLoadoutSlots();
 }
-function buildLoadoutGrid(){var grid=document.getElementById('loadoutGrid');if(!grid)return;grid.innerHTML='';for(var i=0;i<weapons.length;i++){if(!isOwned(weapons[i].id))continue;if(weapons[i].cat==='knife')continue;var w=weapons[i],used=carriedWeapons.indexOf(i)>=0;var c=document.createElement('div');c.className='loChip'+(used?' used':'');c.innerHTML='<div class="ic">'+w.skinEmoji+'</div><div class="nm">'+w.name+'</div><div style="font-size:9px;color:#6a5a8a;margin-top:2px">💥'+w.damage+'</div>';(function(idx){c.addEventListener('click',function(){var at=carriedWeapons.indexOf(idx);if(at>=0&&at<2){carriedWeapons[at]=-1;}else{var empty=-1;for(var k=0;k<2;k++)if(carriedWeapons[k]<0){empty=k;break;}if(empty>=0)carriedWeapons[empty]=idx;else carriedWeapons[0]=idx;}buildLoadoutGrid();updateLoadoutSlots();});})(i);grid.appendChild(c);}}
+function buildLoadoutGrid(){
+  var grid=document.getElementById('loadoutGrid');if(!grid)return;grid.innerHTML='';
+  for(var i=0;i<weapons.length;i++){
+    if(!isOwned(weapons[i].id))continue;
+    if(weapons[i].cat==='knife')continue;
+    var w=weapons[i],used=carriedWeapons.indexOf(i)>=0;
+    var c=document.createElement('div');c.className='loChip'+(used?' used':'');
+    c.innerHTML='<div class="ic">'+w.skinEmoji+'</div><div class="nm">'+w.name+'</div><div style="font-size:9px;color:rgba(255,255,255,.75);margin-top:2px">💥'+w.damage+'</div>';
+    (function(idx){c.addEventListener('click',function(){var at=carriedWeapons.indexOf(idx);if(at>=0&&at<2){carriedWeapons[at]=-1;}else{var empty=-1;for(var k=0;k<2;k++)if(carriedWeapons[k]<0){empty=k;break;}if(empty>=0)carriedWeapons[empty]=idx;else carriedWeapons[0]=idx;}buildLoadoutGrid();updateLoadoutSlots();});})(i);
+    grid.appendChild(c);
+  }
+}
 function updateLoadoutSlots(){
   var slots=document.querySelectorAll('.loadSlot');
   for(var i=0;i<slots.length;i++){
     var el=slots[i],s=parseInt(el.dataset.slot),idx=carriedWeapons[s];
     if(s===2){el.classList.add('knife','filled');var kw=weapons[KNIFE_INDEX];el.innerHTML='<div style="font-size:24px">'+kw.skinEmoji+'</div><div style="font-size:11px">'+kw.name+'</div>';continue;}
     if(idx!=null&&idx>=0&&idx<weapons.length){el.classList.add('filled');el.innerHTML='<div style="font-size:24px">'+weapons[idx].skinEmoji+'</div><div style="font-size:11px">'+weapons[idx].name+'</div>';}
-    else{el.classList.remove('filled');el.innerHTML='🎯 اسلات '+(s+1)+'<br><span style="font-size:11px;opacity:.7">خالی</span>';}
+    else{el.classList.remove('filled');el.innerHTML='🎯 '+(s===0?t('slot1'):t('slot2'))+'<br><span style="font-size:11px;opacity:.7">'+t('empty')+'</span>';}
   }
 }
 function confirmLoadout(){
@@ -1912,6 +2580,9 @@ function confirmLoadout(){
   startGame();
 }
 
+// ============================================================
+// تنظیمات. اینجا دکمه زبان رو گذاشتم با کلی چیز دیگه
+// ============================================================
 function buildSettingsUI(){
   var cont=document.getElementById('settingsScroll');if(!cont)return;cont.innerHTML='';
   function addCat(title){var d=document.createElement('div');d.className='setCat';d.textContent=title;cont.appendChild(d);}
@@ -1929,37 +2600,128 @@ function buildSettingsUI(){
     btn.addEventListener('click',function(){settings[key]=!settings[key];btn.classList.toggle('on',settings[key]);saveGame();});
     cont.appendChild(row);
   }
-  addCat('🖱️ ماوس');
-  addSlider('🎯 حساسیت','sensitivity',0.5,5,0.1,function(v){return v.toFixed(1);});
-  addSlider('🔭 حساسیت زوم','adsSensitivity',0.3,3,0.1,function(v){return v.toFixed(1);});
-  addToggle('🔄 معکوس Y','invertY');
+  function addLanguageRow(){
+    var row=document.createElement('div');row.className='setRow';
+    var faActive = LANG==='fa'?' active':'';
+    var enActive = LANG==='en'?' active':'';
+    row.innerHTML='<label>'+t('langLabel')+'</label><div class="langRow"><button class="langBtn'+faActive+'" data-lang="fa">🇮🇷 '+t('persian')+'</button><button class="langBtn'+enActive+'" data-lang="en">🇬🇧 '+t('english')+'</button></div>';
+    var fbtn=row.querySelector('[data-lang="fa"]');
+    var ebtn=row.querySelector('[data-lang="en"]');
+    fbtn.addEventListener('click',function(){ if(LANG!=='fa'){LANG='fa';saveGame();applyLanguage();openSettings();} });
+    ebtn.addEventListener('click',function(){ if(LANG!=='en'){LANG='en';saveGame();applyLanguage();openSettings();} });
+    cont.appendChild(row);
+  }
 
-  addCat('🎥 دوربین');
-  addSlider('📳 لرزش دوربین','camShake',0,3,0.1,function(v){return v.toFixed(1);});
-  addSlider('🚶 تکون راه رفتن','walkBob',0,2,0.1,function(v){return v.toFixed(1);});
-  addSlider('🔫 تکون اسلحه','gunSway',0,2,0.1,function(v){return v.toFixed(1);});
-  addSlider('👁️ زاویه دید (FOV)','fov',60,110,1,function(v){return Math.round(v)+'°';});
-  addSlider('🌫️ فاصله مه','fogRange',200,600,10,function(v){return Math.round(v);});
+  // اول از همه زبان
+  addCat(LANG==='en'?'🌐 Language':'🌐 زبان');
+  addLanguageRow();
 
-  addCat('🔊 صدا');
-  addSlider('🔫 صدای بازی','sfxVolume',0,1,0.05,function(v){return Math.round(v*100)+'%';});
-  addSlider('🎵 موسیقی','musicVolume',0,1,0.05,function(v){return Math.round(v*100)+'%';});
-  addSlider('🌳 صدای محیط','ambientVolume',0,1,0.05,function(v){return Math.round(v*100)+'%';});
-  addToggle('👣 صدای قدم','footsteps');
-  addToggle('🎵 موسیقی روشن','music');
+  addCat(LANG==='en'?'🖱️ Mouse':'🖱️ ماوس');
+  addSlider(LANG==='en'?'🎯 Sensitivity':'🎯 حساسیت','sensitivity',0.5,5,0.1,function(v){return v.toFixed(1);});
+  addSlider(LANG==='en'?'🔭 ADS Sensitivity':'🔭 حساسیت زوم','adsSensitivity',0.3,3,0.1,function(v){return v.toFixed(1);});
+  addToggle(LANG==='en'?'🔄 Invert Y':'🔄 معکوس Y','invertY');
 
-  addCat('🎮 بازی');
-  addToggle('🔄 خشاب خودکار','autoReload');
-  addToggle('✕ Hitmarker','hitmarker');
-  addToggle('📊 نمایش FPS','showFps');
+  addCat(LANG==='en'?'📱 Touch':'📱 لمس');
+  addSlider(LANG==='en'?'👆 Touch Sensitivity':'👆 حساسیت لمس','touchSensitivity',0.5,5,0.1,function(v){return v.toFixed(1);});
 
-  addCat('📱 موبایل');
-  addSlider('🖼️ کیفیت تصویر','pixelRatio',0.5,2,0.1,function(v){return v.toFixed(1);});
-  addToggle('🌿 جزئیات بالا','shadows');
+  addCat(LANG==='en'?'🎥 Camera':'🎥 دوربین');
+  addSlider(LANG==='en'?'📳 Camera Shake':'📳 لرزش دوربین','camShake',0,3,0.1,function(v){return v.toFixed(1);});
+  addSlider(LANG==='en'?'🚶 Walk Bob':'🚶 تکون راه رفتن','walkBob',0,2,0.1,function(v){return v.toFixed(1);});
+  addSlider(LANG==='en'?'🔫 Gun Sway':'🔫 تکون اسلحه','gunSway',0,2,0.1,function(v){return v.toFixed(1);});
+  addSlider(LANG==='en'?'👁️ FOV':'👁️ زاویه دید (FOV)','fov',60,110,1,function(v){return Math.round(v)+'°';});
+  addSlider(LANG==='en'?'🌫️ Fog Range':'🌫️ فاصله مه','fogRange',200,600,10,function(v){return Math.round(v);});
+
+  addCat(LANG==='en'?'🔊 Sound':'🔊 صدا');
+  addSlider(LANG==='en'?'🔫 SFX':'🔫 صدای بازی','sfxVolume',0,1,0.05,function(v){return Math.round(v*100)+'%';});
+  addSlider(LANG==='en'?'🎵 Music':'🎵 موسیقی','musicVolume',0,1,0.05,function(v){return Math.round(v*100)+'%';});
+  addSlider(LANG==='en'?'🌳 Ambient':'🌳 صدای محیط','ambientVolume',0,1,0.05,function(v){return Math.round(v*100)+'%';});
+  addToggle(LANG==='en'?'👣 Footsteps':'👣 صدای قدم','footsteps');
+  addToggle(LANG==='en'?'🎵 Music On':'🎵 موسیقی روشن','music');
+
+  addCat(LANG==='en'?'🎮 Gameplay':'🎮 بازی');
+  addToggle(LANG==='en'?'🔄 Auto Reload':'🔄 خشاب خودکار','autoReload');
+  addToggle(LANG==='en'?'✕ Hitmarker':'✕ Hitmarker','hitmarker');
+
+  addCat(LANG==='en'?'📱 Mobile':'📱 موبایل');
+  addSlider(LANG==='en'?'🖼️ Pixel Ratio':'🖼️ کیفیت تصویر','pixelRatio',0.5,2,0.1,function(v){return v.toFixed(1);});
+  addToggle(LANG==='en'?'🌿 High Details':'🌿 جزئیات بالا','shadows');
 }
 function openSettings(){var ss=document.getElementById('startScreen');if(ss)ss.classList.add('hidden');var ps=document.getElementById('pauseScreen');if(ps)ps.classList.remove('show');var sc=document.getElementById('settingsScreen');if(sc)sc.classList.add('show');buildSettingsUI();}
 function closeSettings(){var sc=document.getElementById('settingsScreen');if(sc)sc.classList.remove('show');if(gameStarted){var ps=document.getElementById('pauseScreen');if(ps)ps.classList.add('show');}else{var ss=document.getElementById('startScreen');if(ss)ss.classList.remove('hidden');}}
 
+// ============================================================
+// اعمال زبان به تمام HTML
+// ============================================================
+function applyLanguage(){
+  // Title
+  var el;
+  el=document.getElementById('titleMain'); if(el) el.textContent = t('title');
+  el=document.getElementById('pauseTitle'); if(el) el.textContent = t('title');
+  el=document.getElementById('startScoreLabel'); if(el) el.textContent = t('totalScore');
+  el=document.getElementById('scoreLabel'); if(el) el.textContent = t('score');
+  el=document.getElementById('levelLabel'); if(el) el.textContent = t('level');
+  el=document.getElementById('shopScoreLabel'); if(el) el.textContent = t('score');
+
+  // Main menu buttons
+  el=document.getElementById('startBtn'); if(el) el.textContent = t('startGame');
+  el=document.getElementById('openShopBtn'); if(el) el.textContent = t('shop');
+  el=document.getElementById('tutorialBtn'); if(el) el.textContent = t('tutorial');
+  el=document.getElementById('settingsBtn'); if(el) el.textContent = t('settings');
+
+  // Tutorial
+  el=document.getElementById('tutorialTitle'); if(el) el.textContent = t('tutorial');
+  el=document.getElementById('tutorialFooter');
+  if(el) el.innerHTML = LANG==='en'
+    ? '⚠️ Copying forbidden, I made this ⚠️<br>Made by Soheil Imani from Derakhshande Sarraf school<br>Thanks to Mr. Dehghan for lending his phone'
+    : '⚠️ کپی کردن ممنوع، من اینو ساختم ⚠️<br>ساخته شده توسط سهیل ایمانی از مدرسه درخشنده صراف<br>ممنون از آقای دهقان که تلفنش رو قرض داد';
+
+  // Map select
+  el=document.getElementById('mapTitle'); if(el) el.textContent = t('selectMap');
+
+  // Loadout
+  el=document.getElementById('loadoutTitle'); if(el) el.textContent = t('loadout');
+  el=document.getElementById('loadoutSub'); if(el) el.textContent = t('loadoutSub');
+  el=document.getElementById('slot1Label'); if(el) el.textContent = t('slot1');
+  el=document.getElementById('slot2Label'); if(el) el.textContent = t('slot2');
+  el=document.getElementById('slotKnifeLabel'); if(el) el.textContent = t('knife');
+  el=document.getElementById('slot1Empty'); if(el) el.textContent = t('empty');
+  el=document.getElementById('slot2Empty'); if(el) el.textContent = t('empty');
+  el=document.getElementById('slotKnifeDefault'); if(el) el.textContent = t('default');
+  el=document.getElementById('loadoutConfirm'); if(el) el.textContent = t('startBtn2');
+
+  // Pause
+  el=document.getElementById('pauseSub'); if(el) el.textContent = t('paused');
+  el=document.getElementById('resumeBtn'); if(el) el.textContent = t('resume');
+  el=document.getElementById('settingsFromPauseBtn'); if(el) el.textContent = t('settings');
+  el=document.getElementById('restartBtn'); if(el) el.textContent = t('restart');
+  el=document.getElementById('exitToMainBtn'); if(el) el.textContent = t('mainMenu');
+  updateMusicButton();
+
+  // Shop
+  el=document.getElementById('shopTitle'); if(el) el.textContent = t('shopTitle');
+
+  // Settings
+  el=document.getElementById('settingsTitle'); if(el) el.textContent = t('settings');
+
+  // HUD
+  el=document.getElementById('zoomLabel'); if(el) el.textContent = t('zoom');
+  el=document.getElementById('bossBarLabel');
+  if(el){
+    if(boss && bossActive){
+      var names={shikam:'🐻 '+(LANG==='en'?'Belly-Boy':'شکم قرومساق'),souzani:'🕴️ '+(LANG==='en'?'Souzani':'سوزنی'),sahand:'👨 '+(LANG==='en'?'Uncle Sahand & Aunts':'عمو سهند و عمه هاش')};
+      el.textContent=names[currentBossType]||t('boss');
+    } else {
+      el.textContent = t('boss');
+    }
+  }
+
+  // Jump button
+  el=document.getElementById('jumpBtn'); if(el) el.textContent = LANG==='en'?'Jump':'پرش';
+}
+
+// ============================================================
+// init و شروع همه چیز
+// ============================================================
 function init(){
   isMobile=/Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent)||('ontouchstart' in window&&window.innerWidth<1024);
   p1.horizVel=new THREE.Vector3();
@@ -1975,7 +2737,7 @@ function init(){
     renderer.setPixelRatio(Math.min(settings.pixelRatio,window.devicePixelRatio,1.4));
     renderer.setClearColor(0xa8d8f0,1);
     document.body.appendChild(renderer.domElement);
-  }catch(err){var eb=document.getElementById('errBox');if(eb){eb.style.display='block';eb.textContent='❌ WebGL خطا: '+err.message;}return;}
+  }catch(err){var eb=document.getElementById('errBox');if(eb){eb.style.display='block';eb.textContent='❌ WebGL Error: '+err.message;}return;}
   TEX.grass=makeGrassTex();TEX.brick=makeBrickTex();TEX.asphalt=makeAsphaltTex();TEX.concrete=makeConcreteTex();
   TEX.snackChips=makeSnackTex('چیپس شکاری','#ffaa22','#aa1100','#fff');
   TEX.snackCake=makeSnackTex('کیک شکاری','#ff88bb','#aa2266','#fff');
@@ -2019,6 +2781,10 @@ function init(){
   for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el)makeDraggable(el,ids[i]);}
   var joyEl=document.getElementById('joystick');if(joyEl)makeDraggable(joyEl,'joystick');
   applyCtrlPositions();
+
+  // اعمال اولیه زبان
+  applyLanguage();
+
   window.addEventListener('resize',function(){var w=window.innerWidth,h=window.innerHeight;camera.aspect=w/h;camera.updateProjectionMatrix();renderer.setSize(w,h);});
   var sb=document.getElementById('startBtn');if(sb)sb.addEventListener('click',openMapSelect);
   var tb=document.getElementById('tutorialBtn');if(tb)tb.addEventListener('click',openTutorial);
@@ -2059,12 +2825,12 @@ function startGame(){
   startMusic();
   if(!isMobile){try{document.body.requestPointerLock();}catch(e){}}
   updateHud();updateAmmoHud();updateCrosshair();
-  showEventText('🗡️ آماده!','gold');
+  showEventText(t('ready'),'gold');
 }
 var ACCEL=58,MAX_SPEED=8.5,SPRINT_SPEED=12,FRICTION=9,lastAutoShot=0,prevTime=performance.now();
 function playerUpdate(dt){
-  if(ctrlHeld){crouchHoldTime+=dt;if(crouchHoldTime>0.9&&stance!=='prone'){stance='prone';showStanceHud('🛌 دراز کشیدی');}else if(crouchHoldTime<=0.9&&stance==='stand')stance='crouch';}
-  else{if(stance!=='stand'){stance='stand';showStanceHud('🧍 ایستادی');}crouchHoldTime=0;}
+  if(ctrlHeld){crouchHoldTime+=dt;if(crouchHoldTime>0.9&&stance!=='prone'){stance='prone';showStanceHud('🛌 '+(LANG==='en'?'Prone':'دراز کشیدی'));}else if(crouchHoldTime<=0.9&&stance==='stand')stance='crouch';}
+  else{if(stance!=='stand'){stance='stand';showStanceHud('🧍 '+(LANG==='en'?'Standing':'ایستادی'));}crouchHoldTime=0;}
   var inputX=(p1.mRight?1:0)-(p1.mLeft?1:0);
   var inputZ=(p1.mBwd?1:0)-(p1.mFwd?1:0);
   var fwd=new THREE.Vector3(-Math.sin(p1.yaw),0,-Math.cos(p1.yaw));
@@ -2125,7 +2891,6 @@ function animate(){
     camera.position.y+=(Math.random()-0.5)*shakeAmt*0.5;
     camera.rotation.z=(Math.random()-0.5)*shakeAmt*0.15;
   } else if(!currentDance)camera.rotation.z=0;
-
   if(gameStarted&&!isPaused&&!dying){
     ambientBirdTimer-=dt;
     if(ambientBirdTimer<=0){
@@ -2133,7 +2898,6 @@ function animate(){
       ambientBirdTimer=6+Math.random()*10;
     }
   }
-
   updateEnemies(dt,now);
   updateBoss(dt,now);
   updateVehicles(dt,now);
@@ -2142,20 +2906,25 @@ function animate(){
   if(muzzleFlashTime>0){muzzleFlashTime-=dt*1000;if(muzzleFlash&&muzzleFlashTime<=0)muzzleFlash.visible=false;}
   renderer.render(scene,camera);
 }
-try{init();animate();}catch(err){var eb=document.getElementById('errBox');if(eb){eb.style.display='block';eb.textContent='❌ خطا:\n'+err.message;}}
+try{init();animate();}catch(err){var eb=document.getElementById('errBox');if(eb){eb.style.display='block';eb.textContent='❌ Error:\n'+err.message;}}
 };
 </script>
 
 <!--
     =====================================================
-    تغییرات این نسخه:
-    - سوزنی حالا شبیه آدم واقعیه!
-    - گردن، صورت، چشم، ابرو، دهان، گوش
-    - دماغ مستطیلی بزرگ (نه گوی گرد)
-    - کفش، کروات، یقه، زنجیر طلا
-    - SEO برای پیدا شدن تو گوگل
-
+    تموم شد رفت. تغییرات این نسخه:
+    - منوی شیک با افکت بلور (backdrop-filter)
+    - دکمه انتخاب زبان فارسی/انگلیسی تو تنظیمات
+    - وقتی زبان عوض شه همه چیز عوض میشه
+    - باس جدید: عمو سهند و عمه هاش 👻👻👻
+      عمو سهند با کاپشن آبی و شلوار سورمه ای
+      سه تا روح عمه پشتش که یکی یکی میان جلو میزنن
+    - چرخش دوربین با لمس صفحه (مثل پابجی)
+    - یه سری چرت و پرت دیگه که یادم نمیاد
+    
     سازنده: سهیل ایمانی
+    مدرسه: درخشنده صراف
+    خداحافظ 🤙
     =====================================================
 -->
 </body>
