@@ -4,9 +4,10 @@
 <meta charset="UTF-8">
 
 <!-- ==================== SEO اصلی ==================== -->
-<title>آنجل استرایک | بازی تیراندازی محله رضا گلزار - ساخته سهیل ایمانی</title>
-<meta name="description" content="آنجل استرایک (Angel Strike)">
-<meta name="keywords" content="آنجل استرایک, Angel Strike, بازی آنجل استرایک, مدرسه درخشنده صراف, بازی تیراندازی, بازی مرورگری, بازی ایرانی, بازی سه بعدی">
+<title>آنجل استرایک | بازی تیراندازی محله رضا گلزار </title>
+<meta name="description" content="آنجل استرایک (Angel Strike) بازی سه‌بعدی تیراندازی مرورگری در محله رضا گلزار. شامل مدرسه درخشنده صراف، ساخته سهیل ایمانی.">
+<meta name="keywords" content="آنجل استرایک, Angel Strike, بازی آنجل استرایک, محله رضا گلزار, سهیل ایمانی, مدرسه درخشنده صراف, بازی تیراندازی, بازی مرورگری, باس سوزنی, سوزنی, شکم قرومساق, بازی ایرانی, بازی سه بعدی">
+<meta name="author" content="سهیل ایمانی">
 <meta name="robots" content="index, follow">
 <meta name="language" content="Persian">
 <meta name="revisit-after" content="3 days">
@@ -14,14 +15,14 @@
 <!-- ==================== Open Graph ==================== -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="آنجل استرایک - بازی تیراندازی محله رضا گلزار">
-<meta property="og:description" content="بازی سه‌بعدی تیراندازی ساخته سهیل ایمانی.">
+<meta property="og:description" content="بازی سه‌بعدی تیراندازی مرورگری با آنجل شاپ، چاقوهای کمیاب، باس سوزنی و شکم قرومساق. ساخته سهیل ایمانی.">
 <meta property="og:site_name" content="آنجل استرایک">
 <meta property="og:locale" content="fa_IR">
 
 <!-- ==================== Twitter ==================== -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="آنجل استرایک - بازی تیراندازی">
-<meta name="twitter:description" content="بازی سه‌بعدی شوتر">
+<meta name="twitter:description" content="بازی سه‌بعدی شوتر سهیل ایمانی.">
 
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <meta name="theme-color" content="#ff5a9a">
@@ -375,8 +376,156 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;heigh
  .shopBuddyTitle{height:62px!important;font-size:32px!important}
 }
 
+
+/* ===================== ANGEL STRIKE MENU + SETTINGS UPDATE ===================== */
+#startScreen{
+  background:radial-gradient(ellipse at 50% 12%,rgba(135,68,190,.22),transparent 48%),
+    linear-gradient(145deg,#0e0919 0%,#1d1230 52%,#0d1020 100%)!important;
+  color:#f7edff!important;gap:10px!important;padding:22px 3vw!important;
+}
+#startScreen h1{font-size:clamp(34px,4.5vw,54px)!important;color:#ff8ac9!important;
+  text-shadow:0 0 12px rgba(255,90,185,.72),0 0 30px rgba(147,80,255,.50)!important;margin:0!important}
+#startScreen .subtitle{color:#d9c2f2!important;letter-spacing:4px!important;margin:0 0 4px!important}
+#startScreen .totalScore{margin:0 0 7px!important}
+.mainMenuCards{display:flex;flex-direction:row;align-items:stretch;justify-content:center;gap:22px;
+  width:min(980px,96vw);direction:ltr!important}
+.mainMenuCard{
+  appearance:none;-webkit-appearance:none;box-sizing:border-box;position:relative;isolation:isolate;
+  display:flex;flex:1 1 0;flex-direction:column;justify-content:space-between;align-items:stretch;
+  min-width:0;width:100%;max-width:300px;height:340px;margin:0;padding:0;overflow:hidden;
+  border:1.5px solid rgba(196,139,255,.8);border-radius:20px;color:#fff!important;cursor:pointer;
+  background:linear-gradient(155deg,rgba(50,34,72,.94),rgba(18,13,30,.97));
+  box-shadow:0 0 0 1px rgba(255,255,255,.05),0 0 15px rgba(166,94,255,.32),
+    0 0 24px rgba(255,90,195,.16),0 12px 25px rgba(0,0,0,.4),inset 0 1px rgba(255,255,255,.12);
+  font:800 18px Tahoma,sans-serif;text-align:center;
+  transition:transform .26s cubic-bezier(.2,.7,.2,1),border-color .26s,box-shadow .26s,filter .26s;
+}
+.mainMenuCard:hover{transform:translateY(-7px) scale(1.035);border-color:#f0b4ff;
+  box-shadow:0 0 16px rgba(255,104,211,.78),0 0 38px rgba(143,88,255,.62),
+    0 16px 30px rgba(0,0,0,.48),inset 0 1px rgba(255,255,255,.22);filter:brightness(1.08)}
+.mainMenuCard:active{transform:translateY(-1px) scale(.99)}
+.mainMenuCard:focus-visible{outline:3px solid #ffd0fa;outline-offset:4px}
+.mainCardArt{position:relative;display:flex;flex:1 1 auto;min-height:0;width:100%;align-items:center;justify-content:center;overflow:hidden;
+  background:radial-gradient(ellipse at 50% 48%,rgba(157,103,214,.22),transparent 70%),linear-gradient(145deg,rgba(255,255,255,.035),rgba(0,0,0,.12))}
+.mainCardArt::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(135deg,rgba(255,255,255,.06),transparent 48%,rgba(140,95,200,.08))}
+.mainCardArt img{display:block;position:relative;z-index:1;width:100%;height:100%;max-width:100%;max-height:100%;padding:10px 12px 0;object-fit:contain;object-position:center bottom;pointer-events:none;background:transparent;filter:drop-shadow(0 6px 8px rgba(0,0,0,.32));transition:filter .22s}
+.mainCardFooter{display:flex;flex:0 0 76px;width:100%;height:76px;align-items:center;justify-content:center;gap:12px;padding:8px 12px;
+  direction:rtl;background:linear-gradient(180deg,#30203f,#181020);border-top:1px solid rgba(213,169,255,.55);
+  box-shadow:inset 0 3px 10px rgba(0,0,0,.32),0 -2px 12px rgba(174,105,255,.12)}
+.mainCardLabel{color:#fff;font-size:23px;font-weight:900;line-height:1.35;text-shadow:0 0 9px rgba(220,175,255,.48)}
+.mainCardFooter svg{width:25px;height:25px;flex:0 0 25px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;color:#e9bdff;filter:drop-shadow(0 0 7px rgba(192,124,255,.82))}
+.shopBuddy.shopCardButton{height:340px!important;min-height:340px!important;max-width:300px!important;flex:1 1 0!important;width:100%!important;
+  align-items:stretch!important;justify-content:space-between!important;border:1.5px solid rgba(196,139,255,.8)!important;
+  border-radius:20px!important;overflow:hidden!important;background:linear-gradient(155deg,rgba(50,34,72,.94),rgba(18,13,30,.97))!important;
+  box-shadow:0 0 0 1px rgba(255,255,255,.05),0 0 15px rgba(166,94,255,.32),0 0 24px rgba(255,90,195,.16),0 12px 25px rgba(0,0,0,.4),inset 0 1px rgba(255,255,255,.12)!important;
+  transition:transform .26s cubic-bezier(.2,.7,.2,1),border-color .26s,box-shadow .26s,filter .26s!important;}
+.shopBuddy.shopCardButton:hover{transform:translateY(-7px) scale(1.035)!important;filter:brightness(1.08)!important;
+  border-color:#f0b4ff!important;box-shadow:0 0 16px rgba(255,104,211,.78),0 0 38px rgba(143,88,255,.62),0 16px 30px rgba(0,0,0,.48)!important}
+.shopBuddy.shopCardButton .mainCardArt{display:flex!important;flex:1 1 auto!important;width:100%!important;height:auto!important;min-height:0!important;position:relative!important;overflow:hidden!important}
+.shopBuddy.shopCardButton .mainCardArt img{position:relative!important;left:auto!important;top:auto!important;right:auto!important;bottom:auto!important;
+  width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important;padding:10px 12px 0!important;
+  object-fit:contain!important;object-position:center bottom!important;transform:none!important;filter:drop-shadow(0 6px 8px rgba(0,0,0,.32))!important;
+  transition:filter .22s!important;}
+.shopBuddy.shopCardButton .mainCardFooter{position:relative!important;z-index:2!important;flex:0 0 76px!important;width:100%!important;height:76px!important;
+  border-radius:0!important;border-top:1px solid rgba(213,169,255,.55)!important;background:linear-gradient(180deg,#30203f,#181020)!important;
+  box-shadow:inset 0 3px 10px rgba(0,0,0,.32),0 -2px 12px rgba(174,105,255,.12)!important}
+.shopBuddyTitle{position:static!important;display:inline!important;width:auto!important;height:auto!important;min-height:0!important;padding:0!important;
+  border:0!important;border-radius:0!important;background:transparent!important;color:#fff!important;font-size:23px!important;font-weight:900!important;
+  box-shadow:none!important;text-shadow:0 0 9px rgba(220,175,255,.48)!important}
+.shopBuddy.shopCardButton.character-react .mainCardArt img{animation:angelCharacterReaction .56s ease-in-out!important}
+@keyframes angelCharacterReaction{0%{transform:translateX(0) rotate(0) scale(1)}16%{transform:translateX(-5px) rotate(-3deg) scale(1.035)}34%{transform:translateX(5px) rotate(3deg) scale(1.025)}52%{transform:translateX(-3px) rotate(-2deg) scale(1.02)}72%{transform:translateX(2px) rotate(1.5deg) scale(1.01)}100%{transform:translateX(0) rotate(0) scale(1)}}
+.tutorialTextLink{margin:5px 0 0!important;min-width:0!important;padding:7px 18px!important;font-size:13px!important;background:transparent!important;border:1px solid rgba(190,145,235,.32)!important;border-radius:12px!important;color:#d9c2f2!important;box-shadow:none!important}
+.tutorialTextLink:hover{background:rgba(143,88,255,.18)!important;color:#fff!important;box-shadow:0 0 14px rgba(165,95,255,.32)!important;transform:translateY(-1px)}
+/* All overlay exit buttons use the same square X as the shop. */
+.closeX{position:absolute!important;top:15px!important;right:15px!important;width:46px!important;height:46px!important;min-width:46px!important;min-height:46px!important;
+  display:flex!important;align-items:center!important;justify-content:center!important;padding:0!important;border-radius:11px!important;
+  background:linear-gradient(145deg,#5a2b78,#27153e)!important;color:#fff!important;border:1px solid #b27bd5!important;
+  font-size:22px!important;font-weight:900!important;line-height:1!important;cursor:pointer!important;z-index:10!important;
+  box-shadow:0 5px 0 #100819,0 0 14px rgba(190,90,255,.3),0 8px 18px rgba(0,0,0,.45)!important;
+  transition:transform .18s,box-shadow .18s,filter .18s!important}
+.closeX:hover{transform:translateY(-2px) rotate(3deg)!important;box-shadow:0 0 16px rgba(255,92,205,.85),0 0 30px rgba(115,80,255,.5),0 7px 0 #100819!important}
+.backBtn{display:none!important}
+/* Wide horizontal settings dashboard */
+#settingsScreen{padding:18px 2vw!important;gap:8px!important;justify-content:center!important;align-items:center!important}
+#settingsScreen h1{width:100%;flex:0 0 auto;margin:0 0 4px!important}
+#settingsScroll{width:min(1540px,96vw)!important;max-width:1540px!important;max-height:78vh!important;overflow-y:auto!important;
+  display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:9px 12px!important;align-content:start!important;
+  padding:16px!important;border:1px solid rgba(190,145,240,.24)!important;border-radius:18px!important;
+  background:linear-gradient(145deg,rgba(25,17,43,.94),rgba(10,9,23,.96))!important;
+  box-shadow:0 18px 50px rgba(0,0,0,.42),inset 0 1px rgba(255,255,255,.06)!important}
+#settingsScroll .setCat{grid-column:1/-1!important;margin:6px 0 0!important;padding:8px 12px!important;
+  border:1px solid rgba(183,132,235,.26)!important;border-radius:10px!important;background:linear-gradient(90deg,rgba(135,65,190,.22),rgba(40,25,70,.10))!important;
+  color:#e7caff!important;text-align:right!important;font-size:14px!important}
+#settingsScroll .setRow{min-width:0!important;min-height:56px!important;margin:0!important;padding:9px 11px!important;
+  display:grid!important;grid-template-columns:minmax(90px,1fr) minmax(95px,1.2fr) auto!important;align-items:center!important;gap:8px!important;
+  border:1px solid rgba(190,150,230,.25)!important;border-radius:11px!important;background:linear-gradient(145deg,#251a39,#151125)!important;
+  color:#f4eaff!important;box-shadow:0 5px 12px rgba(0,0,0,.22),inset 0 1px rgba(255,255,255,.05)!important}
+#settingsScroll .setRow label{min-width:0!important;font-size:12px!important;line-height:1.45!important;color:#f1e7ff!important;text-align:right!important}
+#settingsScroll .setRow .val,#settingsScroll .toggleValue{min-width:40px!important;color:#ffc97a!important;font-size:11px!important;text-align:left!important;white-space:nowrap}
+#settingsScroll input[type=range]{width:100%!important;min-width:55px!important;height:5px!important;flex:1!important;background:linear-gradient(90deg,#7c42bd,#fa68b5)!important}
+#settingsScroll input[type=range]::-webkit-slider-thumb{width:15px!important;height:15px!important;background:#ff8bc8!important;box-shadow:0 0 9px rgba(255,100,190,.65)!important}
+#settingsScroll select{min-width:0!important;width:100%!important;max-width:100%!important;grid-column:2/-1!important;padding:7px 9px!important;border-radius:8px!important;
+  color:#fff!important;background:#302047!important;border:1px solid #8555a9!important;font:12px Tahoma!important}
+#settingsScroll .setRow:has(select){grid-template-columns:minmax(90px,1fr) minmax(110px,1.3fr)!important}
+#settingsScroll .toggleBtn{justify-self:end!important;width:46px!important;height:25px!important;background:#48395b!important;border:1px solid #806a9c!important}
+#settingsScroll .toggleBtn.on{background:#874dc0!important;box-shadow:0 0 10px rgba(178,95,255,.34)!important}
+#settingsScroll .toggleBtn .knob{width:19px!important;height:19px!important;left:2px!important;top:2px!important;transition:left .2s!important}
+#settingsScroll .toggleBtn.on .knob{left:23px!important}
+#settingsScroll .keybindBtn,#settingsScroll .settingsAction{border:1px solid rgba(220,170,255,.55);border-radius:9px;padding:8px 12px;color:#fff;font:700 12px Tahoma;cursor:pointer;white-space:nowrap;
+  background:linear-gradient(145deg,#4f2c70,#29183f);box-shadow:0 0 10px rgba(155,85,255,.25),0 4px 0 #100819;transition:transform .16s,box-shadow .16s}
+#settingsScroll .keybindBtn.waiting{background:linear-gradient(145deg,#a52d78,#6630a5);box-shadow:0 0 14px rgba(255,90,190,.55)}
+#settingsScroll .settingsAction.danger{background:linear-gradient(145deg,#873052,#45152d);border-color:rgba(255,120,160,.65);box-shadow:0 0 12px rgba(255,70,135,.25),0 4px 0 #100819}
+#settingsScroll .keybindBtn:hover,#settingsScroll .settingsAction:hover{transform:translateY(-2px);box-shadow:0 0 16px rgba(195,95,255,.55),0 5px 0 #100819}
+#settingsScroll .settingsActionRow{grid-column:span 2!important;grid-template-columns:minmax(120px,1fr) minmax(110px,1.2fr) auto!important}
+#settingsScroll .settingsActionHelp{font-size:10px;line-height:1.5;color:#c9b7df}
+#settingsScroll .settingsNote{grid-column:1/-1!important;color:#cbb6e8;font-size:11px;text-align:center;padding:7px}
+body.neon-off .mainMenuCard,body.neon-off .closeX,body.neon-off .btn,body.neon-off .menuBtn,body.neon-off .tutorialBtn,
+body.neon-off .filterBtn,body.neon-off .shopBtn2,body.neon-off #loadoutConfirm{box-shadow:0 6px 0 rgba(7,5,18,.72),inset 0 1px rgba(255,255,255,.12)!important}
+body.neon-off .mainMenuCard:hover{box-shadow:0 8px 0 rgba(7,5,18,.72),inset 0 1px rgba(255,255,255,.12)!important}
+@media(max-width:1050px){#settingsScroll{grid-template-columns:repeat(3,minmax(0,1fr))!important}.mainMenuCards{gap:14px;width:min(850px,96vw)}}
+@media(max-width:760px){#settingsScroll{grid-template-columns:repeat(2,minmax(0,1fr))!important;max-height:75vh!important;padding:10px!important}
+  .mainMenuCards{width:min(660px,96vw);gap:12px}.mainMenuCard,.shopBuddy.shopCardButton{height:280px!important;min-height:280px!important}
+  .mainCardFooter,.shopBuddy.shopCardButton .mainCardFooter{height:64px!important;flex-basis:64px!important}
+  .mainCardLabel,.shopBuddyTitle{font-size:19px!important}}
+@media(max-width:500px){#startScreen{justify-content:flex-start!important;overflow-y:auto!important;padding:18px 10px!important}
+  .mainMenuCards{flex-wrap:wrap;width:96vw;max-width:400px;gap:10px}
+  .mainMenuCard,.shopBuddy.shopCardButton{flex:1 1 calc(50% - 6px)!important;width:calc(50% - 6px)!important;max-width:none!important;height:220px!important;min-height:220px!important}
+  .mainCardFooter,.shopBuddy.shopCardButton .mainCardFooter{height:56px!important;flex-basis:56px!important;gap:7px!important}
+  .mainCardLabel,.shopBuddyTitle{font-size:16px!important}.mainCardFooter svg{width:20px!important;height:20px!important;flex-basis:20px!important}
+  #settingsScroll{width:97vw!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:7px!important;padding:8px!important}
+  #settingsScroll .setRow{display:flex!important;flex-wrap:wrap!important;min-height:62px!important;padding:8px!important}
+  #settingsScroll .setRow label{flex:1 1 100%!important}
+  #settingsScroll .setRow input[type=range],#settingsScroll .setRow select{flex:1 1 62%!important;width:auto!important}
+  #settingsScroll .settingsActionRow{grid-column:1/-1!important;grid-template-columns:1fr auto!important}
+  #settingsScroll .settingsActionHelp{grid-column:1/-1}}
+@media(prefers-reduced-motion:reduce){.mainMenuCard,.mainMenuCard *{transition:none!important}.shopBuddy.shopCardButton.character-react .mainCardArt img{animation:none!important}}
+
+
+/* Neon glow layer for all menu controls (independent from the natural 3D scene colors). */
+body:not(.neon-off) .btn,body:not(.neon-off) .menuBtn,body:not(.neon-off) .tutorialBtn,
+body:not(.neon-off) .closeX,body:not(.neon-off) .backBtn,body:not(.neon-off) .filterBtn,
+body:not(.neon-off) .shopBtn2,body:not(.neon-off) #loadoutConfirm,body:not(.neon-off) .mapCard,
+body:not(.neon-off) .loChip,body:not(.neon-off) #settingsScroll .settingsAction,
+body:not(.neon-off) #settingsScroll .keybindBtn{
+  box-shadow:0 0 10px rgba(185,105,255,.32),0 0 20px rgba(255,90,190,.16),
+    0 6px 0 rgba(7,5,18,.66),inset 0 1px rgba(255,255,255,.10);
+}
+body:not(.neon-off) .btn:hover,body:not(.neon-off) .menuBtn:hover,body:not(.neon-off) .tutorialBtn:hover,
+body:not(.neon-off) .filterBtn:hover,body:not(.neon-off) .shopBtn2:hover,
+body:not(.neon-off) #loadoutConfirm:hover,body:not(.neon-off) .mapCard:hover,
+body:not(.neon-off) .loChip:hover,body:not(.neon-off) #settingsScroll .settingsAction:hover,
+body:not(.neon-off) #settingsScroll .keybindBtn:hover{
+  box-shadow:0 0 15px rgba(255,100,205,.62),0 0 30px rgba(140,88,255,.42),
+    0 8px 0 rgba(7,5,18,.66),inset 0 1px rgba(255,255,255,.16);
+}
+body.neon-off .btn,body.neon-off .menuBtn,body.neon-off .tutorialBtn,body.neon-off .closeX,
+body.neon-off .backBtn,body.neon-off .filterBtn,body.neon-off .shopBtn2,body.neon-off #loadoutConfirm,
+body.neon-off .mapCard,body.neon-off .loChip,body.neon-off #settingsScroll .settingsAction,
+body.neon-off #settingsScroll .keybindBtn{
+  box-shadow:0 5px 0 rgba(7,5,18,.55),inset 0 1px rgba(255,255,255,.08)!important;
+}
+
 </style>
-<meta name="angel-strike-assets" content="Place grass.png and wall.png in the same folder as this HTML file (same directory in your GitHub repository). grass.png is tiled across a 60x60 subdivided 3D ground mesh; wall.png is applied to school and boundary walls. Missing images use built-in fallbacks.">
 </head>
 <body>
 
@@ -434,20 +583,44 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;heigh
 </div>
 
 <div id="startScreen" class="overlayScreen">
-  <h1>آنجل استرایک</h1>
+  <h1 id="gameTitle">آنجل استرایک</h1>
   <div class="subtitle">ANGEL STRIKE — ARSENAL</div>
-  <div class="totalScore">💰 امتیاز کل: <span class="num" id="startScoreVal">0</span></div>
-  <button class="btn" id="startBtn">▶ شروع بازی</button>
-  <div class="shopMenuRow" aria-label="دکمه تصویری آنجل شاپ">
-    <button type="button" id="openShopBtn" class="shopBuddy shopCardButton">
-      <img id="shopBuddyImg" alt="شخصیت کارتونی با حوله صورتی" draggable="false">
-      <span class="shopBuddyTitle">🛒 آنجل شاپ</span>
+  <div class="totalScore" id="totalScoreBadge">💰 امتیاز کل: <span class="num" id="startScoreVal">0</span></div>
+
+  <div class="mainMenuCards" dir="ltr">
+    <button type="button" class="mainMenuCard" id="settingsBtn" aria-label="تنظیمات">
+      <span class="mainCardArt">
+        <img src="setting.png" alt="تنظیمات" draggable="false" loading="eager">
+      </span>
+      <span class="mainCardFooter">
+        <span class="mainCardLabel" id="settingsBtnLabel">تنظیمات</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 13.5 20.5 14.4 19 17l-1.4-.5a7.8 7.8 0 0 1-1.6.9l-.3 1.5h-3l-.3-1.5a7.8 7.8 0 0 1-1.6-.9L9.4 17 8 14.4l1.1-.9a7.6 7.6 0 0 1 0-1.9L8 10.7 9.4 8.1l1.4.5a7.8 7.8 0 0 1 1.6-.9l.3-1.5h3l.3 1.5a7.8 7.8 0 0 1 1.6.9l1.4-.5 1.5 2.6-1.1.9a7.6 7.6 0 0 1 0 1.9Z"/></svg>
+      </span>
+    </button>
+
+    <button type="button" class="mainMenuCard shopBuddy shopCardButton" id="openShopBtn" aria-label="آنجل شاپ">
+      <span class="mainCardArt shopArt">
+        <!-- Images are external assets; place frist.png, sec.png and fook.png beside this HTML. -->
+        <img id="shopBuddyImg" src="frist.png" alt="شخصیت آنجل شاپ" draggable="false" loading="eager">
+      </span>
+      <span class="mainCardFooter">
+        <span class="mainCardLabel shopBuddyTitle" id="shopBtnLabel">آنجل شاپ</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M1.5 2h3l2.7 13.2a2 2 0 0 0 2 1.6h9.5a2 2 0 0 0 2-1.6L22.5 7H6"/></svg>
+      </span>
+    </button>
+
+    <button type="button" class="mainMenuCard" id="startBtn" aria-label="شروع بازی">
+      <span class="mainCardArt">
+        <img src="start.png" alt="شروع بازی" draggable="false" loading="eager">
+      </span>
+      <span class="mainCardFooter">
+        <span class="mainCardLabel" id="startBtnLabel">شروع بازی</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5a1 1 0 0 1 1.5-.86l11 7a1.6 1.6 0 0 1 0 2.72l-11 7A1 1 0 0 1 7 19.5z" fill="currentColor" stroke="none"/></svg>
+      </span>
     </button>
   </div>
-  <button class="tutorialBtn" id="tutorialBtn">📚 آموزش</button>
-  <button class="tutorialBtn" id="settingsBtn">⚙️ تنظیمات</button>
+  <button class="tutorialBtn tutorialTextLink" id="tutorialBtn" type="button">📚 آموزش و راهنما</button>
 </div>
-
 <div id="tutorialScreen" class="overlayScreen">
   <h1 style="font-size:36px;color:#8a3ac8">📚 آموزش</h1>
   <div class="tutBox">
@@ -473,13 +646,13 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;heigh
       ممنون از آقای دهقان که تلفنش رو قرض داد
     </div>
   </div>
-  <button class="backBtn" id="tutorialBackBtn">←</button>
+  <button class="closeX" id="tutorialBackBtn" type="button" aria-label="خروج" title="خروج">✕</button>
 </div>
 
 <div id="mapSelectScreen" class="overlayScreen">
   <h1 style="color:#ff5a9a">🗺️ انتخاب نقشه</h1>
   <div class="mapGrid" id="mapGrid"></div>
-  <button class="backBtn" id="mapBackBtn">←</button>
+  <button class="closeX" id="mapBackBtn" type="button" aria-label="خروج" title="خروج">✕</button>
 </div>
 
 <div id="loadoutScreen" class="overlayScreen">
@@ -492,11 +665,12 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;heigh
   </div>
   <div id="loadoutGrid"></div>
   <button id="loadoutConfirm">✅ شروع بازی</button>
-  <button class="backBtn" id="loadoutBack">←</button>
+  <button class="closeX" id="loadoutBack" type="button" aria-label="خروج" title="خروج">✕</button>
 </div>
 
 <div id="pauseScreen" class="overlayScreen">
-  <h1>آنجل استرایک</h1>
+  <button class="closeX" id="pauseCloseBtn" type="button" aria-label="خروج" title="خروج">✕</button>
+  <h1 id="pauseTitle">آنجل استرایک</h1>
   <p style="opacity:.75;letter-spacing:3px;color:#6a5a8a;font-weight:700">— ⏸️ متوقف شد —</p>
   <button class="menuBtn" id="resumeBtn">▶️ ادامه</button>
   <button class="menuBtn musicBtn" id="musicBtn">🔊 موسیقی: روشن</button>
@@ -506,7 +680,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;heigh
 </div>
 
 <div id="shopScreen" class="overlayScreen">
-  <button class="closeX" id="shopCloseBtn">✕</button>
+  <button class="closeX" id="shopCloseBtn" type="button" aria-label="خروج" title="خروج">✕</button>
   <div class="shopHeader">
     <h1>🛒 آنجل شاپ</h1>
     <div class="shopScore">💰 امتیاز: <span id="shopScoreVal">0</span></div>
@@ -516,10 +690,10 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;heigh
 </div>
 
 <div id="settingsScreen" class="overlayScreen">
-  <button class="closeX" id="settingsCloseBtn">✕</button>
-  <h1 style="font-size:32px;color:#ff5a9a">⚙️ تنظیمات</h1>
+  <button class="closeX" id="settingsCloseBtn" type="button" aria-label="خروج" title="خروج">✕</button>
+  <h1 id="settingsTitle" style="font-size:32px;color:#ff5a9a">⚙️ تنظیمات</h1>
   <div id="settingsScroll"></div>
-  <button class="backBtn" id="settingsBackBtn">←</button>
+  
 </div>
 
 <script>
@@ -550,7 +724,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;heigh
 window.__START__ = function() {
 if (typeof THREE === 'undefined') return;
 
-var K_SCORE='angel_score_v75'; // v75 resets the old inflated test wallet once
+var K_SCORE='angel_score_v74';
 var K_OWNED='angel_owned_v74';
 var K_LOADOUT='angel_loadout_v74';
 var K_SETTINGS='angel_settings_v74';
@@ -561,14 +735,18 @@ var totalScore=0;
 var ownedWeapons=['glock','ak','butterfly'];
 var savedLoadout=['glock','ak'];
 
-var settings={
+var DEFAULT_SETTINGS={
   sensitivity:2, adsSensitivity:1, sfxVolume:1, musicVolume:0.6, voiceVolume:1,
-  fogRange:380, music:true, fov:78, pixelRatio:1.4, headBob:1, weaponSway:1,
-  screenShake:1, crosshairSize:26, crosshairThickness:2, crosshairColor:'#ffffff',
-  hitmarker:true, hitmarkerSound:true, autoReload:false, toggleAds:false,
-  invertY:false, sprintToggle:false, shadows:'high', aa:true, showFps:false,
-  camShake:1, walkBob:1, gunSway:1, ambientVolume:0.5, footsteps:true
+  ambientVolume:0.5, fogRange:380, music:true, fov:78, pixelRatio:1.4,
+  headBob:1, weaponSway:1, screenShake:1, crosshairSize:26,
+  crosshairThickness:2, crosshairColor:'#ffffff', hitmarker:true,
+  hitmarkerSound:true, autoReload:false, toggleAds:false, invertY:false,
+  sprintToggle:false, shadows:true, antialias:true, showFps:false,
+  camShake:1, walkBob:1, gunSway:1, footsteps:true,
+  language:'fa', neonButtons:true, graphicsQuality:'high', shadowQuality:'high',
+  keybinds:{forward:'KeyW',backward:'KeyS',left:'KeyA',right:'KeyD',jump:'Space',reload:'KeyR',sprint:'ShiftLeft',crouch:'ControlLeft'}
 };
+var settings=JSON.parse(JSON.stringify(DEFAULT_SETTINGS));
 
 var progress={level:1,totalPlays:0,bestStage:1};
 
@@ -579,6 +757,7 @@ try{
   var se=localStorage.getItem(K_SETTINGS); if(se){var sp=JSON.parse(se); if(sp){for(var k in sp)settings[k]=sp[k];}}
   var pr=localStorage.getItem(K_PROGRESS); if(pr){var prp=JSON.parse(pr); if(prp){progress.level=prp.level||1;progress.totalPlays=prp.totalPlays||0;progress.bestStage=prp.bestStage||1;}}
 }catch(e){}
+settings.keybinds=Object.assign({},DEFAULT_SETTINGS.keybinds,settings.keybinds||{});
 
 ['glock','ak','butterfly'].forEach(function(id){if(ownedWeapons.indexOf(id)<0)ownedWeapons.push(id);});
 
@@ -590,7 +769,7 @@ function getEnemyDmgMult(){return 1+(progress.level-1)*0.10;}
 function getKillsToBoss(){return 11+progress.level;}
 
 var selectedMap='rezagolzar';
-var scene,camera,renderer;
+var scene,camera,renderer,shadowLight=null;
 var isPaused=false,gameStarted=false,dying=false;
 var score=0,health=150;
 var enemies=[],obstacles=[],effects=[],vehicles=[];
@@ -791,7 +970,7 @@ function scheduleMusicStep(){
 function startMusic(){if(!audioCtx||musicScheduler||!settings.music)return;musicPlaying=true;musicStep=0;nextNoteTime=audioCtx.currentTime+0.1;scheduleMusicStep();updateMusicButton();}
 function stopMusic(){musicPlaying=false;if(musicScheduler)clearTimeout(musicScheduler);musicScheduler=null;updateMusicButton();}
 function toggleMusic(){if(musicPlaying)stopMusic();else{if(!settings.music)settings.music=true;startMusic();}saveGame();}
-function updateMusicButton(){var b=document.getElementById('musicBtn');if(b)b.textContent=musicPlaying?'🔊 موسیقی: روشن':'🔇 موسیقی: خاموش';}
+function updateMusicButton(){var b=document.getElementById('musicBtn');if(!b)return;var lang=settings.language||'fa';var on=musicPlaying,labels={en:['🔊 Music: On','🔇 Music: Off'],'tr':['🔊 Müzik: Açık','🔇 Müzik: Kapalı'],'de':['🔊 Musik: an','🔇 Musik: aus'],'nl':['🔊 Muziek: aan','🔇 Muziek: uit']};var pair=labels[lang]||['🔊 موسیقی: روشن','🔇 موسیقی: خاموش'];b.textContent=on?pair[0]:pair[1];}
 
 function newCtx(s){var c=document.createElement('canvas');c.width=c.height=s;return c;}
 function addGrain(x,s,i){var id=x.getImageData(0,0,s,s),d=id.data;for(var k=0;k<d.length;k+=4){var n=(Math.random()-0.5)*i;d[k]+=n;d[k+1]+=n;d[k+2]+=n;}x.putImageData(id,0,0);}
@@ -823,40 +1002,7 @@ function makeSignboard(text,color,bg,w,h){
   return new THREE.Mesh(new THREE.PlaneGeometry(w||8,h||2),mat);
 }
 
-function loadNamedTexture(filename,fallbackCanvas){
-  // The named PNGs live beside the HTML (works both from file:// and GitHub Pages).
-  // Materials clone this texture before the image finishes loading, so update every clone too.
-  var texture=new THREE.CanvasTexture(fallbackCanvas);
-  texture.wrapS=texture.wrapT=THREE.RepeatWrapping;
-  texture._angelClones=[];
-  if(THREE.SRGBColorSpace) texture.colorSpace=THREE.SRGBColorSpace;
-  else if(THREE.sRGBEncoding) texture.encoding=THREE.sRGBEncoding;
-  texture.needsUpdate=true;
-  var image=new Image();
-  image.onload=function(){
-    texture.image=image;
-    texture.needsUpdate=true;
-    for(var i=0;i<texture._angelClones.length;i++){
-      texture._angelClones[i].image=image;
-      texture._angelClones[i].needsUpdate=true;
-    }
-    console.info('Angel Strike texture loaded:',filename,image.naturalWidth+'x'+image.naturalHeight);
-  };
-  image.onerror=function(){
-    console.error('Angel Strike texture missing:',filename,'Expected beside the HTML file. Built-in fallback is active.');
-  };
-  try{image.src=new URL('./'+filename,document.baseURI).href;}
-  catch(e){image.src=filename;}
-  return texture;
-}
-function makeTexLocal(source,rx,ry){
-  var t=source&&source.isTexture?source.clone():new THREE.CanvasTexture(source);
-  if(source&&source.isTexture&&source._angelClones)source._angelClones.push(t);
-  t.wrapS=t.wrapT=THREE.RepeatWrapping;
-  t.repeat.set(rx,ry);
-  if(THREE.SRGBColorSpace)t.colorSpace=THREE.SRGBColorSpace;
-  return t;
-}
+function makeTexLocal(canvas,rx,ry){var t=new THREE.CanvasTexture(canvas);t.wrapS=t.wrapT=THREE.RepeatWrapping;t.repeat.set(rx,ry);return t;}
 
 var TEX={},OUTFIT_TEX={};
 
@@ -1026,24 +1172,8 @@ function buildCar(opts){
 
 var MAP_SIZE=300;
 function buildMap(){
-  // 60 x 60 = 3,600 small grass quads on one continuous terrain mesh.
-  // Each quad repeats the full grass image once; the material is lit and receives shadows.
-  var grassTileCount=60;
-  var grassTileSize=600/grassTileCount;
-  var grassGeo=new THREE.PlaneGeometry(600,600,grassTileCount,grassTileCount);
-  grassGeo.rotateX(-Math.PI/2);
-  var grassMap=makeTexLocal(TEX.grass,grassTileCount,grassTileCount);
-  grassMap.wrapS=grassMap.wrapT=THREE.RepeatWrapping;
-  grassMap.magFilter=THREE.LinearFilter;
-  grassMap.minFilter=THREE.LinearMipmapLinearFilter;
-  grassMap.generateMipmaps=true;
-  var grassGround=new THREE.Mesh(grassGeo,new THREE.MeshStandardMaterial({
-    map:grassMap,color:0xffffff,roughness:1.0,metalness:0.0,side:THREE.DoubleSide
-  }));
-  grassGround.name='grass-ground-3600-tiles';
-  grassGround.position.y=0;
-  grassGround.receiveShadow=true;
-  scene.add(grassGround);
+  var ground=new THREE.Mesh(new THREE.PlaneGeometry(600,600),new THREE.MeshStandardMaterial({map:makeTexLocal(TEX.grass,60,60),color:0xc8e8a8,roughness:0.9}));
+  ground.rotation.x=-Math.PI/2;ground.receiveShadow=true;scene.add(ground);
   var half=MAP_SIZE/2;
   function wall(x,z,w,d){
     var b=new THREE.Mesh(new THREE.BoxGeometry(w,10,d),new THREE.MeshStandardMaterial({map:makeTexLocal(TEX.brick,Math.max(1,Math.round(Math.max(w,d)/6)),3),roughness:0.9}));
@@ -1656,11 +1786,10 @@ function spawnWaterDeath(mesh){
 }
 function killEnemy(enemy,byKnife){
   enemy.alive=false;spawnWaterDeath(enemy.mesh);
-  var stageBonus=Math.max(0,progress.level-1)*5;
-  var bonus=(byKnife?40:25)+stageBonus;
+  var bonus=byKnife?300:100;
   score+=bonus;addScore(bonus);killCount++;
   updateHud();playSiktirSound();
-  if(byKnife)showEventText('🗡️ +'+bonus,'gold');
+  if(byKnife)showEventText('🗡️ +۳۰۰','gold');
   enemySpeedMultiplier=1+killCount*SPEED_GAIN_PER_KILL;
   KILLS_TO_BOSS=getKillsToBoss();
   if(killCount>=KILLS_TO_BOSS&&!bossActive){var bt=Math.random()<0.5?'shikam':'souzani';spawnBoss(bt);}
@@ -1707,8 +1836,7 @@ function killBoss(byKnife){
   }
   var light=new THREE.PointLight(0xffdd44,4,20);light.position.copy(pos);light.position.y+=1.5;scene.add(light);
   effects.push({mesh:light,life:1.5,maxLife:1.5,type:'light'});
-  var bossReward=500+Math.max(0,progress.level-1)*100;
-  bossActive=false;boss=null;score+=bossReward;addScore(bossReward);updateHud();
+  bossActive=false;boss=null;score+=5000;addScore(5000);updateHud();
   var bb=document.getElementById('bossBar');if(bb)bb.classList.remove('show');
   playExplosion();
   progress.level++;progress.totalPlays++;
@@ -1972,29 +2100,29 @@ function showStanceHud(text){var el=document.getElementById('stanceHud');if(!el)
 function setupControls(){
   document.addEventListener('keydown',function(e){
     if(!gameStarted||dying)return;
-    if(e.code==='KeyW'){p1.mFwd=true;if(currentDance)stopDance();}
-    else if(e.code==='KeyS'){p1.mBwd=true;if(currentDance)stopDance();}
-    else if(e.code==='KeyA'){p1.mLeft=true;if(currentDance)stopDance();}
-    else if(e.code==='KeyD'){p1.mRight=true;if(currentDance)stopDance();}
-    else if(e.code==='Space'){if(!isJumping&&!isSliding&&stance==='stand'){velocityY=6;isJumping=true;stopDance();}}
+    if(e.code===settings.keybinds.forward){p1.mFwd=true;if(currentDance)stopDance();}
+    else if(e.code===settings.keybinds.backward){p1.mBwd=true;if(currentDance)stopDance();}
+    else if(e.code===settings.keybinds.left){p1.mLeft=true;if(currentDance)stopDance();}
+    else if(e.code===settings.keybinds.right){p1.mRight=true;if(currentDance)stopDance();}
+    else if(e.code===settings.keybinds.jump){if(!isJumping&&!isSliding&&stance==='stand'){velocityY=6;isJumping=true;stopDance();}}
     else if(e.code==='Digit1')switchSlot(0);
     else if(e.code==='Digit2')switchSlot(1);
     else if(e.code==='Digit3')switchSlot(2);
-    else if(e.code==='KeyR')startReload();
+    else if(e.code===settings.keybinds.reload)startReload();
     else if(e.code==='Escape'){if(wheelOpen)closeWheel(false);else togglePause();}
     else if(e.code==='Tab'){if(e.repeat)return;e.preventDefault();openWheel('weapon');}
     else if(e.code==='KeyQ'){if(e.repeat)return;e.preventDefault();openWheel('weapon');}
     else if(e.code==='KeyG'||e.code==='KeyE'){if(e.repeat)return;e.preventDefault();openWheel('dance');}
-    else if(e.code==='ShiftLeft'||e.code==='ShiftRight'){if(!settings.sprintToggle)isSprinting=true;else isSprinting=!isSprinting;}
-    else if(e.code==='ControlLeft'||e.code==='ControlRight'){if(e.repeat)return;if(isSprinting)trySlide();else{ctrlHeld=true;crouchHoldTime=0;}}
+    else if(e.code===settings.keybinds.sprint||e.code==='ShiftRight'){if(!settings.sprintToggle)isSprinting=true;else isSprinting=!isSprinting;}
+    else if(e.code===settings.keybinds.crouch||e.code==='ControlRight'){if(e.repeat)return;if(isSprinting)trySlide();else{ctrlHeld=true;crouchHoldTime=0;}}
   });
   document.addEventListener('keyup',function(e){
-    if(e.code==='KeyW')p1.mFwd=false;
-    else if(e.code==='KeyS')p1.mBwd=false;
-    else if(e.code==='KeyA')p1.mLeft=false;
-    else if(e.code==='KeyD')p1.mRight=false;
-    else if(e.code==='ShiftLeft'||e.code==='ShiftRight'){if(!settings.sprintToggle)isSprinting=false;}
-    else if(e.code==='ControlLeft'||e.code==='ControlRight'){ctrlHeld=false;crouchHoldTime=0;}
+    if(e.code===settings.keybinds.forward)p1.mFwd=false;
+    else if(e.code===settings.keybinds.backward)p1.mBwd=false;
+    else if(e.code===settings.keybinds.left)p1.mLeft=false;
+    else if(e.code===settings.keybinds.right)p1.mRight=false;
+    else if(e.code===settings.keybinds.sprint||e.code==='ShiftRight'){if(!settings.sprintToggle)isSprinting=false;}
+    else if(e.code===settings.keybinds.crouch||e.code==='ControlRight'){ctrlHeld=false;crouchHoldTime=0;}
     else if(e.code==='Tab'){if(wheelOpen)closeWheel(true);}
     else if(e.code==='KeyQ'){if(wheelOpen)closeWheel(true);}
     else if(e.code==='KeyG'||e.code==='KeyE'){if(wheelOpen)closeWheel(true);}
@@ -2127,8 +2255,9 @@ function closeShop(){var sh=document.getElementById('shopScreen');if(sh)sh.class
 var MAPS=[{id:'rezagolzar',name:'🌳 محله رضا گلزار',desc:'🏘️ محله با مدرسه، مسجد، دریاچه و خونه آقای دهقان'}];
 function buildMapGrid(){var g=document.getElementById('mapGrid');if(!g)return;g.innerHTML='';for(var i=0;i<MAPS.length;i++){var m=MAPS[i],c=document.createElement('div');c.className='mapCard';var parts=m.name.split(' ');c.innerHTML='<div class="emoji">'+parts[0]+'</div><div class="name">'+parts.slice(1).join(' ')+'</div><div class="desc">'+m.desc+'</div>';(function(map){c.addEventListener('click',function(){selectedMap=map.id;var ms=document.getElementById('mapSelectScreen');if(ms)ms.classList.remove('show');openLoadoutScreen();});})(m);g.appendChild(c);}}
 function openMapSelect(){var ss=document.getElementById('startScreen');if(ss)ss.classList.add('hidden');var ms=document.getElementById('mapSelectScreen');if(ms)ms.classList.add('show');buildMapGrid();}
-function openTutorial(){var ss=document.getElementById('startScreen');if(ss)ss.classList.add('hidden');var ts=document.getElementById('tutorialScreen');if(ts)ts.classList.add('show');}
-function closeTutorial(){var ts=document.getElementById('tutorialScreen');if(ts)ts.classList.remove('show');var ss=document.getElementById('startScreen');if(ss)ss.classList.remove('hidden');}
+var tutorialReturnTo='main';
+function openTutorial(from){tutorialReturnTo=from||'main';var ss=document.getElementById('startScreen');if(ss)ss.classList.add('hidden');var sc=document.getElementById('settingsScreen');if(sc)sc.classList.remove('show');var ts=document.getElementById('tutorialScreen');if(ts)ts.classList.add('show');}
+function closeTutorial(){var ts=document.getElementById('tutorialScreen');if(ts)ts.classList.remove('show');if(tutorialReturnTo==='settings'){var sc=document.getElementById('settingsScreen');if(sc)sc.classList.add('show');}else{var ss=document.getElementById('startScreen');if(ss)ss.classList.remove('hidden');}tutorialReturnTo='main';}
 function closeMapSelect(){var ms=document.getElementById('mapSelectScreen');if(ms)ms.classList.remove('show');var ss=document.getElementById('startScreen');if(ss)ss.classList.remove('hidden');}
 function openLoadoutScreen(){
   var ms=document.getElementById('mapSelectScreen');if(ms)ms.classList.remove('show');
@@ -2165,43 +2294,163 @@ function buildSettingsUI(){
     var row=document.createElement('div');row.className='setRow';
     row.innerHTML='<label>'+label+'</label><input type="range" min="'+min+'" max="'+max+'" step="'+step+'" value="'+settings[key]+'"><span class="val">'+(fmt?fmt(settings[key]):settings[key])+'</span>';
     var inp=row.querySelector('input'),val=row.querySelector('.val');
-    inp.addEventListener('input',function(){settings[key]=parseFloat(inp.value);if(val)val.textContent=fmt?fmt(settings[key]):settings[key];saveGame();});
+    inp.addEventListener('input',function(){settings[key]=parseFloat(inp.value);if(val)val.textContent=fmt?fmt(settings[key]):settings[key];applySettingsLive(key);saveGame();});
     cont.appendChild(row);
   }
   function addToggle(label,key){
     var row=document.createElement('div');row.className='setRow';
-    row.innerHTML='<label>'+label+'</label><div class="toggleBtn'+(settings[key]?' on':'')+'"><div class="knob"></div></div>';
-    var btn=row.querySelector('.toggleBtn');
-    btn.addEventListener('click',function(){settings[key]=!settings[key];btn.classList.toggle('on',settings[key]);saveGame();});
+    row.innerHTML='<label>'+label+'</label><div class="toggleBtn'+(settings[key]?' on':'')+'" role="switch" aria-checked="'+(!!settings[key])+'" tabindex="0"><div class="knob"></div></div><span class="toggleValue">'+(settings[key]?'روشن':'خاموش')+'</span>';
+    var btn=row.querySelector('.toggleBtn'),value=row.querySelector('.toggleValue');
+    function flip(){settings[key]=!settings[key];btn.classList.toggle('on',settings[key]);btn.setAttribute('aria-checked',String(!!settings[key]));value.textContent=settings[key]?'روشن':'خاموش';applySettingsLive(key);saveGame();}
+    btn.addEventListener('click',flip);btn.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();flip();}});
     cont.appendChild(row);
   }
-  addCat('🖱️ ماوس');
-  addSlider('🎯 حساسیت','sensitivity',0.5,5,0.1,function(v){return v.toFixed(1);});
-  addSlider('🔭 حساسیت زوم','adsSensitivity',0.3,3,0.1,function(v){return v.toFixed(1);});
-  addToggle('🔄 معکوس Y','invertY');
+  function addSelect(label,key,options){
+    var row=document.createElement('div');row.className='setRow';
+    var lab=document.createElement('label');lab.textContent=label;row.appendChild(lab);
+    var sel=document.createElement('select');options.forEach(function(pair){var op=document.createElement('option');op.value=pair[0];op.textContent=pair[1];sel.appendChild(op);});sel.value=settings[key];
+    sel.addEventListener('change',function(){settings[key]=sel.value;applySettingsLive(key);saveGame();});row.appendChild(sel);cont.appendChild(row);
+  }
+  function keyName(code){var names={Space:'Space',ShiftLeft:'Shift',ShiftRight:'Shift',ControlLeft:'Ctrl',ControlRight:'Ctrl',ArrowUp:'↑',ArrowDown:'↓',ArrowLeft:'←',ArrowRight:'→'};if(names[code])return names[code];return (code||'').replace(/^Key/,'').replace(/^Digit/,'');}
+  function addKeybind(label,key){
+    var row=document.createElement('div');row.className='setRow keybindRow';
+    var lab=document.createElement('label');lab.textContent=label;row.appendChild(lab);
+    var btn=document.createElement('button');btn.type='button';btn.className='keybindBtn';btn.textContent=keyName(settings.keybinds[key]);
+    btn.addEventListener('click',function(){
+      btn.textContent='یک کلید بزن…';btn.classList.add('waiting');
+      function capture(e){if(['Escape','Tab'].indexOf(e.code)>=0){e.preventDefault();e.stopImmediatePropagation();btn.textContent=keyName(settings.keybinds[key]);btn.classList.remove('waiting');document.removeEventListener('keydown',capture,true);return;}e.preventDefault();e.stopImmediatePropagation();settings.keybinds[key]=e.code;btn.textContent=keyName(e.code);btn.classList.remove('waiting');document.removeEventListener('keydown',capture,true);saveGame();}
+      document.addEventListener('keydown',capture,true);
+    });
+    row.appendChild(btn);cont.appendChild(row);
+  }
+  function addAction(label,help,buttonText,klass,handler){
+    var row=document.createElement('div');row.className='setRow settingsActionRow';
+    var lab=document.createElement('label');lab.textContent=label;row.appendChild(lab);
+    var desc=document.createElement('span');desc.className='settingsActionHelp';desc.textContent=help;row.appendChild(desc);
+    var btn=document.createElement('button');btn.type='button';btn.className='settingsAction '+klass;btn.textContent=buttonText;btn.addEventListener('click',handler);row.appendChild(btn);cont.appendChild(row);
+  }
 
-  addCat('🎥 دوربین');
-  addSlider('📳 لرزش دوربین','camShake',0,3,0.1,function(v){return v.toFixed(1);});
-  addSlider('🚶 تکون راه رفتن','walkBob',0,2,0.1,function(v){return v.toFixed(1);});
-  addSlider('🔫 تکون اسلحه','gunSway',0,2,0.1,function(v){return v.toFixed(1);});
-  addSlider('👁️ زاویه دید (FOV)','fov',60,110,1,function(v){return Math.round(v)+'°';});
-  addSlider('🌫️ فاصله مه','fogRange',200,600,10,function(v){return Math.round(v);});
-
-  addCat('🔊 صدا');
-  addSlider('🔫 صدای بازی','sfxVolume',0,1,0.05,function(v){return Math.round(v*100)+'%';});
-  addSlider('🎵 موسیقی','musicVolume',0,1,0.05,function(v){return Math.round(v*100)+'%';});
-  addSlider('🌳 صدای محیط','ambientVolume',0,1,0.05,function(v){return Math.round(v*100)+'%';});
-  addToggle('👣 صدای قدم','footsteps');
-  addToggle('🎵 موسیقی روشن','music');
-
-  addCat('🎮 بازی');
-  addToggle('🔄 خشاب خودکار','autoReload');
-  addToggle('✕ Hitmarker','hitmarker');
+  addCat('🌐 زبان و ظاهر رابط');
+  addSelect('زبان بازی','language',[
+    ['fa','فارسی'],['en','English'],['pt-BR','Português (Brasil)'],['pt-PT','Português (Portugal)'],
+    ['fr','Français'],['de','Deutsch'],['tr','Türkçe'],['ur','اردو (پاکستان)'],
+    ['id','Bahasa Indonesia'],['bn','বাংলা (বাংলাদেশ)'],['uk','Українська'],['ar','العربية'],['nl','Nederlands']
+  ]);
+  addToggle('💜 نور نئونی پشت دکمه‌ها','neonButtons');
   addToggle('📊 نمایش FPS','showFps');
 
-  addCat('📱 موبایل');
-  addSlider('🖼️ کیفیت تصویر','pixelRatio',0.5,2,0.1,function(v){return v.toFixed(1);});
-  addToggle('🌿 جزئیات بالا','shadows');
+  addCat('🖥️ کیفیت گرافیک و نمایش');
+  addSelect('کیفیت کلی','graphicsQuality',[['low','اقتصادی'],['medium','متوسط'],['high','بالا'],['ultra','فوق‌العاده']]);
+  addSelect('کیفیت سایه','shadowQuality',[['off','خاموش'],['low','کم'],['medium','متوسط'],['high','بالا']]);
+  addToggle('🌑 سایه‌های پویا','shadows');
+  addToggle('✨ ضد دندانه‌دار شدن','antialias');
+  addSlider('وضوح تصویر','pixelRatio',0.5,2,0.1,function(v){return v.toFixed(1)+'×';});
+  addSlider('فاصله مه و دید','fogRange',150,650,10,function(v){return Math.round(v)+'m';});
+
+  addCat('🖱️ موس و نشانه‌گیری');
+  addSlider('حساسیت موس','sensitivity',0.2,6,0.1,function(v){return v.toFixed(1);});
+  addSlider('حساسیت زوم','adsSensitivity',0.2,3,0.1,function(v){return v.toFixed(1);});
+  addSlider('اندازه نشانه','crosshairSize',12,44,1,function(v){return Math.round(v)+'px';});
+  addSlider('ضخامت نشانه','crosshairThickness',1,5,1,function(v){return Math.round(v)+'px';});
+  addSelect('رنگ نشانه','crosshairColor',[['#ffffff','سفید'],['#ff70bd','صورتی'],['#65e7ff','آبی'],['#9bff8b','سبز'],['#ffd45e','زرد']]);
+  addToggle('معکوس کردن محور Y','invertY');
+  addToggle('نشانه برخورد (Hitmarker)','hitmarker');
+  addToggle('صدای برخورد','hitmarkerSound');
+
+  addCat('🎥 دوربین و حرکت');
+  addSlider('میدان دید (FOV)','fov',60,115,1,function(v){return Math.round(v)+'°';});
+  addSlider('لرزش دوربین','camShake',0,3,0.1,function(v){return v.toFixed(1);});
+  addSlider('تکان راه رفتن','walkBob',0,2,0.1,function(v){return v.toFixed(1);});
+  addSlider('تکان اسلحه','gunSway',0,2,0.1,function(v){return v.toFixed(1);});
+  addToggle('دویدن با حالت روشن/خاموش','sprintToggle');
+  addToggle('نگه‌داشتن یا تغییر وضعیت زوم','toggleAds');
+
+  addCat('🔊 صدا و موسیقی');
+  addSlider('صدای افکت‌ها','sfxVolume',0,1,0.05,function(v){return Math.round(v*100)+'%';});
+  addSlider('صدای محیط','ambientVolume',0,1,0.05,function(v){return Math.round(v*100)+'%';});
+  addSlider('صدای موسیقی','musicVolume',0,1,0.05,function(v){return Math.round(v*100)+'%';});
+  addSlider('صدای گفتار','voiceVolume',0,1,0.05,function(v){return Math.round(v*100)+'%';});
+  addToggle('موسیقی بازی','music');
+  addToggle('صدای قدم‌ها','footsteps');
+
+  addCat('⌨️ شخصی‌سازی کلیدهای کنترل');
+  addKeybind('حرکت به جلو','forward');addKeybind('حرکت به عقب','backward');
+  addKeybind('حرکت به چپ','left');addKeybind('حرکت به راست','right');
+  addKeybind('پرش','jump');addKeybind('خشاب','reload');
+  addKeybind('دویدن','sprint');addKeybind('خم شدن / اسلاید','crouch');
+
+  addCat('📚 راهنما و بازنشانی');
+  addAction('راهنمای بازی','کنترل‌ها و روش بازی را مشاهده کن.','باز کردن','normal',function(){openTutorial('settings');});
+  addAction('بازنشانی تنظیمات','فقط تنظیمات به مقادیر اولیه برمی‌گردند.','ریست تنظیمات','normal',resetSettingsOnly);
+  addAction('پاک کردن تمام پیشرفت‌ها','امتیاز، خریدها، لول و رکوردها پاک می‌شوند.','ریست کامل بازی','danger',resetAllProgress);
+  var note=document.createElement('div');note.className='settingsNote';note.textContent='تنظیمات ذخیره می‌شوند. تغییرات کیفیت ضد دندانه‌دار شدن پس از بارگذاری دوباره بازی اعمال می‌شوند.';cont.appendChild(note);
+  applySettingsLive('neonButtons');applyLanguageText();
+}
+
+function applySettingsLive(key){
+  if(key==='language')applyLanguageText();
+  if(key==='neonButtons')document.body.classList.toggle('neon-off',!settings.neonButtons);
+  if(key==='showFps'){var fps=document.getElementById('fpsHud');if(fps)fps.classList.toggle('show',!!settings.showFps);}
+  if(key==='fov'&&camera){camera.fov=settings.fov;camera.updateProjectionMatrix();}
+  if(key==='fogRange'&&scene&&scene.fog)scene.fog.far=settings.fogRange;
+  if(key==='pixelRatio'&&renderer)renderer.setPixelRatio(Math.min(settings.pixelRatio,window.devicePixelRatio||1.4,settings.graphicsQuality==='ultra'?2:settings.graphicsQuality==='high'?1.5:settings.graphicsQuality==='medium'?1.2:0.9));
+  if(key==='crosshairSize'||key==='crosshairThickness'||key==='crosshairColor')updateCrosshair();
+  if(key==='shadows'||key==='shadowQuality'||key==='graphicsQuality'){
+    if(renderer)renderer.shadowMap.enabled=!!settings.shadows&&settings.shadowQuality!=='off'&&settings.graphicsQuality!=='low';
+    if(shadowLight){var size=settings.shadowQuality==='low'?512:settings.shadowQuality==='medium'?1024:settings.shadowQuality==='high'?2048:0;if(isMobile)size=Math.min(size,1024);if(size>0)shadowLight.shadow.mapSize.set(size,size);shadowLight.castShadow=size>0&&!!settings.shadows;shadowLight.shadow.needsUpdate=true;}
+    if(renderer&&key==='graphicsQuality')renderer.setPixelRatio(Math.min(settings.pixelRatio,window.devicePixelRatio||1.4,settings.graphicsQuality==='ultra'?2:settings.graphicsQuality==='high'?1.5:settings.graphicsQuality==='medium'?1.2:0.9));
+  }
+  if(key==='music'){if(settings.music){if(audioCtx&&audioCtx.state==='suspended')audioCtx.resume();startMusic();}else stopMusic();}
+  if(key==='antialias')showToast('برای اعمال ضد دندانه‌دار شدن، بازی را دوباره بارگذاری کن.',2200);
+}
+
+function applyLanguageText(){
+  var lang=settings.language||'fa';
+  var L={
+    fa:{dir:'rtl',settings:'تنظیمات',shop:'آنجل شاپ',start:'شروع بازی',tutorial:'آموزش و راهنما',settingsTitle:'⚙️ تنظیمات',shopTitle:'🛒 آنجل شاپ',guideTitle:'📚 آموزش',resume:'ادامه',restart:'شروع مجدد',main:'منوی اصلی'},
+    en:{dir:'ltr',settings:'Settings',shop:'Angel Shop',start:'Start Game',tutorial:'Guide & Help',settingsTitle:'⚙️ Settings',shopTitle:'🛒 Angel Shop',guideTitle:'📚 Guide',resume:'Resume',restart:'Restart',main:'Main Menu'},
+    'pt-BR':{dir:'ltr',settings:'Configurações',shop:'Loja Angel',start:'Iniciar jogo',tutorial:'Ajuda',settingsTitle:'⚙️ Configurações',shopTitle:'🛒 Loja Angel',guideTitle:'📚 Guia',resume:'Continuar',restart:'Reiniciar',main:'Menu principal'},
+    'pt-PT':{dir:'ltr',settings:'Definições',shop:'Loja Angel',start:'Iniciar jogo',tutorial:'Ajuda',settingsTitle:'⚙️ Definições',shopTitle:'🛒 Loja Angel',guideTitle:'📚 Guia',resume:'Continuar',restart:'Reiniciar',main:'Menu principal'},
+    fr:{dir:'ltr',settings:'Paramètres',shop:'Boutique Angel',start:'Jouer',tutorial:'Guide',settingsTitle:'⚙️ Paramètres',shopTitle:'🛒 Boutique Angel',guideTitle:'📚 Guide',resume:'Reprendre',restart:'Recommencer',main:'Menu principal'},
+    de:{dir:'ltr',settings:'Einstellungen',shop:'Angel-Shop',start:'Spiel starten',tutorial:'Anleitung',settingsTitle:'⚙️ Einstellungen',shopTitle:'🛒 Angel-Shop',guideTitle:'📚 Anleitung',resume:'Weiter',restart:'Neustart',main:'Hauptmenü'},
+    tr:{dir:'ltr',settings:'Ayarlar',shop:'Angel Mağazası',start:'Oyunu Başlat',tutorial:'Rehber',settingsTitle:'⚙️ Ayarlar',shopTitle:'🛒 Angel Mağazası',guideTitle:'📚 Rehber',resume:'Devam',restart:'Yeniden Başlat',main:'Ana Menü'},
+    ur:{dir:'rtl',settings:'ترتیبات',shop:'اینجل شاپ',start:'کھیل شروع کریں',tutorial:'رہنمائی',settingsTitle:'⚙️ ترتیبات',shopTitle:'🛒 اینجل شاپ',guideTitle:'📚 رہنمائی',resume:'جاری رکھیں',restart:'دوبارہ شروع',main:'مرکزی مینو'},
+    id:{dir:'ltr',settings:'Pengaturan',shop:'Toko Angel',start:'Mulai Game',tutorial:'Panduan',settingsTitle:'⚙️ Pengaturan',shopTitle:'🛒 Toko Angel',guideTitle:'📚 Panduan',resume:'Lanjutkan',restart:'Mulai ulang',main:'Menu utama'},
+    bn:{dir:'ltr',settings:'সেটিংস',shop:'অ্যাঞ্জেল শপ',start:'গেম শুরু',tutorial:'নির্দেশিকা',settingsTitle:'⚙️ সেটিংস',shopTitle:'🛒 অ্যাঞ্জেল শপ',guideTitle:'📚 নির্দেশিকা',resume:'চালিয়ে যান',restart:'আবার শুরু',main:'প্রধান মেনু'},
+    uk:{dir:'ltr',settings:'Налаштування',shop:'Крамниця Angel',start:'Почати гру',tutorial:'Довідка',settingsTitle:'⚙️ Налаштування',shopTitle:'🛒 Крамниця Angel',guideTitle:'📚 Довідка',resume:'Продовжити',restart:'Перезапустити',main:'Головне меню'},
+    ar:{dir:'rtl',settings:'الإعدادات',shop:'متجر أنجل',start:'ابدأ اللعبة',tutorial:'الدليل',settingsTitle:'⚙️ الإعدادات',shopTitle:'🛒 متجر أنجل',guideTitle:'📚 الدليل',resume:'متابعة',restart:'إعادة التشغيل',main:'القائمة الرئيسية'},
+    nl:{dir:'ltr',settings:'Instellingen',shop:'Angel-winkel',start:'Start spel',tutorial:'Handleiding',settingsTitle:'⚙️ Instellingen',shopTitle:'🛒 Angel-winkel',guideTitle:'📚 Handleiding',resume:'Hervatten',restart:'Opnieuw starten',main:'Hoofdmenu'}
+  };
+  var t=L[lang]||L.fa;document.documentElement.lang=lang;document.documentElement.dir=t.dir;
+  function set(id,v){var el=document.getElementById(id);if(el)el.textContent=v;}
+  set('settingsBtnLabel',t.settings);set('shopBtnLabel',t.shop);set('startBtnLabel',t.start);set('tutorialBtn', '📚 '+t.tutorial);
+  set('settingsTitle',t.settingsTitle);set('pauseTitle','Angel Strike');
+  var sh=document.querySelector('#shopScreen .shopHeader h1');if(sh)sh.textContent=t.shopTitle;
+  var th=document.querySelector('#tutorialScreen h1');if(th)th.textContent=t.guideTitle;
+  set('resumeBtn','▶️ '+t.resume);set('restartBtn','🔄 '+t.restart);set('exitToMainBtn','🏠 '+t.main);
+}
+
+function resetSettingsOnly(){
+  if(!window.confirm('همه تنظیمات بازی به حالت اولیه برگردند؟'))return;
+  settings=JSON.parse(JSON.stringify(DEFAULT_SETTINGS));
+  saveGame();
+  applySettingsLive('language');applySettingsLive('neonButtons');applySettingsLive('showFps');
+  applySettingsLive('fov');applySettingsLive('fogRange');applySettingsLive('pixelRatio');
+  applySettingsLive('crosshairSize');applySettingsLive('crosshairThickness');applySettingsLive('crosshairColor');
+  applySettingsLive('shadows');applySettingsLive('shadowQuality');applySettingsLive('graphicsQuality');
+  applySettingsLive('music');buildSettingsUI();showToast('✅ تنظیمات به حالت اولیه برگشتند.',1800);
+}
+
+function resetAllProgress(){
+  if(!window.confirm('تمام امتیازها، خریدها و مراحل بازی پاک شوند؟ این کار قابل بازگشت نیست.'))return;
+  totalScore=0;ownedWeapons=['glock','ak','butterfly'];savedLoadout=['glock','ak'];
+  progress.level=1;progress.totalPlays=0;progress.bestStage=1;
+  score=0;killCount=0;stageNumber=1;health=150;
+  carriedWeapons=[0,1,KNIFE_INDEX];activeSlot=2;refreshCurrentWeapon();
+  for(var i=0;i<weapons.length;i++){weapons[i].ammo=weapons[i].magSize;weapons[i].reserve=weapons[i].maxReserve;}
+  try{localStorage.removeItem(K_SCORE);localStorage.removeItem(K_OWNED);localStorage.removeItem(K_LOADOUT);localStorage.removeItem(K_PROGRESS);}catch(e){}
+  saveGame();updateStartScore();updateShopScore();updateHud();updateAmmoHud();updateWeaponVisibility();buildMobileWeaponButtons();
+  showToast('✅ تمام پیشرفت‌ها پاک شدند.',2000);
 }
 function openSettings(){var ss=document.getElementById('startScreen');if(ss)ss.classList.add('hidden');var ps=document.getElementById('pauseScreen');if(ps)ps.classList.remove('show');var sc=document.getElementById('settingsScreen');if(sc)sc.classList.add('show');buildSettingsUI();}
 function closeSettings(){var sc=document.getElementById('settingsScreen');if(sc)sc.classList.remove('show');if(gameStarted){var ps=document.getElementById('pauseScreen');if(ps)ps.classList.add('show');}else{var ss=document.getElementById('startScreen');if(ss)ss.classList.remove('hidden');}}
@@ -2216,13 +2465,15 @@ function init(){
     MAX_ALIVE_ENEMIES=6;
   }
   try{
-    renderer=new THREE.WebGLRenderer({antialias:true,alpha:false,powerPreference:'high-performance'});
+    renderer=new THREE.WebGLRenderer({antialias:settings.antialias!==false,alpha:false,powerPreference:'high-performance'});
+    renderer.shadowMap.enabled=!!settings.shadows&&settings.shadowQuality!=='off'&&settings.graphicsQuality!=='low';
+    renderer.shadowMap.type=THREE.PCFSoftShadowMap;
     renderer.setSize(window.innerWidth,window.innerHeight);
     renderer.setPixelRatio(Math.min(settings.pixelRatio,window.devicePixelRatio,1.4));
     renderer.setClearColor(0xa8d8f0,1);
     document.body.appendChild(renderer.domElement);
   }catch(err){var eb=document.getElementById('errBox');if(eb){eb.style.display='block';eb.textContent='❌ WebGL خطا: '+err.message;}return;}
-  TEX.grass=loadNamedTexture('grass.png',makeGrassTex());TEX.brick=loadNamedTexture('wall.png',makeBrickTex());TEX.asphalt=makeAsphaltTex();TEX.concrete=makeConcreteTex();
+  TEX.grass=makeGrassTex();TEX.brick=makeBrickTex();TEX.asphalt=makeAsphaltTex();TEX.concrete=makeConcreteTex();
   TEX.snackChips=makeSnackTex('چیپس شکاری','#ffaa22','#aa1100','#fff');
   TEX.snackCake=makeSnackTex('کیک شکاری','#ff88bb','#aa2266','#fff');
   TEX.snackCream=makeSnackTex('خامه پِرو','#fff5cc','#ddaa44','#663300');
@@ -2234,7 +2485,7 @@ function init(){
   camera=new THREE.PerspectiveCamera(settings.fov,window.innerWidth/window.innerHeight,0.05,1800);
   camera.position.set(0,1.7,90);camera.rotation.order='YXZ';scene.add(camera);
   scene.add(new THREE.AmbientLight(0xd8e0e8,0.65));
-  var sun=new THREE.DirectionalLight(0xfff5e0,1.2);sun.position.set(90,140,-70);scene.add(sun);
+  var sun=new THREE.DirectionalLight(0xfff5e0,1.2);shadowLight=sun;sun.position.set(90,140,-70);sun.castShadow=!!settings.shadows&&settings.shadowQuality!=='off';sun.shadow.mapSize.set(settings.shadowQuality==='low'?512:settings.shadowQuality==='medium'?1024:2048,settings.shadowQuality==='low'?512:settings.shadowQuality==='medium'?1024:2048);sun.shadow.camera.left=-220;sun.shadow.camera.right=220;sun.shadow.camera.top=220;sun.shadow.camera.bottom=-220;sun.shadow.camera.near=1;sun.shadow.camera.far=500;sun.shadow.bias=-0.0002;scene.add(sun);
   scene.add(new THREE.HemisphereLight(0xc8e0f0,0x9aa87a,0.5));
   var fillLight=new THREE.DirectionalLight(0xffccaa,0.3);fillLight.position.set(-50,30,60);scene.add(fillLight);
   var skyC=document.createElement('canvas');skyC.width=64;skyC.height=512;
@@ -2258,6 +2509,8 @@ function init(){
     scene.add(cloudG);
   }
   buildMap();
+  scene.traverse(function(o){if(o.isMesh){o.castShadow=!!settings.shadows;o.receiveShadow=true;if(o.name==='ground'||o.name==='main-ground'||o.name==='natural-procedural-grass-ground')o.castShadow=false;}});
+  applySettingsLive('showFps');applySettingsLive('neonButtons');
   camera.position.set(0,1.7,90);
   setupWeaponViewmodels();
   setupControls();
@@ -2273,6 +2526,7 @@ function init(){
   var lc=document.getElementById('loadoutConfirm');if(lc)lc.addEventListener('click',confirmLoadout);
   var lb=document.getElementById('loadoutBack');if(lb)lb.addEventListener('click',function(){var ls=document.getElementById('loadoutScreen');if(ls)ls.classList.remove('show');var ms=document.getElementById('mapSelectScreen');if(ms)ms.classList.add('show');});
   var rb=document.getElementById('resumeBtn');if(rb)rb.addEventListener('click',togglePause);
+  var pcb=document.getElementById('pauseCloseBtn');if(pcb)pcb.addEventListener('click',togglePause);
   var rsb=document.getElementById('restartBtn');if(rsb)rsb.addEventListener('click',function(){returnToMainMenu();setTimeout(openMapSelect,300);});
   var etm=document.getElementById('exitToMainBtn');if(etm)etm.addEventListener('click',returnToMainMenu);
   var mb=document.getElementById('musicBtn');if(mb)mb.addEventListener('click',toggleMusic);
@@ -2286,13 +2540,13 @@ function init(){
     shopBuddyImg.src=shopBuddyPhotos[pose];
     if(shopBuddy)shopBuddy.setAttribute('data-pose',String(pose));
   }
-  if(shopBuddyImg){setShopBuddyPose(0);shopBuddyImg.onerror=function(){this.style.display='none';console.warn('Shop character image missing:',this.src);};}
+  if(shopBuddyImg)setShopBuddyPose(0);
   if(shopBuddy){
     shopBuddy.addEventListener('mouseenter',function(){
       if(shopBuddyIsHovering)return;
       shopBuddyIsHovering=true;
       shopBuddyHoverCount++;
-      setShopBuddyPose(shopBuddyHoverCount>5?2:1);
+      setShopBuddyPose(shopBuddyHoverCount%2===1?1:2);
       if(shopBuddyHoverCount===6)showToast('😏 حالا دیگه حرکت آخر رو دیدی!',1700);
     });
     shopBuddy.addEventListener('mouseleave',function(){
@@ -2305,8 +2559,8 @@ function init(){
   var stb=document.getElementById('settingsBtn');if(stb)stb.addEventListener('click',openSettings);
   var sfpb=document.getElementById('settingsFromPauseBtn');if(sfpb)sfpb.addEventListener('click',openSettings);
   var scb2=document.getElementById('settingsCloseBtn');if(scb2)scb2.addEventListener('click',closeSettings);
-  var sbb=document.getElementById('settingsBackBtn');if(sbb)sbb.addEventListener('click',closeSettings);
-  updateMusicButton();updateStartScore();updateShopScore();updateAmmoHud();updateHud();updateCrosshair();
+
+  updateMusicButton();updateStartScore();updateShopScore();updateAmmoHud();updateHud();updateCrosshair();applySettingsLive('showFps');applySettingsLive('neonButtons');applyLanguageText();
 }
 function startGame(){
   gameStarted=true;isPaused=false;dying=false;
