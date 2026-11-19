@@ -2,12 +2,17 @@
 <html lang="fa">
 <head>
 <meta charset="UTF-8">
-<link rel="icon" type="image/png" href="bill.png">
+<link rel="icon" type="image/webp" href="bill.webp">
+<link rel="preload" as="image" href="frist.webp" fetchpriority="high">
+<link rel="preload" as="image" href="setting.webp">
+<link rel="preload" as="image" href="start.webp">
+<link rel="prefetch" as="image" href="sec.webp">
+<link rel="prefetch" as="image" href="fook.webp">
 
 <!-- ==================== SEO اصلی ==================== -->
 <title>آنجل استرایک | بازی تیراندازی محله رضا گلزار - ساخته سهیل ایمانی</title>
-<meta name="description" content="آنجل استرایک (Angel Strike) بازی سه‌بعدی تیراندازی شامل مدرسه درخشنده صراف">
-<meta name="keywords" content="آنجل استرایک, Angel Strike, بازی آنجل استرایک, محله رضا گلزار, سهیل ایمانی, مدرسه درخشنده صراف, بازی تیراندازی, بازی مرورگری, باس سوزنی, سوزنی, شکم قرومساق, بازی ایرانی, بازی سه بعدی">
+<meta name="description" content="آنجل استرایک (Angel Strike) بازی سه‌بعدی تیراندازی مرورگری در محله رضا گلزار. شامل مدرسه درخشنده صراف، مسجد، دریاچه، آنجل شاپ، چاقوهای کمیاب، باس سوزنی و شکم قرومساق. ساخته سهیل ایمانی.">
+<meta name="keywords" content="آنجل استرایک, Angel Strike, بازی آنجل استرایک">
 <meta name="author" content="سهیل ایمانی">
 <meta name="robots" content="index, follow">
 <meta name="language" content="Persian">
@@ -16,7 +21,7 @@
 <!-- ==================== Open Graph ==================== -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="آنجل استرایک - بازی تیراندازی محله رضا گلزار">
-<meta property="og:description" content="بازی سه‌بعدی تیراندازی مرورگری با آنجل شاپ، چاقوهای کمیاب، باس سوزنی و شکم قرومساق. ساخته سهیل ایمانی.">
+<meta property="og:description" content="بازی سه‌بعدی تیراندازی مرورگری با آنجل شاپ، ساخته سهیل ایمانی.">
 <meta property="og:site_name" content="آنجل استرایک">
 <meta property="og:locale" content="fa_IR">
 
@@ -591,7 +596,7 @@ body.neon-off #settingsScroll .keybindBtn{
   <div class="mainMenuCards" dir="ltr">
     <button type="button" class="mainMenuCard" id="settingsBtn" aria-label="تنظیمات">
       <span class="mainCardArt">
-        <img src="setting.png" alt="تنظیمات" draggable="false" loading="lazy" decoding="async">
+        <img src="setting.webp" alt="تنظیمات" draggable="false" loading="eager" decoding="async">
       </span>
       <span class="mainCardFooter">
         <span class="mainCardLabel" id="settingsBtnLabel">تنظیمات</span>
@@ -601,8 +606,8 @@ body.neon-off #settingsScroll .keybindBtn{
 
     <button type="button" class="mainMenuCard shopBuddy shopCardButton" id="openShopBtn" aria-label="آنجل شاپ">
       <span class="mainCardArt shopArt">
-        <!-- Images are external assets; place frist.png, sec.png and fook.png beside this HTML. -->
-        <img id="shopBuddyImg" src="frist.png" alt="شخصیت آنجل شاپ" draggable="false" width="300" height="264" loading="eager" fetchpriority="high" decoding="async">
+        <!-- Images are external assets; place frist.webp, sec.webp and fook.webp beside this HTML. -->
+        <img id="shopBuddyImg" src="frist.webp" alt="شخصیت آنجل شاپ" draggable="false" width="300" height="264" loading="eager" fetchpriority="high" decoding="async">
       </span>
       <span class="mainCardFooter">
         <span class="mainCardLabel shopBuddyTitle" id="shopBtnLabel">آنجل شاپ</span>
@@ -612,7 +617,7 @@ body.neon-off #settingsScroll .keybindBtn{
 
     <button type="button" class="mainMenuCard" id="startBtn" aria-label="شروع بازی">
       <span class="mainCardArt">
-        <img src="start.png" alt="شروع بازی" draggable="false" loading="lazy" decoding="async">
+        <img src="start.webp" alt="شروع بازی" draggable="false" loading="eager" decoding="async">
       </span>
       <span class="mainCardFooter">
         <span class="mainCardLabel" id="startBtnLabel">شروع بازی</span>
@@ -2531,11 +2536,12 @@ function init(){
   var rsb=document.getElementById('restartBtn');if(rsb)rsb.addEventListener('click',function(){returnToMainMenu();setTimeout(openMapSelect,300);});
   var etm=document.getElementById('exitToMainBtn');if(etm)etm.addEventListener('click',returnToMainMenu);
   var mb=document.getElementById('musicBtn');if(mb)mb.addEventListener('click',toggleMusic);
-  var shopBuddyPhotos=['frist.png','sec.png','fook.png'];
+  var shopBuddyPhotos=['frist.webp','sec.webp','fook.webp'];
   var shopBuddy=document.getElementById('openShopBtn');
   var shopBuddyImg=document.getElementById('shopBuddyImg');
   var shopBuddyHoverCount=0;
   var shopBuddyIsHovering=false;
+  var shopBuddyFinalPose=false;
   function setShopBuddyPose(pose){
     if(!shopBuddyImg)return;
     shopBuddyImg.src=shopBuddyPhotos[pose];
@@ -2546,13 +2552,19 @@ function init(){
     shopBuddy.addEventListener('mouseenter',function(){
       if(shopBuddyIsHovering)return;
       shopBuddyIsHovering=true;
+      if(shopBuddyFinalPose)return;
       shopBuddyHoverCount++;
-      setShopBuddyPose(shopBuddyHoverCount%2===1?1:2);
-      if(shopBuddyHoverCount===6)showToast('😏 حالا دیگه حرکت آخر رو دیدی!',1700);
+      if(shopBuddyHoverCount>7){
+        shopBuddyFinalPose=true;
+        setShopBuddyPose(2);
+        showToast('😈 حالت نهایی آنجل شاپ فعال شد!',1700);
+      }else{
+        setShopBuddyPose(1);
+      }
     });
     shopBuddy.addEventListener('mouseleave',function(){
       shopBuddyIsHovering=false;
-      setShopBuddyPose(0);
+      if(!shopBuddyFinalPose)setShopBuddyPose(0);
     });
   }
   var osb=document.getElementById('openShopBtn');if(osb)osb.addEventListener('click',openShop);
